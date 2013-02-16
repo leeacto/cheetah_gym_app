@@ -1,4 +1,12 @@
 CheetahGymApp::Application.routes.draw do
+  get "wods/new"
+
+  get "wods/index"
+
+  get "wods/edit"
+
+  get "wods/destroy"
+
   get "sessions/new"
 
   get "users/new"
