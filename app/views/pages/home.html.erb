@@ -2,5 +2,8 @@
 	<p>
 		Welcome to the Cheetah Crossfit Home Page
 	</p>
-
-	<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
+	<% if signed_in? %>
+		<%= link_to "Create new WOD", createwod_path, :class => "newwod_button round" %>
+	<% else %>
+		<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
+	<% end %>

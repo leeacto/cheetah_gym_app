@@ -93,6 +93,20 @@ a.signup_button {
 	padding: 20px;
 }
 
+/* New WOD button */
+a.newwod_button { 
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block; 
+	text-align: center; 
+	width: 190px; 
+	color: #cff; 
+	background: #006400; 
+	font-size: 150%; 
+	font-weight: bold; 
+	padding: 20px;
+}
+
 /* Round corners */
 
 .round {

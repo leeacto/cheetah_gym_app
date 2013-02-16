@@ -1,32 +1,26 @@
 require 'spec_helper'
 
 describe WodsController do
+  render_views
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
+  describe "GET 'show'" do
+    before(:each) do
+      @wod = Wod.create(:name => "Fran", :desc => "21-15-9", :seq => "WG", :wod_type => "time", :baserep => 1)
+    end
+
+    it "should be successful" do
+      get :show, :id => @wod
       response.should be_success
     end
-  end
 
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
+    it "should find the right wod" do
+      get :show, :id => @wod
+      assigns(:wod).should == @wod
     end
-  end
 
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
+    it "should have the right title" do
+      get :show, :id => @wod
+      response.should have_selector("title", :content => @wod.name)
     end
   end
 

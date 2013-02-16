@@ -10,8 +10,10 @@ CheetahGymApp::Application.routes.draw do
   get "sessions/new"
 
   get "users/new"
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :wods
 
   match '/contact', :to => 'pages#contact'
   match '/help', :to => 'pages#help'
@@ -19,7 +21,7 @@ CheetahGymApp::Application.routes.draw do
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  
+  match '/createwod', :to => 'wods#new'
   root :to => 'pages#home'
 
 
