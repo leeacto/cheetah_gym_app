@@ -1,7 +1,7 @@
 require 'digest'
 class User < ActiveRecord::Base
 	attr_accessor :password
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :password, :password_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -13,9 +13,9 @@ class User < ActiveRecord::Base
   # Automatically create the virtual attribute 'password_confirmation'. 
   validates :password, :presence => true,
 						:confirmation => true,
-						:length => { :within => 6..40 }		
-						
-	before_save :encrypt_password
+						:length => { :within => 6..40 }				
+
+  before_save :encrypt_password
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -50,5 +50,3 @@ class User < ActiveRecord::Base
       Digest::SHA2.hexdigest(string)
     end
 end
-
-
