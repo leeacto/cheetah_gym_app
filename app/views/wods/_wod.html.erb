@@ -1,6 +1,6 @@
 <li>
 	<%= link_to wod.name, wod %> 
-	<%= link_to "Daily WOD", new_wod_daily_wod_path(wod) %>
+	<%= render 'shared/woddate' %>
 	<% if current_user.admin? %>
 		<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
 									:title => "Delete #{wod.name}" %>

@@ -14,12 +14,11 @@ class DailyWodsController < ApplicationController
   end
 
   def create
-    @dwod = DailyWod.new(params[:daily_wod])
+    @dwod = current_wod.daily_wods.build(params[:daily_wod])
     if @dwod.save
-      flash[:success] = "Daily WOD Created"
-      redirect_to @dwod
+      flash[:success] = "Daily WOD created!"
+      redirect_to current_wod
     else
-      @title = "New Daily Wod - @wod"
       render 'new'
     end
   end

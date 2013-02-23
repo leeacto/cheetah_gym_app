@@ -25,7 +25,7 @@ class WodsController < ApplicationController
     @wod = Wod.new(params[:wod])
     if @wod.save
       flash[:success] = "New WOD Created"
-      redirect_to @wod
+      redirect_to root_path
     else
       @title = "Create New WOD"
       render 'new'
