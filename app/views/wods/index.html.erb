@@ -1,2 +1,9 @@
-<h1>Wods#index</h1>
-<p>Find me in app/views/wods/index.html.erb</p>
+<h1>WOD Index</h1>
+
+<%= will_paginate %>
+
+<ul class="wods">
+	<%= render @wods %>
+</ul>
+
+<%= will_paginate %>

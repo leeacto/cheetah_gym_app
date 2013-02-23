@@ -9,7 +9,7 @@
 		</div>
 		<div class="field">
 			<%= f.label "Description" %><br /> 
-			<%= f.text_field :desc %>
+			<%= f.text_area :desc, :size => "1x1" %>
 		</div>
 		<div class="field">
 			<%= f.label "Workout" %> for <br />
@@ -34,4 +34,4 @@
 		<div class="actions">
 			<%= f.submit "Create WOD" %> 
 		</div>
-	<% end %>
+<% end %>

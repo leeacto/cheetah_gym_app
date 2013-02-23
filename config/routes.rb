@@ -1,4 +1,14 @@
 CheetahGymApp::Application.routes.draw do
+  get "daily_wods/new"
+
+  get "daily_wods/edit"
+
+  get "daily_wods/destroy"
+
+  get "daily_wods/show"
+
+  get "daily_wods/create"
+
   get "wods/new"
 
   get "wods/index"
@@ -13,7 +23,9 @@ CheetahGymApp::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :wods
+  resources :wods do
+    resources :daily_wods
+  end
 
   match '/contact', :to => 'pages#contact'
   match '/help', :to => 'pages#help'
@@ -22,6 +34,8 @@ CheetahGymApp::Application.routes.draw do
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/createwod', :to => 'wods#new'
+  match '/wodlist', :to => 'wods#index'
+  match '/:wods/:wod_id/daily_wods/new', :to => 'wods#dailywods#create'
   root :to => 'pages#home'
 
 

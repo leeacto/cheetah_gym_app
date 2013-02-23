@@ -6,6 +6,7 @@ class WodsController < ApplicationController
 
   def index
   	@title = "List of WODs"
+    @wods = Wod.paginate(:page => params[:page])
   end
 
   def edit

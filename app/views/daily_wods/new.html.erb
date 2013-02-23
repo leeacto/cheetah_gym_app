@@ -1,0 +1,12 @@
+<h1>Create Daily Wod</h1>
+
+<%= form_for :daily_wod do |f| %> 
+	<div class="field">
+		<%= f.label "WOD Date" %><br />
+		<%= f.date_select :performed %> 
+	</div>
+	
+	<div class="actions">
+		<%= f.submit "Create Daily WOD" %> 
+	</div>
+<% end %>

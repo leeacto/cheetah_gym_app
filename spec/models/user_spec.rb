@@ -132,5 +132,5 @@ describe User do
 			@user.toggle!(:admin)
 			@user.should be_admin
 		end
-	end
+	end	
 end

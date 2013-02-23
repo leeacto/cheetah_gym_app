@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216165238) do
+ActiveRecord::Schema.define(:version => 20130216235621) do
+
+  create_table "daily_wods", :force => true do |t|
+    t.date     "performed"
+    t.integer  "wod_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "daily_wods", ["wod_id"], :name => "index_daily_wods_on_wod_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

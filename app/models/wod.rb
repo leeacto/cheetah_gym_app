@@ -1,6 +1,8 @@
 class Wod < ActiveRecord::Base
   attr_accessible :baserep, :desc, :name, :seq, :wod_type
 
+  has_many :daily_wods, :dependent => :destroy
+  
   validates :baserep, :presence => true
 	validates :desc, :presence => true
 	validates :name, :presence => true,
