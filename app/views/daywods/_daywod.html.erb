@@ -1,8 +1,6 @@
-<h1>Create Daily Wod</h1>
-
-<%= form_for :daily_wod do |f| %> 
+<%= form_for @daywod, :url => wod_daywods_path, :html => { :class => "new_wod_daywod" } do |f| %>
 	<div class="field">
-		<%= f.label "WOD Date" %><br />
+		<%= f.label :performed, "WOD Date" %>
 		<%= f.date_select :performed %> 
 	</div>
 	

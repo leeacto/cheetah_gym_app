@@ -52,13 +52,13 @@ describe Wod do
   	no_brep_wod.should_not be_valid
   end
 
-  describe "daily wod associations" do
+  describe "daywod associations" do
     before(:each) do
       @wod = Wod.create!(@attr)
     end
 
     it "should have a daily wods attribute" do
-      @wod.should respond_to(:daily_wods)
+      @wod.should respond_to(:daywods)
     end
   end
 end

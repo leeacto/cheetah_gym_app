@@ -1,4 +1,4 @@
-class DailyWod < ActiveRecord::Base
+class Daywod < ActiveRecord::Base
   attr_accessible :performed, :wod_id
   
   belongs_to :wod

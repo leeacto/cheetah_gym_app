@@ -1,6 +1,9 @@
 require 'spec_helper'
 
-describe DailyWodsController do
+describe DaywodsController do
+  before(:each) do
+      @wod = Wod.create(:name => "Fran", :desc => "21-15-9", :seq => "WG", :wod_type => "time", :baserep => 1)
+  end
 
   describe "GET 'new'" do
     it "returns http success" do
