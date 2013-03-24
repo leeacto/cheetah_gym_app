@@ -1,43 +1,57 @@
 require 'spec_helper'
 
 describe DaywodsController do
-  before(:each) do
-      @wod = Wod.create(:name => "Fran", :desc => "21-15-9", :seq => "WG", :wod_type => "time", :baserep => 1)
-  end
+  render_views
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
+  describe "POST 'create'" do
+    before(:each) do
+      @wod = FactoryGirl.create(:wod)
+      @attr = { :performed => "01/01/2013", :wod_id => @wod.id }
+    end 
+
+    it "should create a daywod given valid attributes" do
+      Daywod.create!(@attr)
     end
   end
 
   describe "GET 'edit'" do
+    before(:each) do
+      @wod = FactoryGirl.create(:wod)
+      @attr = { :performed => "01/01/2013", :wod_id => @wod.id }
+      @daywod = Daywod.create!(@attr)
+    end 
+
     it "returns http success" do
-      get 'edit'
+      get :edit, :id => @daywod.id
       response.should be_success
     end
   end
 
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
+  describe "DELETE 'destroy'" do
+    
+    before(:each) do
+      @wod = FactoryGirl.create(:wod)
+      @attr = { :performed => "01/01/2013", :wod_id => @wod.id }
+      @daywod = Daywod.create!(@attr)
+    end 
+
+    it "should destroy the daywod" do
+      lambda do
+        delete :destroy, :id => @daywod.id
+      end.should change(Daywod, :count).by(-1)
     end
   end
 
   describe "GET 'show'" do
+     before(:each) do
+      @wod = FactoryGirl.create(:wod)
+      @attr = { :performed => "01/01/2013", :wod_id => @wod.id }
+      @daywod = Daywod.create!(@attr)
+    end 
+
     it "returns http success" do
-      get 'show'
+      get :show, :id => @daywod.id
       response.should be_success
     end
   end
-
-  describe "GET 'create'" do
-    it "returns http success" do
-      get 'create'
-      response.should be_success
-    end
-  end
-
 end

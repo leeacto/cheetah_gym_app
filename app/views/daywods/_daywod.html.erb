@@ -1,10 +1,12 @@
-<%= form_for @daywod, :url => wod_daywods_path, :html => { :class => "new_wod_daywod" } do |f| %>
-	<div class="field">
-		<%= f.label :performed, "WOD Date" %>
-		<%= f.date_select :performed %> 
-	</div>
-	
-	<div class="actions">
-		<%= f.submit "Create Daily WOD" %> 
-	</div>
-<% end %>
+
+<tr>
+	<td class="daywod">
+		<%= link_to daywod.performed, wod_daywod_path(daywod.wod_id, daywod.id) %> 
+		<td>
+			<p><%= link_to "delete", @daywod, :method => :delete,
+											 											:confirm => "You sure??",
+											 											:title => daywod.performed %>
+			</p>
+		</td> 
+	</td> 
+</tr>

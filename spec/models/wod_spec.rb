@@ -55,10 +55,23 @@ describe Wod do
   describe "daywod associations" do
     before(:each) do
       @wod = Wod.create!(@attr)
+      @dw1 = @wod.daywods.create!(:performed => "01/01/2013")
+      @dw2 = @wod.daywods.create!(:performed => "02/01/2013")
     end
 
     it "should have a daily wods attribute" do
       @wod.should respond_to(:daywods)
+    end
+
+    describe "daywod history" do
+      it "should have a daywod history" do
+        @wod.should respond_to(:hist)
+      end 
+
+      it "should include the wod's daywods" do
+        @wod.hist.include?(@dw1).should be_true
+        @wod.hist.include?(@dw2).should be_true
+      end
     end
   end
 end

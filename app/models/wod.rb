@@ -10,4 +10,8 @@ class Wod < ActiveRecord::Base
 						:uniqueness => { :case_sensitive => false }
 	validates :seq, :presence => true
 	validates :wod_type, :presence => true
+
+	def hist
+		Daywod.past_performed(self)
+	end
 end

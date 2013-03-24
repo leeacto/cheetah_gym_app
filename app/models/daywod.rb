@@ -5,4 +5,8 @@ class Daywod < ActiveRecord::Base
   
   validates :performed, :presence => true
   validates :wod_id, :presence => true
+
+  def self.past_performed(wod)
+  	where("wod_id = ?", wod)
+  end
 end

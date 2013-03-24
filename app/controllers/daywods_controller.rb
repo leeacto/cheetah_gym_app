@@ -9,9 +9,15 @@ class DaywodsController < ApplicationController
   end
 
   def destroy
+    @wod = Daywod.find(params[:id]).wod_id
+    Daywod.find(params[:id]).destroy
+    redirect_to Wod.find(@wod)
   end
 
   def show
+    @wod = Wod.find(Daywod.find(params[:id]).wod_id)
+    @daywod = Daywod.find(params[:id])
+    @title = Wod.find(@wod).name
   end
 
   def create

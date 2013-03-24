@@ -15,18 +15,22 @@ class WodsController < ApplicationController
   end
 
   def destroy
+    Wod.find(params[:id]).destroy
+    flash[:success] = "Wod destroyed."
+    redirect_to wods_path
   end
 
   def show
     @wod = Wod.find(params[:id])
     @title = @wod.name
+    @daywods = @wod.daywods.paginate(:page => params[:page])
   end
 
   def create
     @wod = Wod.new(params[:wod])
     if @wod.save
       flash[:success] = "New WOD Created"
-      redirect_to root_path
+      redirect_to @wod
     else
       @title = "Create New WOD"
       render 'new'

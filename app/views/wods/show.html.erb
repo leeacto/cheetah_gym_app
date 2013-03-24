@@ -9,5 +9,12 @@
 			<strong>Sequence</strong> <%= @wod.seq %><br />
 			<strong>For </strong> <%= @wod.wod_type %><br />
 		</td>
+		<% unless @wod.daywods.empty? %>
+			<table class="daywods" summary="Wod daywods">
+				<strong>Dates Performed</strong>
+				<%= render @daywods %>
+			</table>
+			<%= will_paginate @daywods %>
+		<% end %>
   </tr>
 </table>
