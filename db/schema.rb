@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223213102) do
+ActiveRecord::Schema.define(:version => 20130324160030) do
 
   create_table "daywods", :force => true do |t|
     t.date     "performed"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20130223213102) do
   end
 
   add_index "daywods", ["wod_id"], :name => "index_daily_wods_on_wod_id"
+
+  create_table "results", :force => true do |t|
+    t.float    "recd"
+    t.integer  "user_id"
+    t.integer  "daywod_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "results", ["daywod_id"], :name => "index_results_on_daywod_id"
+  add_index "results", ["user_id"], :name => "index_results_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

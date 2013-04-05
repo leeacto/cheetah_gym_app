@@ -1,0 +1,17 @@
+<h1>WOD Result</h1>
+<%= form_for @result, :url => wod_daywod_results_path, :html => { :class => "new_daywod_result" }  do |f| %> 
+		<%= render 'shared/error_messages', :object => f.object %>
+		<div class="field">
+			<%= f.label "Athlete" %><br />
+			<%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
+		</div>
+		
+		<div class="field">
+			<%= f.label "Result" %><br />
+			<%= f.number_field :recd %> 
+		</div>
+		
+		<div class="actions">
+			<%= f.submit "Submit Result" %> 
+		</div>
+<% end %>

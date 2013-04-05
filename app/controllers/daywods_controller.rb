@@ -18,6 +18,7 @@ class DaywodsController < ApplicationController
     @wod = Wod.find(Daywod.find(params[:id]).wod_id)
     @daywod = Daywod.find(params[:id])
     @title = Wod.find(@wod).name
+    @results = Daywod.find(params[:id]).results.paginate(:page => params[:page])
   end
 
   def create

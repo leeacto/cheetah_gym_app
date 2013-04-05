@@ -21,4 +21,10 @@ FactoryGirl.define do
 		performed		"1/1/2013"
 		association		:wod
 	end
+
+	factory :result do
+		recd			1
+		association		:daywod
+		association		:user
+	end
 end

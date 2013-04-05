@@ -1,0 +1,10 @@
+<%= form_for @daywod, :url => wod_daywods_path, :html => { :class => "new_wod_daywod" } do |f| %>
+	<div class="field">
+		<%= f.label :performed, "WOD Date" %>
+		<%= f.date_select :performed %> 
+	</div>
+	
+	<div class="actions">
+		<%= f.submit "Create Daily WOD" %> 
+	</div>
+<% end %>
