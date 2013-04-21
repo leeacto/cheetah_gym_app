@@ -1,4 +1,19 @@
 <h1><%= link_to @wod.name, @wod %> - <%= @daywod.performed %></h1>
+	<table border="1">
+			<tr>
+				<th>Description</th>
+				<td><%= @wod.desc %>
+			</tr>	
+			<tr>
+				<th>Sequence</th>
+				<td><%= @wod.seq %>
+			</tr>	
+			<tr>
+				<th>Type</th>
+				<td><%= @wod.wod_type %>
+			</tr>	
+	</table>
+
 <strong><p>Results</p></strong>
 
 <% if signed_in? %>
@@ -10,6 +25,8 @@
 			<tr>
 				<th>Athlete</th>
 				<th>Result</th>
+				<th>Rx</th>
+				<th>Notes</th>
 			</tr>
 			<%= render @results %>
 	</table>

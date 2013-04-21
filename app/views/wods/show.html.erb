@@ -1,20 +1,19 @@
-<table class="profile" summary="Profile information"> 
-	<tr>
-			<h1>
-				<%= @wod.name %> 
-			</h1>
-		<td>
-			<strong>Description</strong> <br />
-			<%= @wod.desc %><br />
-			<strong>Sequence</strong> <%= @wod.seq %><br />
-			<strong>For </strong> <%= @wod.wod_type %><br />
-		</td>
-		<% unless @wod.daywods.empty? %>
-			<table class="daywods" summary="Wod daywods">
-				<strong>Dates Performed</strong>
-				<%= render @daywods %>
-			</table>
-			<%= will_paginate @daywods %>
-		<% end %>
-  </tr>
-</table>
+
+<h1><%= @wod.name %></h1>
+
+<strong>Description</strong> <br />
+<%= @wod.desc %><br />
+<strong>Sequence</strong> <%= @wod.seq %><br />
+<strong>For </strong> <%= @wod.wod_type %><br />
+
+<p>
+<%= link_to "Create Daily WOD", new_wod_daywod_path(@wod) %>
+<p>
+
+<% unless @wod.daywods.empty? %>
+	<table class="daywods" summary="Wod daywods">
+		<strong>Dates Performed</strong>
+		<%= render @daywods %>
+	</table>
+	<%= will_paginate @daywods %>
+<% end %>

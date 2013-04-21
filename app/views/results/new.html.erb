@@ -3,12 +3,38 @@
 		<%= render 'shared/error_messages', :object => f.object %>
 		<div class="field">
 			<%= f.label "Athlete" %><br />
-			<%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
+			<% if current_user.admin? %>
+				<%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
+			<% end %>
 		</div>
 		
+		<% if Wod.find(Daywod.find(@daywod.id).wod_id).wod_type != "Time" %>
+
+			<div class="field">
+		 		<%= f.label "Result" %><br />
+				<%= f.number_field :recd %> 
+			</div>
+
+		<% else %>
+			<div class="field">
+		 		<%= f.label "Minutes" %><br />
+				<%= f.number_field :mins %> 
+			</div>
+
+			<div class="field">
+		 		<%= f.label "Seconds" %><br />
+				<%= f.number_field :secs %> 
+			</div>
+
+		<% end %>
 		<div class="field">
-			<%= f.label "Result" %><br />
-			<%= f.number_field :recd %> 
+			<%= f.label "Rx" %><br />
+			<%= f.check_box :rx %> 
+		</div>
+
+		<div class="field">
+			<%= f.label "Note" %><br />
+			<%= f.text_area :note, :size => "1x1" %>
 		</div>
 		
 		<div class="actions">
