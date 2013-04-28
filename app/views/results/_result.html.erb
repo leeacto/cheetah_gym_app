@@ -1,10 +1,10 @@
 
 <tr>
 	<td><%= link_to User.find(result.user_id).name, edit_wod_daywod_result_path(Daywod.find(result.daywod_id).wod_id, result.daywod_id, result.id)  %></td>
-	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type <> "Time" %>
+	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type != "Time" %>
 		<td><%= result.recd %></td>
 	<% else %>
-	
+		<td><%= result.recd %></td>
 	<% end %>
 	<td><%= result.rx %></td>
 	<td><%= result.note %></td>

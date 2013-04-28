@@ -1,14 +1,19 @@
 <h1>WOD Result</h1>
+
+
 <%= form_for @result, :url => wod_daywod_results_path, :html => { :class => "new_daywod_result" }  do |f| %> 
 		<%= render 'shared/error_messages', :object => f.object %>
 		<div class="field">
 			<%= f.label "Athlete" %><br />
 			<% if current_user.admin? %>
 				<%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
+			<% else %>
+				<%= f.hidden_field :user_id, :value => @cuser.id %>
+				<%= @cuser.name %>
 			<% end %>
 		</div>
 		
-		<% if Wod.find(Daywod.find(@daywod.id).wod_id).wod_type != "Time" %>
+		<% if Wod.find(@wod.id).wod_type != "Time" %>
 
 			<div class="field">
 		 		<%= f.label "Result" %><br />
@@ -16,14 +21,15 @@
 			</div>
 
 		<% else %>
+
 			<div class="field">
 		 		<%= f.label "Minutes" %><br />
-				<%= f.number_field :mins %> 
+				<%= f.number_field :mins, :min => 0, :value => 0 %> 
 			</div>
 
 			<div class="field">
 		 		<%= f.label "Seconds" %><br />
-				<%= f.number_field :secs %> 
+				<%= f.number_field :secs, :min => 0, :value => 0 %> 
 			</div>
 
 		<% end %>

@@ -22,6 +22,7 @@ class DaywodsController < ApplicationController
   end
 
   def create
+    
     @daywod = Wod.find(params[:wod_id]).daywods.build(params[:daywod])
     if @daywod.save
       flash[:success] = "Daily WOD created!"

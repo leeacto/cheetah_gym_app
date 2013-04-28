@@ -4,6 +4,7 @@ class ResultsController < ApplicationController
   	@title = "WOD Result"
   	@wod = Wod.find(params[:wod_id])
   	@daywod = Daywod.find(params[:daywod_id])
+    @cuser = current_user
   	@result = @daywod.results.new
   end
 
@@ -31,11 +32,18 @@ class ResultsController < ApplicationController
   end
 
   def create
-    #return unless current_user.admin? == true or params[:user_id] == current_user.id
+    @cuser = current_user
+    @daywod = Wod.find(params[:wod_id]).daywods.find(params[:daywod_id])
+    @wod = Wod.find(params[:wod_id])
+    #Change Mins to Secs if WOD is Timed
+    if @wod.wod_type == "Time"
+      params[:result][:recd] = params[:result][:mins].to_i*60 + params[:result][:secs].to_i
+    end
+    #Save Result
     @result = Wod.find(params[:wod_id]).daywods.find(params[:daywod_id]).results.build(params[:result])
     if @result.save
       flash[:success] = "Result Logged"
-      redirect_to Wod.find(params[:wod_id]).daywods.find(params[:daywod_id])
+      redirect_to @daywod
     else
       render 'new'
     end
