@@ -39,7 +39,9 @@ CheetahGymApp::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   match '/createwod', :to => 'wods#new'
   match '/wodlist', :to => 'wods#index'
+  match '/athletes', :to => 'users#index'
   root :to => 'pages#home'
+
 
 
   # The priority is based upon order of creation:

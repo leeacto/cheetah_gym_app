@@ -24,7 +24,7 @@ class ResultsController < ApplicationController
     @result = @daywod.results.find(params[:id])
     if @result.update_attributes(params[:result])
       flash[:success] = "Result updated"
-      redirect_to @wod
+      redirect_to Wod.find(params[:wod_id]).daywods.find(params[:daywod_id])
     else
       @title = "Edit Result"
       render 'edit'

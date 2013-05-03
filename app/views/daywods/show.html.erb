@@ -24,7 +24,12 @@
 	<table class="results" summary="Daywod Results">
 			<tr>
 				<th>Athlete</th>
-				<th>Result</th>
+				<% if @wod.wod_type == "Time" %>
+					<th>Time</th>
+				<% else %>
+					<th>Result</th>
+				<% end %>
+				
 				<th>Rx</th>
 				<th>Notes</th>
 			</tr>

@@ -1,2 +1,37 @@
-<h1>Wods#edit</h1>
-<p>Find me in app/views/wods/edit.html.erb</p>
+<h1> Edit WOD </h1>
+
+<%= form_for(@wod) do |f| %> 
+		<%= render 'shared/error_messages', :object => f.object %>
+		
+		<div class="field">
+			<%= f.label "WOD Name" %><br />
+			<%= f.text_field :name %> 
+		</div>
+		<div class="field">
+			<%= f.label "Description" %><br /> 
+			<%= f.text_area :desc, :size => "1x1" %>
+		</div>
+		<div class="field">
+			<%= f.label "Workout" %> for <br />
+			<%= f.radio_button :wod_type, 'Time', :checked => true %> 
+  			<%= label :wod_type_time, 'Time' %>
+  			<%= f.radio_button :wod_type, 'Reps' %>
+  			<%= label :wod_type_reps, 'Reps' %>
+  			<%= f.radio_button :wod_type, 'Weight' %>
+  			<%= label :wod_type_weight, 'Weight' %>
+  			<%= f.radio_button :wod_type, 'Other' %>
+  			<%= label :wod_type_other, 'Other' %>
+		</div>
+		<div class="field">
+			<%= f.label "Sequence" %> Ex. WG, GG, Chipper, etc.<br /> 
+			<%= f.text_field :seq %>
+		</div>
+		<div class="field">
+			<%= f.label "Reps in Round" %> (60 for Timed WODs; 1 for 1RM)<br /> 
+			<%= f.number_field :baserep %>
+		</div>
+
+		<div class="actions">
+			<%= f.submit "Edit WOD" %> 
+		</div>
+<% end %>

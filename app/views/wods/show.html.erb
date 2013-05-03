@@ -5,6 +5,9 @@
 <%= @wod.desc %><br />
 <strong>Sequence</strong> <%= @wod.seq %><br />
 <strong>For </strong> <%= @wod.wod_type %><br />
+<p>
+<%= link_to "Edit WOD", edit_wod_path(@wod) %>
+<p>
 
 <p>
 <%= link_to "Create Daily WOD", new_wod_daywod_path(@wod) %>

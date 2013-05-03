@@ -28,7 +28,7 @@
 		</div>
 		<div class="field">
 			<%= f.label "Reps in Round" %> (1 for everything but For Reps WOD)<br /> 
-			<%= f.number_field :baserep %>
+			<%= f.number_field :baserep, :min => 0, :value => 0 %>
 		</div>
 
 		<div class="actions">

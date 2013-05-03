@@ -15,10 +15,14 @@
 		
 		<% if Wod.find(@wod.id).wod_type != "Time" %>
 
-			<div class="field">
-		 		<%= f.label "Result" %><br />
-				<%= f.number_field :recd %> 
-			</div>
+			<% if Wod.find(@wod.id).wod_type == "Reps" %>
+
+			<% else %>
+				<div class="field">
+		 			<%= f.label "Result" %><br />
+					<%= f.number_field :recd, :min => 0, :value => 0 %> 
+				</div>
+			<% end %>
 
 		<% else %>
 

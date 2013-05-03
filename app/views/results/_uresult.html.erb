@@ -1,0 +1,12 @@
+
+<tr>
+	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type == "Time" %>
+		<td><%= (result.recd/60).to_i %></td>
+		<td><%= (result.recd - 60*(result.recd/60).to_i).to_i %></td>
+	<% else %>
+		<td><%= result.recd.to_i %></td>
+	<% end %>
+	<td><%= result.rx %></td>
+	<td><%= result.note %></td>
+</tr>
+	

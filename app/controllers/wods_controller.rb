@@ -12,6 +12,19 @@ class WodsController < ApplicationController
 
   def edit
   	@title = "Edit WOD"
+     @wod = Wod.find(params[:id])
+    @title = @wod.name
+  end
+
+  def update
+    @wod = Wod.find(params[:id])
+    if @wod.update_attributes(params[:wod])
+      flash[:success] = "Profile updated"
+      redirect_to @wod
+    else
+      @title = "Edit WOD"
+      render 'edit'
+    end
   end
 
   def destroy

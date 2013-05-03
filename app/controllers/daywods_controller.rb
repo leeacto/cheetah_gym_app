@@ -18,7 +18,11 @@ class DaywodsController < ApplicationController
     @wod = Wod.find(Daywod.find(params[:id]).wod_id)
     @daywod = Daywod.find(params[:id])
     @title = Wod.find(@wod).name
-    @results = Daywod.find(params[:id]).results.paginate(:page => params[:page])
+    if @wod.wod_type == "Time"
+      @results = Daywod.find(params[:id]).results.paginate(:page => params[:page]).order("rx DESC, recd ASC")
+    else
+      @results = Daywod.find(params[:id]).results.paginate(:page => params[:page]).order("rx DESC, recd DESC")
+    end
   end
 
   def create

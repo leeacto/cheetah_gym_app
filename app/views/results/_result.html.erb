@@ -1,12 +1,33 @@
 
 <tr>
+
 	<td><%= link_to User.find(result.user_id).name, edit_wod_daywod_result_path(Daywod.find(result.daywod_id).wod_id, result.daywod_id, result.id)  %></td>
-	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type != "Time" %>
-		<td><%= result.recd %></td>
+	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type == "Time" %>
+		<td>
+			<%= (result.recd/@wod.baserep).to_i %>:
+			<% if (result.recd - @wod.baserep*(result.recd/@wod.baserep).to_i).to_i < 10 %>
+				0
+			<% end %>
+			<%= (result.recd - @wod.baserep*(result.recd/@wod.baserep).to_i).to_i %>
+		</td>
 	<% else %>
-		<td><%= result.recd %></td>
+		<td>
+			<%= (result.recd/@wod.baserep).to_i %>
+			<% if (result.recd - @wod.baserep*(result.recd/@wod.baserep).to_i).to_i > 0 %>
+				+
+				<%= (result.recd - @wod.baserep*(result.recd/@wod.baserep).to_i).to_i %>
+			<% end %>
+			
+		</td>
 	<% end %>
-	<td><%= result.rx %></td>
+	<td>
+		<% if result.rx  == true %>
+		Yes
+		<% else %>
+		No
+		<% end %>
+
+	</td>
 	<td><%= result.note %></td>
 </tr>
 	
