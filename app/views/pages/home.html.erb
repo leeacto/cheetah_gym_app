@@ -7,14 +7,6 @@
 	<% else %>
 		<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
 	<% end %>
-	
-	<%= form_tag wods_path, :method => 'get' do %>
-		<p>
-			<%= text_field_tag :search, params[:search] %>
- 			<%= submit_tag "Search", :name => nil %>
-		</p>
-	<% end %>
-
 
 	<% if Daywod.count > 0 %>
 		

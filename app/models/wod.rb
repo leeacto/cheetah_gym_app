@@ -19,7 +19,7 @@ class Wod < ActiveRecord::Base
 	
 	def self.search(search)
 		if search
-    		where 'name LIKE ?', "%#{search}%"
+    		where 'name LIKE ? or desc LIKE ?', "%#{search}%","%#{search}%"
     	else
     		scoped
     	end
