@@ -9,7 +9,6 @@ class Result < ActiveRecord::Base
   validates :user_id, :presence => true
   #before_save :user_assign_ok
 
-
   private
 
     def user_assign_ok

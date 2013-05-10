@@ -3,16 +3,16 @@ class WodsController < ApplicationController
   	@title = "Create New WOD"
     @wod = Wod.new
   end
-
+  
   def index
   	@title = "List of WODs"
-    @wods = Wod.paginate(:page => params[:page])
+    @wods = Wod.search(params[:search]).paginate(:page => params[:page])
     @daywod = nil
   end
 
   def edit
   	@title = "Edit WOD"
-     @wod = Wod.find(params[:id])
+    @wod = Wod.find(params[:id])
     @title = @wod.name
   end
 

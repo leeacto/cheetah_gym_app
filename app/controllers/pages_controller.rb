@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
   	@title = "Home"
+    @daywods = Daywod.all
   end
 
   def contact
