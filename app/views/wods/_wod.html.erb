@@ -1,10 +1,16 @@
-<li>
-	<%= link_to wod.name, wod %> 
-	<%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %>
-	<% if current_user.nil? == false %>
-	<% if current_user.admin? %>
-		<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
-									:title => "Delete #{wod.name}" %>
-	<% end %>
-	<% end %>
-</li>
+
+	<tr>
+		<td><%= link_to wod.name, wod %></td>
+		<td><%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %></td>
+		<td>
+			<% if current_user.nil? == false %>
+				<% if current_user.admin? %>
+					<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
+																			:title => "Delete #{wod.name}" %>
+				<% end %>
+			<% end %>
+		</td>	
+	</tr>
+	<tr>
+		<%= wod.desc %>
+	</tr>

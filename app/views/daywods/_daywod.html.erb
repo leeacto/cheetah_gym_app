@@ -3,9 +3,9 @@
 	<td class="daywod">
 		<%= link_to daywod.performed, wod_daywod_path(daywod.wod_id, daywod.id) %> 
 		<td>
-			<p><%= link_to "delete", @daywod, :method => :delete,
-																						:confirm => "You sure??",
-																						:title => daywod.performed %>
+			<p><%= link_to "delete", wod_daywod_path(@wod, daywod), :method => :delete,
+																				:confirm => "You sure??",
+																				:title => daywod.performed %>
 			</p>
 		</td> 
 	</td> 

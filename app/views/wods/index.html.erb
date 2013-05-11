@@ -2,7 +2,11 @@
 
 <%= link_to "Create new WOD", createwod_path, :class => "newwod_button round" %>
 
+<p>
+
 <ul class="wods">
-	<%= render @wods %>
+	<table border="1">
+		<%= render @wods %>
+	</table>
 </ul>
 
