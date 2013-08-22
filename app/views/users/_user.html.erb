@@ -1,7 +1,10 @@
 <li>
 	<%= link_to user.name, user %> 
-	<% if current_user.admin? %>
-		| <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
+	<% if current_user.admin? or @me == user %>
+		<% if @me != user %>
+		| <%= link_to "Delete", user, :method => :delete, :confirm => "You sure?",
 									:title => "Delete #{user.name}" %>
+		<% end %>
+		| <%= link_to "Settings", edit_user_path(user) %>							
 	<% end %>
 </li>

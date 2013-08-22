@@ -1,8 +1,10 @@
+require 'debugger'
+
 class Wod < ActiveRecord::Base
   attr_accessible :baserep, :desc, :name, :seq, :wod_type
 
   has_many :daywods, :dependent => :destroy
-  
+  has_many :results, :through => :daywods
   validates :baserep, :presence => true
 	validates :desc, :presence => true
 	validates :name, :presence => true,
@@ -17,7 +19,23 @@ class Wod < ActiveRecord::Base
 		Daywod.past_performed(self)
 	end
 	
-	def self.search(search)
+  def result_avg(rx=nil)
+    res_ct = 0
+    res_sum = 0
+    self.results.each do |d|
+      if d.rx  == rx
+        res_sum += d.recd
+        res_ct += 1
+      end
+    end
+    if res_ct > 0
+      res_sum.to_f / res_ct
+    else
+      0
+    end
+  end
+	
+  def self.search(search)
 		if search
     		where 'name LIKE ? or desc LIKE ? or seq LIKE ?', "%#{search}%","%#{search}%","%#{search}%"
     	else

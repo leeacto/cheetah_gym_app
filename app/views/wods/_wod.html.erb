@@ -1,16 +1,19 @@
 
-	<tr>
-		<td><%= link_to wod.name, wod %></td>
-		<td><%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %></td>
-		<td>
-			<% if current_user.nil? == false %>
-				<% if current_user.admin? %>
-					<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
+<tr>
+	<td><%= link_to wod.name, wod %></td>
+	<td><%= wod.result_avg(true) %></td>
+	<td><%= wod.result_avg(false) %></td>
+	<td><%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %></td>
+	<td>
+		<% if current_user.nil? == false %>
+			<% if current_user.admin? %>
+				<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
 																			:title => "Delete #{wod.name}" %>
-				<% end %>
 			<% end %>
-		</td>	
-	</tr>
-	<tr>
-		<%= wod.desc %>
-	</tr>
+		<% end %>
+	</td>	
+</tr>
+	
+<tr>
+	<td><pre>&nbsp<%= wod.desc %></pre></td>
+</tr>

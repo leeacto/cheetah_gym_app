@@ -11,12 +11,13 @@ class UsersController < ApplicationController
   def index
     @title = "All users"
     @users = User.paginate(:page => params[:page])
+    @me = current_user
   end
 
   def show
   	@user = User.find(params[:id])
   	@title = @user.name
-    @results = User.find(params[:id]).feed.paginate(:page => params[:page]).order
+    @results = Result.where("user_id = ?", params[:id]).order("rx DESC, recd ASC")
   end
 
   def create

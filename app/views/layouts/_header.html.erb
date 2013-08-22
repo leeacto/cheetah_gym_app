@@ -7,7 +7,7 @@
 					<%= text_field_tag :search, params[:search] %>
  					<%= submit_tag "Search", :name => nil %>
 				<% end %>
-		</li>
+			</li>
 			<li><%= link_to "Home", root_path %></li> 
 			<% if signed_in? %>
 			<li><%= link_to "Athletes", athletes_path %></li>
@@ -17,10 +17,11 @@
 			<li><%= link_to "WODs", wodlist_path %></li>
 			<li><%= link_to "Help", help_path %></li> 
 			<% if signed_in? %>
-			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+				<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
 			<% else %>
-			<li><%= link_to "Sign in", signin_path %></li>
+				<li><%= link_to "Sign in", signin_path %></li>
 			<% end %>
+			<li><%= link_to "Schedule", schedule_path %></li>
 		</ul>
 	</nav>
 

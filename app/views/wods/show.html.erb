@@ -2,7 +2,7 @@
 <h1><%= @wod.name %></h1>
 
 <strong>Description</strong> <br />
-<%= @wod.desc %><br />
+<pre><%= @wod.desc %></pre><br />
 <strong>Sequence</strong> <%= @wod.seq %><br />
 <strong>For </strong> <%= @wod.wod_type %><br />
 <p>
@@ -15,7 +15,11 @@
 
 <% unless @wod.daywods.empty? %>
 	<table class="daywods" summary="Wod daywods">
-		<strong>Dates Performed</strong>
+		<strong>
+			<td>
+			<th>Dates Performed</th>
+			<th><center>Gym WOD</center></th></td>
+		</strong>
 		<%= render @daywods %>
 	</table>
 	<%= will_paginate @daywods %>

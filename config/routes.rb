@@ -34,6 +34,7 @@ CheetahGymApp::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/help', :to => 'pages#help'
   match '/about', :to => 'pages#about'
+  match '/schedule', :to => 'pages#schedule'
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

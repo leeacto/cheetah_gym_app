@@ -11,7 +11,6 @@ class WodsController < ApplicationController
   end
 
   def edit
-  	@title = "Edit WOD"
     @wod = Wod.find(params[:id])
     @title = @wod.name
   end

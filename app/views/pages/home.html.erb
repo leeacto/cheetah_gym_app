@@ -1,13 +1,33 @@
-<h1>Cheetah Crossfit</h1> 
-	<p>
-		Welcome to the Cheetah Crossfit Home Page
-	</p>
-	<% if signed_in? %>
-		<%= link_to "Create new WOD", createwod_path, :class => "newwod_button round" %>
-	<% else %>
-		<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
-	<% end %>
 
-	<% if Daywod.count > 0 %>
-		
+	<center>
+		<% if signed_in? %>
+			<%= link_to "Create new WOD", createwod_path, :class => "newwod_button round" %>
+		<% else %>
+			<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
+		<% end %>
+	</center>
+
+	<% @daywods.each do |w| %>
+		<% if w.personal == true %>
+			<table>	
+				<tr>
+					<td>
+						<%= w.performed %>
+					</td>
+				</tr>
+				<tr>
+					<td>WOD: <%= link_to Wod.find(w.wod_id).name, wod_daywod_path(Wod.find(w.wod_id), w) %><td>
+				</tr>
+				<tr>
+					<td>
+						<pre><%= Wod.find(w.wod_id).desc %></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<%= link_to "Enter Result", new_wod_daywod_result_path(Wod.find(w.wod_id), w) %>
+					</td>
+				</tr>
+			<table>
+		<% end %>
 	<% end %>

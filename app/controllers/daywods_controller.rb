@@ -6,6 +6,20 @@ class DaywodsController < ApplicationController
   end
 
   def edit
+    @daywod = Daywod.find(params[:id])
+    @title = "Edit Daywod"
+  end
+
+  def update
+    @wod = Wod.find(params[:wod_id])
+    @daywod = Daywod.find(params[:id])
+    if @daywod.update_attributes(params[:daywod])
+      flash[:success] = "Daywod updated"
+      redirect_to @wod
+    else
+      @title = "Edit Daywod"
+      render 'edit'
+    end
   end
 
   def destroy
@@ -26,11 +40,12 @@ class DaywodsController < ApplicationController
   end
 
   def create
-    
-    @daywod = Wod.find(params[:wod_id]).daywods.build(params[:daywod])
+    @daywod = Daywod.new(params[:daywod])
+    @daywod.update_attributes(:wod_id => params[:wod_id])
+    @wod = Wod.find(params[:wod_id])
     if @daywod.save
       flash[:success] = "Daily WOD created!"
-      redirect_to Wod.find(params[:wod_id])
+      redirect_to @daywod
     else
       render 'new'
     end
