@@ -4,10 +4,9 @@ class Result < ActiveRecord::Base
   
   belongs_to :daywod
   belongs_to :user
-
+  has_one :wod, through: :daywod
   validates :recd, :presence => true
   validates :user_id, :presence => true
-  #before_save :user_assign_ok
 
   private
 

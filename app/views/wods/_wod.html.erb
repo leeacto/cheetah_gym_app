@@ -1,8 +1,36 @@
 
 <tr>
 	<td><%= link_to wod.name, wod %></td>
-	<td><%= wod.result_avg(true) %></td>
-	<td><%= wod.result_avg(false) %></td>
+	<td>
+		<% if wod.result_avg(true) > 0 %>	
+			<% if wod.wod_type == "Time" %>
+				<%= Time.local(1999,1,1,0,
+				(wod.result_avg(true)/wod.baserep).to_i,
+				(wod.result_avg(true) - wod.baserep*(wod.result_avg(true)/wod.baserep).to_i).to_i).strftime "%M:%S" %>
+			<% else %>
+				<%= (wod.result_avg(true)/wod.baserep).to_i %>
+				<% if (wod.result_avg(true) - wod.baserep*(wod.result_avg(true)/wod.baserep).to_i).to_i > 0 %>
+					+
+					<%= (wod.result_avg(true) - wod.baserep*(wod.result_avg(true)/wod.baserep).to_i).to_f %>
+				<% end %>
+			<% end %>
+		<% end %>
+	</td>
+	<td>
+		<% if wod.result_avg(false) > 0 %>
+			<% if wod.wod_type == "Time" %>
+				<%= Time.local(1999,1,1,0,
+				(wod.result_avg(false)/wod.baserep).to_i,
+				(wod.result_avg(false) - wod.baserep*(wod.result_avg(false)/wod.baserep).to_i).to_i).strftime "%M:%S" %>
+			<% else %>
+				<%= (wod.result_avg(false)/wod.baserep).to_i %>
+				<% if (wod.result_avg(false) - wod.baserep*(wod.result_avg(false)/wod.baserep).to_i).to_i > 0 %>
+					+
+					<%= (wod.result_avg(false) - wod.baserep*(wod.result_avg(false)/wod.baserep).to_i).to_f %>
+				<% end %>
+			<% end %>
+		<% end %>
+	</td>
 	<td><%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %></td>
 	<td>
 		<% if current_user.nil? == false %>

@@ -14,10 +14,6 @@ class Wod < ActiveRecord::Base
 	validates :wod_type, :presence => true
 
 	before_save :reps_to_sixty
-
-	def hist
-		Daywod.past_performed(self)
-	end
 	
   def result_avg(rx=nil)
     res_ct = 0
@@ -37,11 +33,11 @@ class Wod < ActiveRecord::Base
 	
   def self.search(search)
 		if search
-    		where 'name LIKE ? or desc LIKE ? or seq LIKE ?', "%#{search}%","%#{search}%","%#{search}%"
-    	else
-    		scoped
-    	end
-    end
+  		where 'name LIKE ? or desc LIKE ? or seq LIKE ?', "%#{search}%","%#{search}%","%#{search}%"
+  	else
+  		scoped
+  	end
+  end
 
   private
 
