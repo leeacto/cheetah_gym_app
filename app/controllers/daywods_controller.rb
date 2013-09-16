@@ -29,13 +29,13 @@ class DaywodsController < ApplicationController
   end
 
   def show
-    @wod = Wod.find(Daywod.find(params[:id]).wod_id)
     @daywod = Daywod.find(params[:id])
+    @wod = @daywod.wod
     @title = Wod.find(@wod).name
     if @wod.wod_type == "Time"
-      @results = Daywod.find(params[:id]).results.paginate(:page => params[:page]).order("rx DESC, recd ASC")
+      @results = @daywod.results.paginate(:page => params[:page]).order("rx DESC, recd ASC")
     else
-      @results = Daywod.find(params[:id]).results.paginate(:page => params[:page]).order("rx DESC, recd DESC")
+      @results = @daywod.results.paginate(:page => params[:page]).order("rx DESC, recd DESC")
     end
   end
 
@@ -45,7 +45,7 @@ class DaywodsController < ApplicationController
     @wod = Wod.find(params[:wod_id])
     if @daywod.save
       flash[:success] = "Daily WOD created!"
-      redirect_to @daywod
+      redirect_to Daywod.find(@daywod)
     else
       render 'new'
     end
