@@ -8,6 +8,20 @@ class Result < ActiveRecord::Base
   validates :recd, :presence => true
   validates :user_id, :presence => true
 
+  def formatted
+    if self.wod.wod_type == "Time"
+      Time.local(1999,1,1,0,
+      (self.recd/self.wod.baserep).to_i,
+      (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i).strftime "%M:%S"
+    else
+     (self.recd/self.wod.baserep).to_i
+      if (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i > 0
+        +
+        (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i
+      end   
+    end
+  end
+
   private
 
     def user_assign_ok

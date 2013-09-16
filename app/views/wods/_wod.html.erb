@@ -31,17 +31,19 @@
 			<% end %>
 		<% end %>
 	</td>
-	<td><%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %></td>
 	<td>
+		<%= link_to "Create Daily WOD", new_wod_daywod_path(wod) %>
+	</td>
 		<% if current_user.nil? == false %>
 			<% if current_user.admin? %>
-				<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
+				<td>
+					<%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
 																			:title => "Delete #{wod.name}" %>
+			
+				</td>	
 			<% end %>
 		<% end %>
-	</td>	
 </tr>
-	
 <tr>
-	<td><pre>&nbsp<%= wod.desc %></pre></td>
+	<td colspan="4"><%= wod.desc %></td>
 </tr>

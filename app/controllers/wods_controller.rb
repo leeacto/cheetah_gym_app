@@ -36,6 +36,7 @@ class WodsController < ApplicationController
     @wod = Wod.find(params[:id])
     @title = @wod.name
     @daywods = @wod.daywods.paginate(:page => params[:page])
+    @athletes = @wod.athletes.uniq
   end
 
   def create

@@ -3,7 +3,7 @@ class Daywod < ActiveRecord::Base
   
   belongs_to :wod
   has_many :results
-  
+  has_many :athletes, through: :results, source: :user
   validates :performed, :presence => true
   validates :wod_id, :presence => true
 

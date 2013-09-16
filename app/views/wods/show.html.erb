@@ -15,12 +15,33 @@
 
 <% unless @wod.daywods.empty? %>
 	<table class="daywods" summary="Wod daywods">
-		<strong>
 			<td>
 			<th>Dates Performed</th>
 			<th><center>Gym WOD</center></th></td>
-		</strong>
 		<%= render @daywods %>
 	</table>
-	<%= will_paginate @daywods %>
+
+	<table id="ath_results">
+		<th>Dates</th>
+		<% @daywods.each do |d| %>
+			<th>
+				<%= d.performed %>
+			</th>
+		<% end %>
+
+		<% @athletes.each do |a| %>
+			<tr>
+				<td><%= a.name %></td>
+				<% @daywods.each do |d| %>
+					<td>
+						<% if d.athletes.include?(a) %>
+							<%= d.results.where(:user_id => a.id).first.formatted %>
+						<% else %>
+
+						<% end %>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
 <% end %>

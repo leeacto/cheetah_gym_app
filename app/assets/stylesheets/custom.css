@@ -61,3 +61,11 @@ img {
 .journal li {
 	padding-left: 2em;
 }
+
+#wod_index {
+	text-align: center;
+}
+
+#wod_index td {
+	border: 1px solid black;
+}

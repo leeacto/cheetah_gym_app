@@ -5,6 +5,7 @@ class Wod < ActiveRecord::Base
 
   has_many :daywods, :dependent => :destroy
   has_many :results, :through => :daywods
+  has_many :athletes, through: :results, source: :user
   validates :baserep, :presence => true
 	validates :desc, :presence => true
 	validates :name, :presence => true,
