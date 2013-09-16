@@ -25,7 +25,7 @@
 		<th>Dates</th>
 		<% @daywods.each do |d| %>
 			<th>
-				<%= d.performed %>
+				<%= link_to d.performed,  wod_daywod_path(d.wod_id, d.id) %>
 			</th>
 		<% end %>
 
