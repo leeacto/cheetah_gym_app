@@ -33,7 +33,7 @@
 			<tr>
 				<td><%= a.name %></td>
 				<% @daywods.each do |d| %>
-					<td>
+					<td class = "recd">
 						<% if d.athletes.include?(a) %>
 							<%= d.results.where(:user_id => a.id).first.formatted %>
 						<% else %>

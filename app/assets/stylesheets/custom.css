@@ -18,6 +18,7 @@ img {
 }
 
 .head_foot ul {
+	margin: auto;
 	padding: 3px;
 	border: 1px solid #FFCB3E;
 	background-color: #FFCB3E;
@@ -68,4 +69,8 @@ img {
 
 #wod_index td {
 	border: 1px solid black;
+}
+
+.recd {
+	text-align: center;
 }
