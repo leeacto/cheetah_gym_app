@@ -1,7 +1,12 @@
 <div class="Select Workout" %>
+	<h2 id="select_tab">Select Workout</h2>
+	
 	<%= form_for :wod, :id => "select_wod" do |f| %>
 		<%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
 	<% end %>
-	<%= button_to "New WOD", new_wod_path, :method => 'get' %>
+	<%= button_to "New WOD", new_wod_path, :method => 'get', :id => 'new_wod_button' %>
 
+	<div class="wod_form">
+		<%= render partial: 'wods/wod_fields' %>
+	</div>
 </div>
