@@ -74,3 +74,16 @@ img {
 .recd {
 	text-align: center;
 }
+
+.sign_in_up {
+	border: 2px solid gray;
+	text-align: center;
+	width: 10%;
+	margin: auto;
+	padding: 10px;
+}
+
+.sign_in_up a {
+	text-decoration: none;
+	color: #444;
+}

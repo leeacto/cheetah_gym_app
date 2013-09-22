@@ -1,11 +1,11 @@
 
-	<center>
+	<div class="sign_in_up round">
 		<% if signed_in? %>
-			<%= link_to "Create new WOD", createwod_path, :class => "newwod_button round" %>
+			<%= link_to "Create new WOD", createwod_path %>
 		<% else %>
-			<%= link_to "Sign up now!", signup_path, :class => "signup_botton round" %>
+			<%= link_to "Sign up now!", signup_path %>
 		<% end %>
-	</center>
+	</div>
 
 	<% @daywods.each do |w| %>
 		<% if w.personal == true %>

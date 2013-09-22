@@ -11,6 +11,6 @@ module ApplicationHelper
 	end
 
 	def logo
-		image_tag("cflogo.gif", :alt => "Sample App", :class => "round") 
+		image_tag("cflogo.png", :alt => "Cheetah Crossfit", :class => "round") 
 	end
 end

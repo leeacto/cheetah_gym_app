@@ -1,0 +1,231 @@
+name,desc,wod_type,baserep,seq
+"""AF2"" FOR TIME: 20 Thrusters, 20 SDHP, 20 Chest To Bar, 20 Box Jumps",Time,,WGWG
+"""ANK"" FOR TIME: 1 Block Run, 10 HSPU / Wall Walk, 15 Toes to Bar, 20 Clean and Jerk (115#/75#), 25 Chest to Bar Pullups, 30 Bar Facing Burpees, 35 KB Swings (70/60/40), 40 HR Pushups, 45 Situps, 50 Double Unders, 1000m Row",Time,,Chipper
+"""Annie"" 50-40-30-20-10: Double Unders, Sit ups (anchored)",Time,,MG
+"""Barbara"" 5 Rounds for Time: 20 Pull-ups, 30 Push-ups, 40 Sit-ups, 50 Squats",Time,,GGGG
+"""BODHI ZAUFA""  FOR TIME: 250m Row, 30 Wall Ball, Rest to 4:00, 250m Row, 30 Wall Ball, 30 HR Pushups, 30 KB SDHP (90#/50#), Rest to 12:00, 250m Row, 30 Wall Ball, 30 HR Pushups, 30 KB SDHP (90#/50#), 30 KB Swings (50#/35#), 30 Push Press (115#/75#), Post total times of all 3 heats.",Time,,MWG
+"""Bottom Tabata"" Pushups, Squats, Situps, Ball Slams, *All rest takes place in the active position, 1000 meter Row if 40 reps are not completed.",Reps,1,GGGG
+"""Death by Ring Dips"" 1 ring dip 1st minute, 2 the 2nd, etc.",Reps,1,G
+"""Death by Toes to Bar"" ",Reps,1,G
+"""DT"" FOR TIME: 5 Rounds of: 12 Deadlift, 9 Hang Clean, 6 Push Jerk",Time,,WWW
+"""Elizabeth"" FOR TIME: 21-15-9 Clean 135#, Ring Dips",Time,,WG
+"""Fight Gone Bad""  Three rounds of:, Wall-ball, 20 pound ball, 10 ft target (Reps), Sumo deadlift high-pull, 75 pounds (Reps), Box Jump, 20"" box (Reps), Push-press, 75 pounds (Reps), Row (Calories)",Reps,1,Chipper
+"""FILTHY 50"" For Time: 50 Box jump, 24 inch box, 50 Jumping pull-ups, 50 Kettlebell swings, 1 pood, Walking Lunge, 50 steps, 50 Knees to elbows, 50 Push press, 45 pounds, 50 Stiff-Leg Deadlift 45 pounds, 50 Wall ball shots, 20 pound ball, 50 Burpees, 50 Double unders, (Minus the GHD back extensions after PP on 8.09)",Time,,Chipper
+"""GRACE"" FOR TIME: 30 reps Clean and Jerk 135#, 30 reps",Time,,W
+"""GWEN"" 3 Rounds of 15-12-9 Clean and Jerk (Max Weight)",Weight,1,W
+"""Helen"" FOR TIME: 3 Rounds Run 400 meters, 1.5 pood Kettlebell X 21 swings  (50# / 30#), 12 Pull-ups",Time,,MWG
+"""Helen's Sister"" 3 rounds FOR TIME: Run 400 meters, 1.5 pood Kettlebell X 21 swings  (50# / 35#), 18 Burpees",Time,,MWG
+"""Hope"" Three rounds of:, Burpees, Power Snatch (75#), Box Jump (24""), Thrusters (75#), Chest to Bar Pullups",Reps,1,Chipper
+"""ISABEL"" FOR TIME: 30 reps 135# Snatch ",Time,,W
+"""Jackie"" FOR TIME: 1000 meter Row, 50 Thrusters (45# / 25#), 30 Pull-ups",Time,,MWG
+"""Karabel"" For Time: 10 Rounds 3 Hang Snatch (135#/95#), 15 Wall Ball",Time,,WW
+"""MORRISON"" FOR TIME: 50-40-30-20-10 Wall Ball, Box Jump (24""/18""), KB Swings (50#/35#)",Time,,WGW
+"""Nancy"" 5 Rounds for Time: 400 meter run, 15 OH Squats (95#/65#)",Time,,MW
+"""Nicole"" AMRAP in 20 Min. Run 400 meters, Max rep Pull-ups",Reps,1,MG
+"""THE BEAR"" 5 Rounds of 7 reps Deadlift, Clean, Front Squat, Push Press, Back Squat , Push Press, Touch the floor and repeat.  You cannot , set the bar down once you begin.",Weight,1,W
+"""Toody"" FOR TIME: 2 Rounds 9 Squat Clean to Jerk (155/105), 11 Wall Walks, 70 Situps, 42 Burpees",Time,,WGG
+"""THE CHIEF"" AMRAP in 3 minutes for 5 Sets (1 min breaks) 3 Power Cleans (135#), 6 Push-ups, 9 Squats",Reps,18,WGG
+"21-18-15-12-9-6- and 3 rep rounds of: KB Swing (50#/30#w), Pull-ups",Time,,WG
+"3-3-3 of: OH Squat , Front Squat, Back Squat",Weight,1,WWW
+5 Rounds of Max Reps: BW Bench Press ,Reps,1,W
+"5 Rounds of: 5 DB Deadlift, 5 DB Clean-Squat, 5 DB Push Press, 5 DB Squat",Weight,1,WWW
+"5 rounds of: Max rep Pushups, As few rounds as possible of:, 100 KB Swings (50# / 35#), FOR CALORIES:, Row 5 min",Reps,1,GWM
+"AMRAMP in 7 Minutes: Open 12.1 Burpees (6"" above reach)",Reps,1,G
+"AMRAP in 10min: Row Calories (Even minutes), KB Swings (Odd minutes), Rest 2 minutes:, HR BT Pushups (Even minutes), Situps (Odd minutes)",Reps,1,MWGG
+"AMRAP in 12 min of: 20 Situps, 15 Squats, 10 Burpees",Reps,45,GGG
+"AMRAP in 12 min: 10 Pullups, 10 Pushups, 10 Toes to Bar, 10 Squats",Reps,40,GGGG
+"AMRAP in 12 Min: 15 HR Pushups, 10 Pullups, 5 KB Swings (70#/50#)",Reps,30,GGW
+"AMRAP in 12 Min: 5 Squat Clean Thrusters (135/95), 150m Row, 25 Situps",Reps,180,WMG
+"AMRAP in 12 Min: 5 Thruster (95#/65#), 7 Hang Powercleans, 9 SDHP",Reps,21,WWW
+"AMRAP in 12 minutes: 10 Pullups, 20 Push Press (75# / 55#w), 30 Double Unders",Reps,60,GWM
+"AMRAP in 15 Min: 1 HSPU, 5 Box Jump (24""/18""), 10 BT HR Pushups",Reps,16,GGG
+"AMRAP in 15 min: 20 Wall Ball, 30 Situps",Reps,50,WG
+"AMRAP in 15 Min: 5 Ring Dips, 10 Pullups, 15 Box Jumps (24""/18"")",Reps,30,GGG
+"AMRAP in 15 min: 5 Two for One's, 10 Burpees, 15 KB Swings (50# / 30#)",Reps,30,WGW
+"AMRAP in 15 minutes: 5 L Pullups, 10 Clean & Jerk (95#), 150 m Row",Reps,165,GWM
+"AMRAP in 20 min 25 Pushups, 25 KB Swings 50#",Reps,50,GW
+"AMRAP in 20 Min of: 5 Wall Walks, 10 Toes to Bar, 15 Box Jumps (24""/18"")",Reps,30,GGG
+"AMRAP in 20 Min. of: 5 Clap Pushups, 10 Burpees, 15 Squats",Reps,30,GGG
+"AMRAP in 20 Min: 10 Burpees, 10 Toes to Bar, 10 KB Squat Cleans",Reps,30,GGW
+"AMRAP in 20 min: 10 Deadlift (225#/115#w), 10 Burpees, 10 KB Swings (70#/40#w)",Reps,30,WGW
+"AMRAP in 20 Min: 15 Clean and Jerk (95/65), 400m Run",Reps,415,WM
+"AMRAP in 20 min: 5 Deadlift (225#/155#), 10 Box Jump (26""/20""), 15 KB Swings (50#/35#)",Reps,30,WGW
+"AMRAP in 20 min: 5 Deadlift (BW), 10 Burpees, 15 Wall Ball",Reps,30,WGW
+"AMRAP in 20 min: 5 OH Squat (75# / 55#), 7 Hang Power Snatch, 9 Sumo grip Deadlift",Reps,21,WWW
+"AMRAP in 20 min: 5 Power Clean (145# / 85#), 10 Toes to Bar, 15 Wall Ball (20# / 10#)",Reps,30,WGW
+"AMRAP in 20 Min: 5 Thruster, 7 Hang Powercleans, 9 Sum Deadlift High Pull",Reps,21,WWW
+"AMRAP in 20 minutes Clap Pushups 20 reps, SDHP 95# 10 reps, Run 200 meters",Reps,230,GWM
+"AMRAP in 20 minutes L Pullups 5 reps, Bench Press Bodyweight 10 reps, Double Unders 15 reps",Reps,30,GWM
+"AMRAP in 20 minutes: 10 Pullups, 20 Push Press (75# / 55#w), 30 Double Unders",Reps,60,GWM
+"AMRAP in 20 minutes: 250 meter Row, 25 Pushups",Reps,275,MG
+"AMRAP in 20 minutes: 5 L Pullups, 15 KB Swings (50#/30#w), 30 BT Pushups",Reps,50,GWM
+"AMRAP in 20: 400m Run, 10 Pullups, 20 Wall Ball (20/14)",Reps,430,MGW
+"AMRAP in 7 Min: 10 Wall Ball, 20 Double Unders",Reps,30,WM
+"AMRAP in 7 min: 3-3-6-6-9-9-12-12... Thrusters (100# / 65#w), CTB Pullups",Reps,1,WG
+Back Squat 3 Sets of 5,Weight,1,W
+Burpee Box Jumps for time 100 reps,Time,,G
+Clean and Jerk 3-3-3-3-3,Weight,1,W
+Deadlift 1RM ,Weight,1,W
+Deadlift 2-2-2-2-2-2-2 (rest 60 sec between sets),Weight,1,W
+Deadlift 3x5,Weight,1,W
+Deadlift 5-5-5-5-5,Weight,1,W
+"DEATH BY: Ring Dips, then:, 5 Min AMRAP Situps",Reps,1,GG
+FOR HEIGHT: Box Jumps,Height,1,G
+"FOR REPS: Tabata Double Unders, KB Swings (50/35), HR Pushups, Squats",Reps,1,MWGG
+"FOR TIME 50-40-30-20-10: Double Unders, Push Press (55/35), Sit-ups",Time,,MWG
+"FOR TIME:  1 Lap (50#KB/30#KB), 25 Situps, 5 Ea KB Thrusters (50#/30#), 1 Lap (20#WB/10#WB), 25 Situps, 5 Ea KB Thrusters (50#/30#), 1 Lap (15#KB/10#KB), 25 Situps, 5 Ea KB Thrusters (50#/30#), 1 Lap, 25 Situps, 5 Ea KB Thrusters (50#/30#)",Time,,MGW
+"FOR TIME:  10 Wall Walks, 20 Pushups, 30 KB Swings (70/50), 40 HR Pushups, 50 Squats, 1000m Row",Time,,Chipper
+"FOR TIME:  100 Double Unders, 50 HR Pushups, 40 KB Swings, 30 Burpee Pullups",Time,,Chipper
+"FOR TIME:  100 Double Unders, 75 Situps, 60 Squats, 40 Pushups, 20 Burpees, 10 CTB Pullups",Time,,Chipper
+"FOR TIME:  10-8-6-4-2 Deadlift (245/165), 2-4-6-8-10 Wall Walk, Begin each round with 5 Burpees",Time,,WG
+"FOR TIME:  1500m Row, 3200m Bike (G15), 1600m Run",Time,,M
+"FOR TIME:  400m Run, 21 Front Squat (95#/65#), 21 Toes to Bar, 800m Run, 15 Front Squat , 15 Toes to Bar, 1200m Run, 9 Front Squat, 9 Toes to Bar",Time,,MWG
+"FOR TIME:  50 Double Unders, 21 Deadlifts (225#/135#), 50 Double Unders, 15 Deadlifts, 50 Double Unders, 9 Deadlifts",Time,,MW
+"FOR TIME:  500m Row, 50 Double Unders, 500m Row, 50 Situps, 500m Row, 50 Squats, 500m Row, 50 KB Swings (50/35)",Time,,Chipper
+FOR TIME:  Row 1000m,Time,,M
+FOR TIME:  Row 1500m,Time,,M
+FOR TIME:  Row 5k,Time,,M
+"FOR TIME:  Run 800, 50 Strict Press (45#/30#), 1000m Row",Time,,MWM
+"FOR TIME: ""20's"" Pushups (Clap), Pullups (Kipping), Box Jumps, Pushups (Hands Release), Pullups (Strict), Overhead Squats, Pushups (Switch), Toes to Bar, KB Swings (American)",Time,,Chipper
+"FOR TIME: ""30's"" Push Press, Sit ups, Power Cleans, Box Jumps , 500 meter Row, Starting at the 4 minute mark, do 4 burpees every, minute on the minute.",Time,,Chipper
+"FOR TIME: ""Groundhog Day"" 10 Toes to Bar, 20 KB Swings (70/50/35), 10 Toes to Bar, 20 KB Swings (70/50/35), 30 Box Jumps (24/18), 40 Wall Ball, 10 Toes to Bar, 20 KB Swings (70/50/35), 30 Box Jumps (24/18), 40 Wall Ball, 50 Burpees, 60 Calorie Row",Time,,Chipper
+"FOR TIME: 1 Round Run 800 meters, Row 2000 meters, Run 800 meters",Time,,M
+"FOR TIME: 10 HSPU / 5 Wall Walks, 500m Row",Time,,GM
+"FOR TIME: 10 Wall Walks, 1500m Row, 20 Burpee Box Jumps, 25 KB Swings",Time,,Chipper
+"FOR TIME: 100 Double Unders, 20 Pullups, 40 Ring Pushups, 60 Squats",Time,,MGGG
+"FOR TIME: 100 Squats, 1 mi Run, 50 Squats, 1000m Row, 25 Squats, 400m Run, 250m Row",Time,,Chipper
+"FOR TIME: 100 Squats, 1 mile Run, 50 Squats, 1000m Row, 25 Squats, 400m Run, 250m Row",Time,,GM
+"For Time: 1000 meter Row, 18-15-12-9-6 of:, Pullups, KB Swings (70#-50#/30#w), 1000 meter Row",Time,,MWG
+"FOR TIME: 1000m Row, 50 Wall Ball, 50 Press, 25 Pullups, 25 Burpees, 25 T2B",Time,,Chipper
+"FOR TIME: 10-8-6-4-2 KB Squat Clean (70/40), Toes to Bar, 2 for 1 Wall Ball, Pullups, Burpees",Time,,WGWGG
+"FOR TIME: 10-8-6-4-2 Power Clean, 2-4-6-8-10 HSPU, 5-5-5-5-5  Jerk",Time,,WGW
+"FOR TIME: 12-10-8-6-4-2 Deadlift (185#/135#), Box Jump (24""/18""), BT HR Pushups, KB Squat Clean (50#/40#)",Time,,WGGW
+"FOR TIME: 12-10-8-6-4-2 Ground to Overhead (135#/85#), Weighted Pullups",Time,,WW
+"FOR TIME: 2 Rounds: 15 Man Makers (30# / 20#), 800 meter Run",Time,,WM
+"FOR TIME: 20 minute Cap 20 Cal Row, 25 Toes to Bar, 30 Situps, 35 HR Pushups, 45 Ground to Overhead (35#/20#) from upstairs, 60 Double Unders",Time,,Chipper
+"FOR TIME: 20 Pullups, 30 HR Pushups, 20 Pullups, 30 HR Pushups, 800m Run, 20 Double Unders, 30 Situps, 20 Double Unders, 30 Situps",Time,,MG
+"FOR TIME: 200m Run, 35 Double Unders, 25 Burpees, 15 Thrusters (95#/65#), 400m Run, 30 Double Unders, 20 Burpees, 10 Thrusters, 800m Run, 25 Double Unders, 15 Burpees, 5 Thrusters",Time,,MGW
+"FOR TIME: 21 CTB Pullups, 10 HSPU / 6 Wall Walks, 15 CTB Pullups, 10 HSPU / 6 Wall Walks, 9 CTB Pullups, 10 HSPU / 6 Wall Walks",Time,,GG
+"FOR TIME: 21 Press (95# / 65#), 63 Situps, 15 Press, 45 Situps, 9 Press, 27 Situps",Time,,WG
+"FOR TIME: 21-15-9 400m Run, Front Squat (95# / 65#), Bar Face Burpees",Time,,MWG
+"FOR TIME: 21-15-9 500m Row, KB Swings (70#/40#), Clap Pushups, 800m Run",Time,,MWG
+"FOR TIME: 21-15-9 Box Jumps (24/18), Pull-ups, HR BT Pushups",Time,,GGG
+"FOR TIME: 21-15-9 BT HR Pushups, SDHP (95#)",Time,,GW
+"FOR TIME: 21-15-9 Clean (135#/95#), Burpee Box Jump",Time,,WG
+"FOR TIME: 21-15-9 Clean (135#/95#), Burpee Box Jump (24""/18"")",Time,,WG
+"FOR TIME: 21-15-9 Deadlift (225#/135#), 600m Run",Time,,WM
+"FOR TIME: 21-15-9 Deadlift (225#/185#/105#), Box Jumps (30""/24""/18"")",Time,,WG
+"FOR TIME: 21-15-9 Deadlift (225/165), Thruster (95/65)",Time,,WW
+"FOR TIME: 21-15-9 Deadlift , 1 Block Run",Time,,WM
+"FOR TIME: 21-15-9 Double Unders, KB Squat / Press",Time,,MW
+"FOR TIME: 21-15-9 Front Squat (135# / 85#), Row 250-500-750 meters",Time,,WM
+"FOR TIME: 21-15-9 Front Squat (60% 1RM), Row 250",Time,,WM
+"FOR TIME: 21-15-9 Front Squat (95# / 65#), 250 meter Row , Burpees",Time,,WMG
+"FOR TIME: 21-15-9 of Squat Clean, Clap Pushups, Sit-ups (un), KB Swings",Time,,WGGW
+"FOR TIME: 21-15-9 OH Squat (95# / 65#), 400m Run (20#/10# Wall Ball)",Time,,WM
+"FOR TIME: 21-15-9 Push Press (115# / 95# / 65#w), Row 250-500-750 meters",Time,,WM
+"FOR TIME: 21-15-9 Push-Press 135#, Row 500 meters",Time,,WM
+"FOR TIME: 21-15-9 Row 500 meters, Push Press 115#/75#",Time,,MW
+"FOR TIME: 21-15-9 SDHP 95# / 65#, Row 500 meters",Time,,WM
+"FOR TIME: 21-15-9 Shoulder Press (115# / 95# / 65#w), Row 250-500-750 meters",Time,,WM
+"FOR TIME: 21-15-9 Thruster (95#/65#), Bar Burpees, Lap",Time,,WGM
+"FOR TIME: 21-15-9 Thrusters 115# / 75#, KB Swings 70# / 40#",Time,,WW
+"FOR TIME: 21-18-15-12-9-6-3 of: KB Swings (50#/25#), Pullups, HR Pushups",Time,,WGG
+"FOR TIME: 21-18-15-12-9-6-3 Wall Ball, Burpee K2E",Time,,WG
+"FOR TIME: 25 Burpees, 50 Situps, 500 meter Row, 20 Burpees, 40 Situps, 300 meter Row, 15 Burpees, 30 Situps, 200 meter Row, 10 Burpees, 20 Situps, 100 meter Row",Time,,GGM
+"FOR TIME: 25 Double Unders, 750m Row, 50 Double Unders, 500m Row, 75 Double Unders, 250m Row",Time,,MM
+"FOR TIME: 3 Rounds 25 Wall Ball, 12 Burpees",Time,,WG
+"FOR TIME: 3 Rounds 400 m Run, 20 Pullups, 15 BT HR Pushups, 10  Wall Ball, 5 Burpees",Time,,MGGWG
+"FOR TIME: 3 Rounds 400m Run, 15 Ring Pushup, 15 Barbell Rows (85#/60#)",Time,,MGW
+"FOR TIME: 3 ROUNDS 5 Wall Walks, 7 Toes to Bar, 10 Deadlift, 12 Pullups, 150m Row",Time,,Chipper
+"FOR TIME: 3 Rounds 500 m Row, 15 Deadlift (225# / 185# / 135#)",Time,,MW
+"FOR TIME: 3 Rounds 500m Row, 25 Box  Jumps (24""/18"")",Time,,MG
+"FOR TIME: 3 Rounds 7 1-arm KB Push Press (50#/30#), 10 OH Squats, 800m Run",Time,,WGM
+"FOR TIME: 3 Rounds 9 HSPU / Wall Walks, 25 Wall Ball, 19 T2B, 26 Burpees",Time,,Chipper
+"FOR TIME: 3 Rounds EACH: 7 Front Squats (165/125/95), 15 Box Jump (24/18/15)",Time,,WG
+"FOR TIME: 3 Rounds Row 200m, 10 Deadlift (225#/135#), 20 Pushups, Run 400m ",Time,,MWG
+"FOR TIME: 3 Rounds: 33 Pushups (Hands Release), 44 Situps (Unanchored), 550 meter Row",Time,,GGM
+"FOR TIME: 30 Burpees, 10 Box Jump, 20 Burpees, 20 Box Jump, 10 Burpees, 30 Box Jump",Time,,GG
+"FOR TIME: 30 OH Squats (95/65), 400m Run, 50 KB Swings (50/35), 800m Run, 70 Situps, 1200m Run",Time,,Chipper
+"FOR TIME: 30-20-10 Power Snatch (95#/65#), HR Pushups, 250m Row",Time,,WGM
+"FOR TIME: 35-25-15 Push Press (35), Situps, Goblet Squat (15)",Time,,WGW
+"FOR TIME: 4 Rounds 10 Bench Press, 25 Situps, 50 Double Unders",Time,,WGM
+"FOR TIME: 4 Rounds 25 Front Squat (95/65), 400m Run",Time,,WM
+"FOR TIME: 4 Rounds 50 Double Unders, 15 KB Swings (70#/45#), 250m Row",Time,,GWM
+"FOR TIME: 4 Rounds Run 400 meters, Row 500 meters",Time,,M
+"FOR TIME: 4 Rounds, rest 3 min between 5 Squat Cleans (95#/65#), 10 Russian KBS (70#/50#), 10 Pullups",Time,,WWG
+"FOR TIME: 5 Rounds 10 Bench Press, 30 Situps, 50 Double Unders",Time,,WGM
+"FOR TIME: 5 Rounds 10 Deadlifts (225/165), 10 Burpees, 10 Knees to Elbows",Time,,WGG
+"FOR TIME: 5 Rounds 10 Front Squat (135/95), 20 Bosu Situps, 250m Row",Time,,WGM
+"FOR TIME: 5 Rounds 10 reps Bodyweight Bench Press , 500 meter Row , 10 Pullups",Time,,WMG
+"FOR TIME: 5 Rounds 1000m Row (Buy-in), 10 Deadlift (225/155), 15 Toes to Bar, 20 Squats, 400m Run",Time,,MWGGM
+"FOR TIME: 5 Rounds 1000m Row (Buy-in), 20 KB Swings (50/35), 30 HR Pushups, 40 Situps",Time,,WGG
+"FOR TIME: 5 Rounds 1000m Row, 20 KB Swings (50/35), 30 HR Pushups, 40 Situps",Time,,MWGG
+"FOR TIME: 5 Rounds 135 lb Thruster, 10 reps, 50-40-30-20-10 Double-unders",Time,,WM
+"FOR TIME: 5 Rounds 20 KB Swings (70# / 40#), 300 meter Row",Time,,WM
+"FOR TIME: 5 Rounds 20 Wall Ball (20# / 10#w), 6 Clean Jerk (135# / 85#)",Time,,WW
+"FOR TIME: 5 Rounds 400 meter run, 12 Deadlift (225/155)",Time,,MW
+"FOR TIME: 5 Rounds 400m Run, 20 KB Swings, 5 HSPU / WW",Time,,MWG
+"FOR TIME: 5 Rounds 400m Run, 20 Wall Ball (20/14), 15 HR Pushups, 10 Knee to Elbow",Time,,MWGG
+"FOR TIME: 5 Rounds 5 Clean Thrusters (155#/105#), 10 CTB Pullups, .15 mi Run",Time,,WGM
+"FOR TIME: 5 Rounds 5 HSPU or Wall Walks, 10 CTB Pullups",Time,,GG
+"FOR TIME: 5 Rounds 5 OH Squats (95#/65#), 10 Pullups, 15 Burpees",Time,,WGG
+"FOR TIME: 5 Rounds 5 Push Press, 20 Situps, 40 Double Unders",Time,,WGM
+"FOR TIME: 5 Rounds 5 Two for One's, 10 Burpees, 15 KB Swings (50# / 30#)",Time,,WGW
+"FOR TIME: 5 Rounds 50 Double Unders, 10 Clean & Jerk (115#)",Time,,MW
+"FOR TIME: 5 Rounds 6 Push Jerk (155#), 9 Deadlift (155#), 12 Box Jumps (24"")",Time,,WWG
+"FOR TIME: 5 ROUNDS 7 Deadlifts (225# / 135#), 15 Burpees",Time,,WG
+"FOR TIME: 5 Rounds 750m Row, THEN:, 20 wall Ball, 20 HR Pushups, 1 Lap (25# / 10#)",Time,,WGM
+"FOR TIME: 5 Rounds Row 250, 15 SDHP, 10 Toes To Bar",Time,,MWG
+"FOR TIME: 5 Rounds Run 400 meters, 10 OHS (95# / 45#), 12 Burpees",Time,,MGW
+"FOR TIME: 5 Rounds Run 400 meters, 10 Pullups, 20 Wall Ball",Time,,MGW
+"For Time: 5 Rounds Run 400 meters, 12 Pullups, 10 Power Cleans (from floor) 115# / 75#",Time,,MGW
+"FOR TIME: 5 Rounds: 10 Deadlift (225#/155#), 50 Double Unders",Time,,WM
+"FOR TIME: 5 Rounds: 10-10-10-10-10 OH Squats (95# / 75# / 55#w), 50-40-30-20-10 Double Unders",Time,,WM
+"FOR TIME: 5 Sumo Deadlift High Pull (95# / 65#), 10 Front Squat (95# / 65#)",Time,,WW
+"FOR TIME: 50-40-30-20-10 of: Push ups, Sit ups (unanchored)",Time,,GG
+FOR TIME: 60 Thursters @ 50% 1 RM,Time,,W
+"FOR TIME: 7 Rounds ""Coe"" / 3 Rounds ""Cindy"" 10 Thrusters (95/65), 10 Ring Pushups",Time,,WG
+"FOR TIME: 7 Rounds 10 Box Jumps (24"" / 18""), 12 Burpees",Time,,GG
+"FOR TIME: 7 Rounds 10 Wall Ball, 20 Double Unders",Time,,WM
+"FOR TIME: 7 Rounds 20 HR Clap Pushups, 20 KB SDHP (70#/40#)",Time,,GW
+"FOR TIME: 7 Rounds: 250 m Row, 15 Wall-ball, 7 Burpees",Time,,MWG
+FOR TIME: Row 2K,Time,,M
+"FOR TIME: Run 800 meters, 10 sets of 10 Pushups, rest 20 sec between, Run 800 meters",Time,,MGM
+"FOR TIME: Tabata Row, Tabata Run",Reps,,MM
+"FOR WEIGHT: 3-3-3 Front Squat, 3-3-3 Back Squat",Weight,1,WW
+Front Squat 1 RM ,Weight,1,W
+Overhead Squat 3-3-3-3,Weight,1,W
+Push Press 3-3-3-3-3,Weight,1,W
+"REGIONAL WOD 1: 1000m Run, 30 HSPU, 1000m Row",Time,,MGM
+Shoulder Press 10-10-10-10-10,Weight,1,W
+"Snatch 1-1-1-1-1, 5 Min Burpee AMRAP",Reps,1,W
+Squat-Clean 5-4-3-2-1,Weight,1,W
+Squat-Clean 5-5-5-5-5,Weight,1,W
+"TABATA: 4 Rounds each of: Pushups, Situps, Double Unders",Reps,1,GGG
+Thrusters 1-1-1-1-1-1-1,Weight,1,W
+"AMRAP in 20 Minutes: 15 HR Pushups, 15 Wall Ball (20/14), 150m Run (Damen stoplight)",Reps,45,GWM
+"FOR TIME: 21-15-9 Chest to bar Pullups (10#Vest), Clean 135#",Time,,GW
+"""KELLY"" FOR TIME: 5 Rounds 400m Run, 30 Box Jumps (24""/18""), 30 Wall Ball",Time,,MGW
+"FOR TIME: 225 pound Deadlift, 21 reps, Run 800 meters, 225 pound Deadlift, 15 reps, Run 800 meters, 225 pound Deadlift, 9 reps, Run 800 meters",Time,,WM
+"""Fran"" FOR TIME: 3 Rounds of 21-15-9 95 # Barbell Thrusters, Pull-ups",Time,,WG
+"FOR TIME: 5 Rounds 20 HR Pushups, 50 Double Unders, 10 Thrusters (95/65)",Time,,GMW
+"FOR TIME: AMRAP in 5 Min:, 100m Row, 10 Burpees, Rest 1 Min, AMRAP in 5 Min:, 50 Double Unders, 5 Toes to Bar, Rest 1 Min, AMRAP in 5 Min:, Wall Balls",Reps,,Chipper
+"FOR TIME: 3 Rounds 400m Run, 10 OH Squats (95#/65#), 50 Double Unders",Time,,MWG
+"FOR TIME: 3 Rounds 10 Push Press (135/95), 20 Wall Ball (20/14)",Time,,WW
+"FOR TIME: 30-20-10 Snatch (95#), Hand Release Pushups, 250 meter Row",Time,,WGM
+"FOR TIME: 3 Rounds EACH: 7 Front Squats (165/125/95), 15 Box Jump (24/18/15), 15 KB Swings (70/50/35), 30 Situps",Time,,WG
+"""Angie"" For Time: 100 Pull-ups, 100 Push-ups, 100 Sit-ups, 100 Squats",Time,,GGGG
+"""Cindy"" AMRAP in 20 Min. of: 5 Pull-ups, 10 Push-ups, 15 Squats",Reps,30,GGG
+"""Murph"" For Time: 1 mile Run, 100 Pull-ups, 200 Push-ups, 300 Squats, 1 mile Run",Time,,MGM
+"FOR TIME: Run 800 meters, 75 Double Unders, Run 400 meters, 75 Double Unders, Run 200 meters, 75 Double Unders",Time,,MM
+"FOR TIME: 7 Rounds Run to Damen, 10 Toes to Bar, 10 Box Jumps, 10 Pullups",Time,,MGGG
+"""Nasty Girls"" 3 Rounds for Time: 50 Squats, 7 Muscle-ups, 135 pound Hang power cleans, 10 reps",Time,,GGW
+"FOR TIME: 4 Rounds 250m Row, 15 Wall Ball, 25 BT Pushups, 35 Sit Ups (anchored)",Time,,MWGG
+"FOR TIME: 3 Rounds 400 m Run, 10 L Pullups, 15 Burpees, 20 KB Swings (70# / 35#), 25 Situps",Time,,MGGWG
+"FOR TIME: 3 Rounds 5 OH Squats, 10 Pullups, 15 Front Squat, 20 Burpees",Time,,WGWG
+"FOR TIME: 3 Rounds 21 KB Thrusters (40# / 25#), 21 Pullups, 21 Burpees, 400m Run",Time,,WGGM
+"FOR TIME: 10-9-8-7-6-5-4-3-2-1 Thrusters (95#/65#), Situps, Goblet Squats (50#/35#), Burpees, Pullups",Time,,WGWGG
+"FOR TIME:  1000m Row, 100 Double Unders, 50 Situps, 800m Run, 25 Burpee K2E",Time,,Chipper
+"FOR TIME:  100 Squats, 75 Situps, 50 HR BT Pushups, 25 KB Swings (50#/35#), 1000m Row",Time,,Chipper
+"FOR TIME: 7 Rounds ""Coe"" / 3 Rounds ""Cindy"" 10 Thrusters (95/65), 10 Ring Pushups, 5 Pullups, 10 Pushups, 15 Squats",Time,,Chipper
