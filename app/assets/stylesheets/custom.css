@@ -87,3 +87,28 @@ img {
 	text-decoration: none;
 	color: #444;
 }
+
+.flash {
+	border: 1px solid black;
+}
+
+.success {
+	color: green;
+}
+
+.error {
+	color: red;
+}
+
+.profile {
+	width: 100%;
+}
+
+.sidebar {
+	border: 1px solid #808390;
+	float: right;
+}
+
+.select_wod {
+	width: 50px;
+}

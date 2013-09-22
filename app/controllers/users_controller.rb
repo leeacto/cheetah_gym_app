@@ -54,6 +54,11 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def wods
+    @user = User.find(current_user.id)
+    @wods = @user.wods.uniq
+  end
+
   private
     def authenticate
       deny_access unless signed_in?

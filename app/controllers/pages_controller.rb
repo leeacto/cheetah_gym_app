@@ -15,4 +15,9 @@ class PagesController < ApplicationController
   def help
   	@title = "Help"
   end
+
+  def create_workout
+    @wods = Wod.all
+
+  end
 end

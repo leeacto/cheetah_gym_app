@@ -2,6 +2,7 @@
 	<div class="sign_in_up round">
 		<% if signed_in? %>
 			<%= link_to "Create new WOD", createwod_path %>
+			<%= link_to "Log a Workout", newworkout_path %>
 		<% else %>
 			<%= link_to "Sign up now!", signup_path %>
 		<% end %>

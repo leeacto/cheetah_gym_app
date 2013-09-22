@@ -6,14 +6,19 @@
 			</h1>
 		</td>
 		<td class="sidebar round">
-			<strong>Name</strong> <%= @user.name %><br />
-			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+			<strong>Workouts Completed </strong><%= @results.count %><br>
 			<strong>Admin</strong>
-			<% if @user.admin == true %>True<% else %> False <% end %>
+			<% if @user.admin %>True<% else %> False <% end %>
 		</td>
   </tr>
 </table>
-<%= @results.count %> Workouts Completed
+
+<ul class="my_wods_index">
+	<li>
+		<%= link_to "My WODs", mywods_path %>
+	</li>
+</ul>
+
 <table>
 	<tr>
 		<th>Date</th>

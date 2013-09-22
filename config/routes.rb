@@ -42,6 +42,8 @@ CheetahGymApp::Application.routes.draw do
   match '/createwod', :to => 'wods#new'
   match '/wodlist', :to => 'wods#index'
   match '/athletes', :to => 'users#index'
+  match '/mywods', :to => 'users#wods'
+  match '/newworkout', :to => 'pages#create_workout'
   root :to => 'pages#home'
 
 

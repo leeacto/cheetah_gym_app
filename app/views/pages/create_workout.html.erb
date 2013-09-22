@@ -1,0 +1,7 @@
+<div class="Select Workout" %>
+	<%= form_for :wod, :id => "select_wod" do |f| %>
+		<%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
+	<% end %>
+	<%= button_to "New WOD", new_wod_path, :method => 'get' %>
+
+</div>
