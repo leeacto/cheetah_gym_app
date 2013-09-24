@@ -18,6 +18,6 @@ class PagesController < ApplicationController
 
   def create_workout
     @wods = Wod.all
-
   end
+  
 end

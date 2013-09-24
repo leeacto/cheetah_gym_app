@@ -4,6 +4,7 @@ CheetahGymApp::Application.routes.draw do
   get "results/destroy"
 
   get "results/edit"
+  
   get "results/show"
 
   get "daywods/new"
@@ -24,6 +25,7 @@ CheetahGymApp::Application.routes.draw do
 
   get "users/new"
 
+  resources :daywods
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :wods do

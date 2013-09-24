@@ -7,6 +7,7 @@ img {
 	margin: auto;
 }
 
+
 .round {
 	border-radius: 5px;
 }
@@ -34,6 +35,10 @@ img {
 .head_foot li a {
 	color: #231F20;
 	text-decoration: none;
+}
+
+footer {
+	text-align: center;
 }
 
 .middle {
@@ -111,4 +116,31 @@ img {
 
 .select_wod {
 	width: 50px;
+}
+
+.hidden {
+	display: none;
+}
+
+.recd_workout_tabs {
+	margin: auto;
+	width: 300px;
+}
+
+#select_tab {
+	border: 2px solid #FFCB3E;
+	text-align: center;
+	margin: 2px 0 2px 0;
+}
+
+#results_tab {
+	border: 2px solid #FFCB3E;
+	text-align: center;
+	margin: 2px 0 2px 0;
+}
+
+#daywod_tab {
+	border: 2px solid #FFCB3E;
+	text-align: center;
+	margin: 2px 0 2px 0;
 }
