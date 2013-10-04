@@ -1,18 +1,18 @@
 <h1><%= link_to @wod.name, @wod %> - <%= @daywod.performed %></h1>
-	<table border="1">
-			<tr>
-				<th>Description</th>
-				<td><%= @wod.desc %>
-			</tr>	
-			<tr>
-				<th>Sequence</th>
-				<td><%= @wod.seq %>
-			</tr>	
-			<tr>
-				<th>Type</th>
-				<td><%= @wod.wod_type %>
-			</tr>	
-	</table>
+  <table border="1">
+      <tr>
+        <th>Description</th>
+        <td><%= @wod.desc %>
+      </tr>  
+      <tr>
+        <th>Sequence</th>
+        <td><%= @wod.seq %>
+      </tr>  
+      <tr>
+        <th>Type</th>
+        <td><%= @wod.wod_type %>
+      </tr>  
+  </table>
 
 <strong><p>Results</p></strong>
 
@@ -21,19 +21,19 @@
 <% end %>
 
 <% unless @daywod.results.empty? %>
-	<table class="results" summary="Daywod Results">
-			<tr>
-				<th>Athlete</th>
-				<% if @wod.wod_type == "Time" %>
-					<th>Time</th>
-				<% else %>
-					<th>Result</th>
-				<% end %>
-				
-				<th>Rx</th>
-				<th>Notes</th>
-			</tr>
-			<%= render @results %>
-	</table>
-	<%= will_paginate @results %>
+  <table class="results" summary="Daywod Results">
+      <tr>
+        <th>Athlete</th>
+        <% if @wod.wod_type == "Time" %>
+          <th>Time</th>
+        <% else %>
+          <th>Result</th>
+        <% end %>
+        
+        <th>Rx</th>
+        <th>Notes</th>
+      </tr>
+      <%= render @results %>
+  </table>
+  <%= will_paginate @results %>
 <% end %>

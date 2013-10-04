@@ -1,15 +1,15 @@
 <%= form_for @daywod, :url => wod_daywod_path, :html => { :class => "wod_daywod" } do |f| %>
-	<div class="field">
-		<%= f.label :performed, "WOD Date" %>
-		<%= f.date_select :performed %> 
-	</div>
-	
-	<div class="field">
-		<%= f.label :personal, "Personal" %>
-		<%= f.check_box :personal %> 
-	</div>
+  <div class="field">
+    <%= f.label :performed, "WOD Date" %>
+    <%= f.date_select :performed %> 
+  </div>
+  
+  <div class="field">
+    <%= f.label :personal, "Personal" %>
+    <%= f.check_box :personal %> 
+  </div>
 
-	<div class="actions">
-		<%= f.submit "Edit Daily WOD" %> 
-	</div>
+  <div class="actions">
+    <%= f.submit "Edit Daily WOD" %> 
+  </div>
 <% end %>

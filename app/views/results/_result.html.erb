@@ -1,16 +1,16 @@
 
 <tr>
-	<td><%= link_to result.user.name, edit_wod_daywod_result_path(result.wod.id, result.daywod_id, result.id)  %></td>
-	<td>
-		<%= result.formatted %>
-	</td>
-	<td>
-		<% if result.rx  == true %>
-			Yes
-		<% else %>
-			No
-		<% end %>
-	</td>
-	<td><%= result.note %></td>
+  <td><%= link_to result.user.name, edit_wod_daywod_result_path(result.wod.id, result.daywod_id, result.id)  %></td>
+  <td>
+    <%= result.formatted %>
+  </td>
+  <td>
+    <% if result.rx  == true %>
+      Yes
+    <% else %>
+      No
+    <% end %>
+  </td>
+  <td><%= result.note %></td>
 </tr>
-	
+  

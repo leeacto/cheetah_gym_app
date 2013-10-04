@@ -1,31 +1,31 @@
 <table class="profile" summary="Profile information"> 
-	<tr>
-		<td class="main"> 
-			<h1>
-				<%= @user.name %> 
-			</h1>
-		</td>
-		<td class="sidebar round">
-			<strong>Workouts Completed </strong><%= @results.count %><br>
-			<strong>Admin</strong>
-			<% if @user.admin %>True<% else %> False <% end %>
-		</td>
+  <tr>
+    <td class="main"> 
+      <h1>
+        <%= @user.name %> 
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Workouts Completed </strong><%= @results.count %><br>
+      <strong>Admin</strong>
+      <% if @user.admin %>True<% else %> False <% end %>
+    </td>
   </tr>
 </table>
 
 <ul class="my_wods_index">
-	<li>
-		<%= link_to "My WODs", mywods_path %>
-	</li>
+  <li>
+    <%= link_to "My WODs", mywods_path %>
+  </li>
 </ul>
 
 <table>
-	<tr>
-		<th>Date</th>
-		<th>WOD</th>
-		<th>Result</th>
-		<th>Rx</th>
-		<th>Notes</th>
-	</tr>
-	<%= render :partial => "results/uresult", :collection => @results, :as => :result %>
+  <tr>
+    <th>Date</th>
+    <th>WOD</th>
+    <th>Result</th>
+    <th>Rx</th>
+    <th>Notes</th>
+  </tr>
+  <%= render :partial => "results/uresult", :collection => @results, :as => :result %>
 </table>

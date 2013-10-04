@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   before_filter :admin_user, :only => :destroy
 
   def new
-  	@title = "Sign up"
-  	@user = User.new
+    @title = "Sign up"
+    @user = User.new
   end
 
   def index
@@ -15,22 +15,22 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(params[:id])
-  	@title = @user.name
+    @user = User.find(params[:id])
+    @title = @user.name
     @results = Result.where("user_id = ?", params[:id]).order("rx DESC, recd ASC")
   end
 
   def create
-  	@user = User.new(params[:user])
-  	if @user.save
+    @user = User.new(params[:user])
+    if @user.save
       sign_in @user
       flash[:success] = "Welcome to Cheetah Crossfit!"
-  		redirect_to @user
-  	else
-  		@title = "Sign up"
+      redirect_to @user
+    else
+      @title = "Sign up"
       @user.password = ""
-  		render 'new'
-  	end
+      render 'new'
+    end
   end
 
   def edit

@@ -1,11 +1,11 @@
 class ResultsController < ApplicationController
 
   def new
-  	@title = "WOD Result"
-  	@wod = Wod.find(params[:wod_id])
-  	@daywod = Daywod.find(params[:daywod_id])
+    @title = "WOD Result"
+    @wod = Wod.find(params[:wod_id])
+    @daywod = Daywod.find(params[:daywod_id])
     @cuser = current_user
-  	@result = @daywod.results.new
+    @result = @daywod.results.new
   end
 
   def destroy

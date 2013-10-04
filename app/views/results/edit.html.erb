@@ -3,24 +3,24 @@
 <h2>Athlete</h2> <%= User.find(@result.user_id).name %>
 
 <%= form_for @result, :url => wod_daywod_result_path, :html => { :class => "wod_daywod_result" }  do |f| %> 
-		<%= render 'shared/error_messages', :object => f.object %>
-		
-		<div class="field">
-			<%= f.label "Result" %><br />
-			<%= f.number_field :recd %> 
-		</div>
+    <%= render 'shared/error_messages', :object => f.object %>
+    
+    <div class="field">
+      <%= f.label "Result" %><br />
+      <%= f.number_field :recd %> 
+    </div>
 
-		<div class="field">
-			<%= f.label "Rx" %><br />
-			<%= f.check_box :rx %> 
-		</div>
+    <div class="field">
+      <%= f.label "Rx" %><br />
+      <%= f.check_box :rx %> 
+    </div>
 
-		<div class="field">
-			<%= f.label "Note" %><br />
-			<%= f.text_area :note, :size => "1x1" %>
-		</div>
-		
-		<div class="actions">
-			<%= f.submit "Update" %> 
-		</div>
+    <div class="field">
+      <%= f.label "Note" %><br />
+      <%= f.text_area :note, :size => "1x1" %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit "Update" %> 
+    </div>
 <% end %>

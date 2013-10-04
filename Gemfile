@@ -9,18 +9,18 @@ gem 'rails_12factor'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-	gem 'sqlite3' 
+  gem 'sqlite3' 
 end
 
 group :development do
-	gem 'rspec-rails', '2.10.1'
-	gem 'faker', '0.3.1'
+  gem 'rspec-rails', '2.10.1'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
-	gem 'rspec', '2.10.0' 
-	gem 'webrat', '0.7.1'
-	gem 'factory_girl_rails'
+  gem 'rspec', '2.10.0' 
+  gem 'webrat', '0.7.1'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required

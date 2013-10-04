@@ -28,7 +28,7 @@ class Result < ActiveRecord::Base
       if current_user.signed_in? == true then
         return nil
       else
-    	  return nil if :user_id != current_user.id && current_user.admin == false
-    	end
+        return nil if :user_id != current_user.id && current_user.admin == false
+      end
     end
 end

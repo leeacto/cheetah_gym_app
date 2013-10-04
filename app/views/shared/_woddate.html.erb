@@ -1,10 +1,10 @@
 <%= form_for(@wod) do |f| %> 
-	<div class="field">
-		<%= f.label "WOD Date" %>
-		<%= f.date_select :performed %> 
-	</div>
-	
-	<div class="actions">
-		<%= f.submit "Create Daily WOD" %> 
-	</div>
+  <div class="field">
+    <%= f.label "WOD Date" %>
+    <%= f.date_select :performed %> 
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Create Daily WOD" %> 
+  </div>
 <% end %>

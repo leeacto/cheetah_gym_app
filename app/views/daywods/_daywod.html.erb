@@ -1,13 +1,13 @@
 
 <tr>
-	<td class="daywod">
-		<td><%= link_to daywod.performed, wod_daywod_path(daywod.wod_id, daywod.id) %></td>
-		<td><% if daywod.personal == true %><%else%><center>Yes</center><%end%></td>
-		<td><%= link_to "Edit", edit_wod_daywod_path(daywod.wod_id, daywod.id) %></td>
-		<td>
-			<%= link_to "Delete", wod_daywod_path(@wod, daywod), :method => :delete,
-																													:confirm => "You sure??",
-																													:title => daywod.performed %>
-		</td> 
-	</td> 
+  <td class="daywod">
+    <td><%= link_to daywod.performed, wod_daywod_path(daywod.wod_id, daywod.id) %></td>
+    <td><% if daywod.personal == true %><%else%><center>Yes</center><%end%></td>
+    <td><%= link_to "Edit", edit_wod_daywod_path(daywod.wod_id, daywod.id) %></td>
+    <td>
+      <%= link_to "Delete", wod_daywod_path(@wod, daywod), :method => :delete,
+                                                          :confirm => "You sure??",
+                                                          :title => daywod.performed %>
+    </td> 
+  </td> 
 </tr>

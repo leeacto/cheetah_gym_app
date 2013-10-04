@@ -14,34 +14,34 @@
 <p>
 
 <% unless @wod.daywods.empty? %>
-	<table class="daywods" summary="Wod daywods">
-			<td>
-			<th>Dates Performed</th>
-			<th><center>Gym WOD</center></th></td>
-		<%= render @daywods %>
-	</table>
+  <table class="daywods" summary="Wod daywods">
+      <td>
+      <th>Dates Performed</th>
+      <th><center>Gym WOD</center></th></td>
+    <%= render @daywods %>
+  </table>
 
-	<table id="ath_results">
-		<th>Dates</th>
-		<% @daywods.each do |d| %>
-			<th>
-				<%= link_to d.performed,  wod_daywod_path(d.wod_id, d.id) %>
-			</th>
-		<% end %>
+  <table id="ath_results">
+    <th>Dates</th>
+    <% @daywods.each do |d| %>
+      <th>
+        <%= link_to d.performed,  wod_daywod_path(d.wod_id, d.id) %>
+      </th>
+    <% end %>
 
-		<% @athletes.each do |a| %>
-			<tr>
-				<td><%= a.name %></td>
-				<% @daywods.each do |d| %>
-					<td class = "recd">
-						<% if d.athletes.include?(a) %>
-							<%= d.results.where(:user_id => a.id).first.formatted %>
-						<% else %>
+    <% @athletes.each do |a| %>
+      <tr>
+        <td><%= a.name %></td>
+        <% @daywods.each do |d| %>
+          <td class = "recd">
+            <% if d.athletes.include?(a) %>
+              <%= d.results.where(:user_id => a.id).first.formatted %>
+            <% else %>
 
-						<% end %>
-					</td>
-				<% end %>
-			</tr>
-		<% end %>
-	</table>
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
 <% end %>

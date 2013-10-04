@@ -1,37 +1,37 @@
 <h1> Create New WOD </h1>
 
 <%= form_for @wod do |f| %> 
-	<%= render 'shared/error_messages', :object => f.object %>
-	
-	<div class="field">
-		<%= f.label "WOD Name" %><br />
-		<%= f.text_field :name %> 
-	</div>
-	<div class="field">
-		<%= f.label "Description" %><br /> 
-		<%= f.text_area :desc, :size => "30x5" %>
-	</div>
-	<div class="field">
-		<%= f.label "Workout" %> for <br />
-		<%= f.radio_button :wod_type, 'Time', :checked => true %> 
-			<%= label :wod_type_time, 'Time' %>
-			<%= f.radio_button :wod_type, 'Reps' %>
-			<%= label :wod_type_reps, 'Reps' %>
-			<%= f.radio_button :wod_type, 'Weight' %>
-			<%= label :wod_type_weight, 'Weight' %>
-			<%= f.radio_button :wod_type, 'Other' %>
-			<%= label :wod_type_other, 'Other' %>
-	</div>
-	<div class="field">
-		<%= f.label "Sequence" %> Ex. WG, GG, Chipper, etc.<br /> 
-		<%= f.text_field :seq %>
-	</div>
-	<div class="field">
-		<%= f.label "Reps in Round" %> (1 for everything but For Reps WOD)<br /> 
-		<%= f.number_field :baserep, :min => 0, :value => 0 %>
-	</div>
+  <%= render 'shared/error_messages', :object => f.object %>
+  
+  <div class="field">
+    <%= f.label "WOD Name" %><br />
+    <%= f.text_field :name %> 
+  </div>
+  <div class="field">
+    <%= f.label "Description" %><br /> 
+    <%= f.text_area :desc, :size => "30x5" %>
+  </div>
+  <div class="field">
+    <%= f.label "Workout" %> for <br />
+    <%= f.radio_button :wod_type, 'Time', :checked => true %> 
+      <%= label :wod_type_time, 'Time' %>
+      <%= f.radio_button :wod_type, 'Reps' %>
+      <%= label :wod_type_reps, 'Reps' %>
+      <%= f.radio_button :wod_type, 'Weight' %>
+      <%= label :wod_type_weight, 'Weight' %>
+      <%= f.radio_button :wod_type, 'Other' %>
+      <%= label :wod_type_other, 'Other' %>
+  </div>
+  <div class="field">
+    <%= f.label "Sequence" %> Ex. WG, GG, Chipper, etc.<br /> 
+    <%= f.text_field :seq %>
+  </div>
+  <div class="field">
+    <%= f.label "Reps in Round" %> (1 for everything but For Reps WOD)<br /> 
+    <%= f.number_field :baserep, :min => 0, :value => 0 %>
+  </div>
 
-	<div class="actions">
-		<%= f.submit "Create WOD" %> 
-	</div>
+  <div class="actions">
+    <%= f.submit "Create WOD" %> 
+  </div>
 <% end %>

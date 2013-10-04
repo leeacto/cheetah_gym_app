@@ -1,37 +1,37 @@
 <tr>
-	<% #Date performed %>
-	<td><%= Daywod.find(result.daywod_id).performed %></td>
-	<% #Wod Name %>
-	<td><%= Wod.find(Daywod.find(result.daywod_id).wod_id).name %></td>
-	<% #Wod Result %>
-	<% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type == "Time" %>
-		<td>
-			<%= (result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i %>:
-			<% if (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i < 10 %>
-				0
-			<% end %>
-			<%= (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i %>
-		</td>
-	<% else %>
-		<td>
-			<%= (result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i %>
-			<% if (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i > 0 %>
-				+
-				<%= (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i %>
-			<% end %>
-		</td>
-	<% end %>
+  <% #Date performed %>
+  <td><%= Daywod.find(result.daywod_id).performed %></td>
+  <% #Wod Name %>
+  <td><%= Wod.find(Daywod.find(result.daywod_id).wod_id).name %></td>
+  <% #Wod Result %>
+  <% if Wod.find(Daywod.find(result.daywod_id).wod_id).wod_type == "Time" %>
+    <td>
+      <%= (result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i %>:
+      <% if (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i < 10 %>
+        0
+      <% end %>
+      <%= (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i %>
+    </td>
+  <% else %>
+    <td>
+      <%= (result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i %>
+      <% if (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i > 0 %>
+        +
+        <%= (result.recd - Wod.find(Daywod.find(result.daywod_id).wod_id).baserep*(result.recd/Wod.find(Daywod.find(result.daywod_id).wod_id).baserep).to_i).to_i %>
+      <% end %>
+    </td>
+  <% end %>
 
-	<% #RX %>
-	<td>
-		<% if result.rx  == true %>
-		Yes
-		<% else %>
-		No
-		<% end %>
-	</td>
+  <% #RX %>
+  <td>
+    <% if result.rx  == true %>
+    Yes
+    <% else %>
+    No
+    <% end %>
+  </td>
 
-	<% #Notes %>
-	<td><pre><%= result.note %></pre></td>
+  <% #Notes %>
+  <td><pre><%= result.note %></pre></td>
 </tr>
-	
+  

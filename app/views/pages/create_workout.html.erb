@@ -1,37 +1,40 @@
+<div class="your_workout">
+
+</div>
+
+
 <div class="recd_workout_tabs">
-	<h2 id="select_tab">Select Workout</h2>
-	<div class="Select_Workout" %>
-		<%= form_for :wod, :id => "select_wod" do |f| %>
-			<%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
-		<% end %>
+    <ul class="tab_header" >
+      <li id="select_tab">Select Workout</li>
+      <li id="daywod_tab">Enter Date Performed</li>
+      <li id="results_tab">Enter Results</li>
+    </ul>
+  <div class="Select_Workout tab" %>
+    <%= form_for :wod, :id => "select_wod" do |f| %>
+      <%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
+    <% end %>
 
-		<%= button_to "New WOD", new_wod_path, :method => 'get', :id => 'new_wod_button' %>
+    <%= button_to "New WOD", new_wod_path, :method => 'get', :id => 'new_wod_button' %>
 
-		<div class="wod_form">
-			<%= render partial: 'wods/wod_fields' %>
-		</div>
-	</div>
-	<h2 id="daywod_tab">Enter Date Performed</h2>
-	<div class="Select_Daywod" %>
-		<%= form_for  Daywod.new, :id => "select_daywod" do |f| %>
-			<div class="field">
-				<%= f.label :performed, "WOD Date" %>
-				<%= f.date_select :performed %> 
-			</div>
-			
-			<div class="field">
-				<%= f.label :personal, "Personal" %>
-				<%= f.check_box :personal %> 
-			</div>
-
-			<div class="actions">
-				<%= f.submit "Create Daily WOD" %> 
-			</div>
-		<% end %>
-	</div>
-	<h2 id="results_tab">Enter Results</h2>
-	<div id="Select_Results">
-		<%= render partial: '/results/new_result', :locals => {:wod_type => "Timed" }%>
-
-	</div>
+    <div class="wod_form">
+      <%= render partial: 'wods/wod_fields' %>
+    </div>
+  </div>
+  <div class="Select_Daywod hidden tab" %>
+    <%= form_for  Daywod.new, :id => "select_daywod" do |f| %>
+      <div class="field">
+        <%= f.label :performed, "WOD Date" %>
+        <%= f.date_select :performed %> 
+      </div>
+      
+      <div class="field">
+        <%= f.label :personal, "Personal" %>
+        <%= f.check_box :personal %> 
+      </div>
+      <%= f.submit "Create Daily WOD" %> 
+    <% end %>
+  </div>
+  <div class="Select_Results hidden tab">
+    <%= render partial: '/results/new_result', locals: { wod_type: "Time" }%>
+  </div>
 </div>

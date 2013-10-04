@@ -1,5 +1,5 @@
 class Daywod < ActiveRecord::Base
-  attr_accessible :performed, :wod_id, :personal	
+  attr_accessible :performed, :wod_id, :personal  
   
   belongs_to :wod
   has_many :results

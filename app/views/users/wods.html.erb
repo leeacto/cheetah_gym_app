@@ -1,8 +1,8 @@
 <% if @wods.count > 0 %>
-	<% @wod.each do |w| %>
+  <% @wod.each do |w| %>
 
-	<% end %>
+  <% end %>
 <% else %>
-	No WODs Completed<br>
-	<%= link_to "Go Do a WOD!", wodlist_path %>
+  No WODs Completed<br>
+  <%= link_to "Go Do a WOD!", wodlist_path %>
 <% end %>
