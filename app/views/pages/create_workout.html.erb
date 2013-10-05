@@ -9,6 +9,7 @@
       <li id="daywod_tab">Enter Date Performed</li>
       <li id="results_tab">Enter Results</li>
     </ul>
+
   <div class="Select_Workout tab" %>
     <%= form_for :wod, :id => "select_wod" do |f| %>
       <%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
@@ -20,6 +21,7 @@
       <%= render partial: 'wods/wod_fields' %>
     </div>
   </div>
+
   <div class="Select_Daywod hidden tab" %>
     <%= form_for  Daywod.new, :id => "select_daywod" do |f| %>
       <div class="field">
@@ -34,6 +36,7 @@
       <%= f.submit "Create Daily WOD" %> 
     <% end %>
   </div>
+  
   <div class="Select_Results hidden tab">
     <%= render partial: '/results/new_result', locals: { wod_type: "Time" }%>
   </div>

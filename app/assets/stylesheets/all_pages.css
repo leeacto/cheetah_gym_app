@@ -7,7 +7,6 @@ img {
   margin: auto;
 }
 
-
 .round {
   border-radius: 5px;
 }
@@ -16,6 +15,7 @@ img {
   display: inline-block;
   text-align: right;
   width: 100%;
+  clear: both;
 }
 
 .head_foot ul {
@@ -39,7 +39,6 @@ img {
 
 footer {
   text-align: center;
-  position: absolute;
   bottom: 0;
 }
 
@@ -114,61 +113,4 @@ footer {
 .sidebar {
   border: 1px solid #808390;
   float: right;
-}
-
-.select_wod {
-  width: 50px;
-}
-
-.recd_workout_tabs {
-  margin: 0;
-  width: 300px;
-  float: right;
-  margin-right: 30%;
-}
-
-#daywod_tab {
-  border-left: 2px solid #FFCB3E;
-  border-right: 2px solid #FFCB3E;
-}
-
-.tab {
-  display: block;
-  /*position: absolute;*/
-  padding: 10px;
-  width: 544px;
-  border-right: 2px solid #FFCB3E;
-  border-left: 2px solid #FFCB3E;
-  border-bottom: 2px solid #FFCB3E;
-}
-
-ul.tab_header {
-  margin: 0;
-  padding-left: 0;
-  width: 550px;
-  border: 2px solid #FFCB3E;
-  padding: 2px;
-}
-
-ul.tab_header li {
-  font-size: 20px;
-  font-family: sans-serif;
-  text-align: center;
-  display: inline-block;
-  list-style: none;
-}
-
-ul.tab_header li:hover {
-  background-color: red;
-}
-
-.hidden {
-  display: none;
-}
-
-.your_workout {
-  float: left;
-  width: 30%;
-  height: 100px;
-  border: 2px solid #FFCB3E;
 }

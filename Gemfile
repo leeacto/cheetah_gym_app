@@ -10,6 +10,7 @@ gem 'rails_12factor'
 
 group :development, :test do
   gem 'sqlite3' 
+  gem 'jasmine-rails'
 end
 
 group :development do

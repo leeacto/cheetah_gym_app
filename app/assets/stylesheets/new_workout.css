@@ -1,0 +1,51 @@
+.select_wod {
+  width: 50px;
+}
+
+.your_workout {
+  width: 48%;
+  height: 100px;
+  border: 2px solid #FFCB3E;
+  float: left;
+}
+
+.recd_workout_tabs {
+  width: 48%;
+  margin: 0;
+  border-left: 2px solid #FFCB3E;
+  border-bottom: 2px solid #FFCB3E;
+  float: right;
+}
+
+
+.tab {
+  display: block;
+  position: relative;
+  top:  0;
+  padding: 10px;
+}
+
+ul.tab_header {
+  margin: 0;
+  padding-left: 0;
+  border-bottom: 2px solid #FFCB3E;
+}
+
+ul.tab_header li {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  border-right: 2px solid #FFCB3E;
+  border-top-right-radius: 5px;
+  border-top: 2px solid #FFCB3E;
+}
+
+ul.tab_header li:hover {
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}

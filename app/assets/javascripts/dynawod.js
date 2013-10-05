@@ -27,15 +27,22 @@ function showWorkoutTab() {
 
 function showDaywodTab() {
   $('.Select_Workout').addClass('hidden');
-  $('.Select_Daywod').removeClass('hidden');
+  $('.Select_Daywod'  ).removeClass('hidden');
   $('.Select_Results').addClass('hidden');
 }
 
-function showResultTab() {
+function showResultTab() {  
   $('.Select_Workout').addClass('hidden');
   $('.Select_Daywod').addClass('hidden');
   $('.Select_Results').removeClass('hidden');
 }
+
+
+var wodSelector = function(el) {
+  this.el = $el;
+  
+};
+
 
 $(document).ready(function() {
   wodStats($('#wod_wod_id').val());
