@@ -39,12 +39,27 @@ function showResultTab() {
 
 
 var wodSelector = function(el) {
-  this.el = $el;
-  
+  this.el = el;
+  this.tabs = [];
 };
+
+wodSelector.prototype.initialize = function(){
+  this.addTabs();
+}
+
+wodSelector.prototype.addTabs = function(){
+  var self = this;
+  $(this.el).find('.tab_header li').each(function(){
+    var new_tab = new Tab(this.id);
+    self.tabs.push(new_tab);
+  });
+}
 
 
 $(document).ready(function() {
+  var wSelector = new wodSelector('.recd_workout_tabs');
+  wSelector.initialize();
+
   wodStats($('#wod_wod_id').val());
 
   $('#wod_wod_id').on('change', function() {
