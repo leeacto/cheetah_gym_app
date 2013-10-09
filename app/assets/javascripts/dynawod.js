@@ -37,14 +37,47 @@ function showResultTab() {
   $('.Select_Results').removeClass('hidden');
 }
 
-
 var wodSelector = function(el) {
-  this.el = $el;
-  
+  this.el = el;
+  this.tabs = [];
 };
 
+wodSelector.prototype.initialize = function(){
+  this.addTabs();
+}
+
+wodSelector.prototype.selectTab = function(tab){
+  for(var i in this.tabs)
+  {
+    if(this.tabs[i] === tab)
+    {
+      this.tabs[i].hidden = false;
+      this.tabs[i].el.removeClass('hidden');
+    }
+    else {
+     this.tabs[i].hidden = true;
+     this.tabs[i].el.addClass('hidden');
+    }
+  }
+}
+
+wodSelector.prototype.addTabs = function(){
+  var self = this;
+  $(this.el).find('.tab_header li').each(function(){
+    var new_tab = new Tab(this.id);
+    self.tabs.push(new_tab);
+  });
+}
+
+var Tab = function(el) {
+  this.el = $(el);
+  this.hidden = true;
+}
 
 $(document).ready(function() {
+  var wSelector = new wodSelector('.recd_workout_tabs');
+  wSelector.initialize();
+
   wodStats($('#wod_wod_id').val());
 
   $('#wod_wod_id').on('change', function() {
