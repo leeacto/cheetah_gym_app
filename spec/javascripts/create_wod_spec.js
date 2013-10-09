@@ -5,7 +5,6 @@
 describe("selectWod", function(){
   beforeEach(function(){
     sWod = new wodSelector('.recd_workout_tabs');
-    $tabHeads = affix
   });
 
   it("should have the correct el", function(){
@@ -19,27 +18,39 @@ describe("selectWod", function(){
   });
 
   it("should have a selectTab function", function(){
+    tab = new Tab('.test');
     sWod.initialize();
-    var tab = sWod.tabs[0];
-    spyOn(sWod.tabs[0].el, "addClass");
+    spyOn(sWod, "selectTab");
     sWod.selectTab(tab);
-    expect(sWod.tabs[0].el.addClass).toHaveBeenCalled();
+    expect(sWod.selectTab).toHaveBeenCalledWith(tab);
   });
   
-  describe("Initialization", function(){
-    beforeEach(function(){
-      spyOn(sWod.tabs, "push");
-      sWod.initialize();
-    });
-
-    it("should have an addTabs function", function(){
-      expect(sWod.tabs.push).toHaveBeenCalled();
-    });
+  it("should have an addTabs function", function(){
+    spyOn(sWod, "addTabs");
+    sWod.addTabs();
+    expect(sWod.addTabs).toHaveBeenCalled();
   });
 
-  describe("selectTab", function(){
+  describe("selectTab",function(){
     beforeEach(function(){
+      tab_a = new Tab('.tab_a');
+      tab_b = new Tab('.tab_b');
+      tab_c = new Tab('.tab_c');
+      sWod.tabs.push(tab_a);
+      sWod.tabs.push(tab_b);
+      sWod.tabs.push(tab_c);
     });
 
+    it("should remove the hidden state from selected tab", function(){
+      sWod.selectTab(tab_b);
+      expect(tab_b.hidden).toBe(false);
+    });
+
+    it("should add the hidden state to all other tabs", function(){
+      sWod.selectTab(tab_b);
+      sWod.selectTab(tab_c);
+      expect(tab_b.hidden).toBe(true);
+      expect(tab_a.hidden).toBe(true);
+    });
   });
 });
