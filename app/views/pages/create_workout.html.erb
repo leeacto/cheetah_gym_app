@@ -5,12 +5,12 @@
 
 <div class="recd_workout_tabs">
     <ul class="tab_header" >
-      <li id="select_tab">Select Workout</li>
+      <li id="workout_tab">Select Workout</li>
       <li id="daywod_tab">Enter Date Performed</li>
       <li id="results_tab">Enter Results</li>
     </ul>
 
-  <div class="Select_Workout tab" %>
+  <div class="select_workout tab" %>
     <%= form_for :wod, :id => "select_wod" do |f| %>
       <%= f.collection_select :wod_id, Wod.order(:name), :id, :name %>
     <% end %>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="Select_Daywod hidden tab" %>
+  <div class="select_daywod hidden tab" %>
     <%= form_for  Daywod.new, :id => "select_daywod" do |f| %>
       <div class="field">
         <%= f.label :performed, "WOD Date" %>
@@ -37,7 +37,7 @@
     <% end %>
   </div>
   
-  <div class="Select_Results hidden tab">
+  <div class="select_results hidden tab">
     <%= render partial: '/results/new_result', locals: { wod_type: "Time" }%>
   </div>
 </div>

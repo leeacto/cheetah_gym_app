@@ -10,3 +10,11 @@
 #   r.save
 # end
 
+User.create(:name
+    :email
+    :created_at
+    :updated_at
+    :encrypted_password
+    :salt
+    :admin
+  end)

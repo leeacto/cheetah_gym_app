@@ -1,41 +1,41 @@
-function wodStats(id) {
-  $.ajax({
-    url: "/wods/"+(id),
-    method: 'get',
-    dataType: 'json'
-  }).done(function(wod_data) {
-    $('#wod_name').val(wod_data.name);
-    $('#wod_desc').val(wod_data.desc);
-    $('#wod_seq').val(wod_data.seq);
-    var wod_radio = "#wod_wod_type_" + wod_data.wod_type.toLowerCase();
-    $(wod_radio).prop('checked', true);
-    $('#wod_baserep').val(wod_data.baserep);
-  });
-}
+// function wodStats(id) {
+//   $.ajax({
+//     url: "/wods/"+(id),
+//     method: 'get',
+//     dataType: 'json'
+//   }).done(function(wod_data) {
+//     $('#wod_name').val(wod_data.name);
+//     $('#wod_desc').val(wod_data.desc);
+//     $('#wod_seq').val(wod_data.seq);
+//     var wod_radio = "#wod_wod_type_" + wod_data.wod_type.toLowerCase();
+//     $(wod_radio).prop('checked', true);
+//     $('#wod_baserep').val(wod_data.baserep);
+//   });
+// }
 
-function clrWorkoutForm(){
-  $('.wod_form').find('#wod_name, #wod_desc, #wod_seq').val('');
-  $('#wod_baserep').val(1);
-  $('#wod_wod_type_time').prop('checked', true);
-}
+// function clrWorkoutForm(){
+//   $('.wod_form').find('#wod_name, #wod_desc, #wod_seq').val('');
+//   $('#wod_baserep').val(1);
+//   $('#wod_wod_type_time').prop('checked', true);
+// }
 
-function showWorkoutTab() {
-  $('.Select_Workout').removeClass('hidden');
-  $('.Select_Daywod').addClass('hidden');
-  $('.Select_Results').addClass('hidden');
-}
+// function showWorkoutTab() {
+//   $('.Select_Workout').removeClass('hidden');
+//   $('.Select_Daywod').addClass('hidden');
+//   $('.Select_Results').addClass('hidden');
+// }
 
-function showDaywodTab() {
-  $('.Select_Workout').addClass('hidden');
-  $('.Select_Daywod'  ).removeClass('hidden');
-  $('.Select_Results').addClass('hidden');
-}
+// function showDaywodTab() {
+//   $('.Select_Workout').addClass('hidden');
+//   $('.Select_Daywod'  ).removeClass('hidden');
+//   $('.Select_Results').addClass('hidden');
+// }
 
-function showResultTab() {  
-  $('.Select_Workout').addClass('hidden');
-  $('.Select_Daywod').addClass('hidden');
-  $('.Select_Results').removeClass('hidden');
-}
+// function showResultTab() {  
+//   $('.Select_Workout').addClass('hidden');
+//   $('.Select_Daywod').addClass('hidden');
+//   $('.Select_Results').removeClass('hidden');
+// }
 
 var wodSelector = function(el) {
   this.el = el;
@@ -53,10 +53,14 @@ wodSelector.prototype.selectTab = function(tab){
     {
       this.tabs[i].hidden = false;
       this.tabs[i].el.removeClass('hidden');
+      this.tabs[i].body.hidden = false;
+      this.tabs[i].body.el.removeClass('hidden');
     }
     else {
      this.tabs[i].hidden = true;
      this.tabs[i].el.addClass('hidden');
+     this.tabs[i].body.hidden = true;
+     this.tabs[i].body.el.addClass('hidden');
     }
   }
 }
@@ -65,54 +69,66 @@ wodSelector.prototype.addTabs = function(){
   var self = this;
   $(this.el).find('.tab_header li').each(function(){
     var new_tab = new Tab(this.id);
+    new_tab.el.on('click',function(){
+      self.selectTab(new_tab);
+    });
     self.tabs.push(new_tab);
   });
 }
 
 var Tab = function(el) {
-  this.el = $(el);
+  this.el = $("#"+el);
+  this.hidden = true;
+  this.addBody();
+}
+
+Tab.prototype.addBody = function() {
+  this.body = new Body(this.el.selector);
+};
+
+var Body = function(el) {
+  this.el = $(".select_" + el.substring(1,el.length-4))
   this.hidden = true;
 }
 
 $(document).ready(function() {
   var wSelector = new wodSelector('.recd_workout_tabs');
   wSelector.initialize();
+  // wodStats($('#wod_wod_id').val());
 
-  wodStats($('#wod_wod_id').val());
+  // $('#wod_wod_id').on('change', function() {
+  //   wodStats(this.value);
+  // });
 
-  $('#wod_wod_id').on('change', function() {
-    wodStats(this.value);
-  });
+  // $('#new_wod_button').on('click', function(event) {
+  //   event.preventDefault();
+  //   clrWorkoutForm();
+  // });
 
-  $('#new_wod_button').on('click', function(event) {
-    event.preventDefault();
-    clrWorkoutForm();
-  });
+  // $('#new_wod').on('submit', function(event){
+  //   event.stopPropagation();
+  //   event.preventDefault();
+  //   showDaywodTab();
+  // });
 
-  $('#new_wod').on('submit', function(event){
-    event.stopPropagation();
-    event.preventDefault();
-    showDaywodTab();
-  });
+  // $('#select_tab').on('click', function(){
+  //   event.stopPropagation();
+  //   showWorkoutTab();
+  // });
 
-  $('#select_tab').on('click', function(){
-    event.stopPropagation();
-    showWorkoutTab();
-  });
+  // $('#new_daywod').on('submit', function(event){
+  //   event.stopPropagation();
+  //   event.preventDefault();
+  //   showResultTab();
+  // });
 
-  $('#new_daywod').on('submit', function(event){
-    event.stopPropagation();
-    event.preventDefault();
-    showResultTab();
-  });
+  // $('#daywod_tab').on('click', function(){
+  //   event.stopPropagation();
+  //   showDaywodTab();
+  // });
 
-  $('#daywod_tab').on('click', function(){
-    event.stopPropagation();
-    showDaywodTab();
-  });
-
-  $('#results_tab').on('click', function(){
-    event.stopPropagation();
-    showResultTab();
-  });
+  // $('#results_tab').on('click', function(){
+  //   event.stopPropagation();
+  //   showResultTab();
+  // });
 });
