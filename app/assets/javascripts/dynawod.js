@@ -39,18 +39,26 @@ wodSelector.prototype.addTabs = function(){
   this.tabs[0].body.wodForm.el.on('submit', function(event){
     event.stopPropagation();
     event.preventDefault();
-    self.selectTab(self.tabs[1]);
+    if (self.tabs[0].body.wodName.val() === '')
+    {
+      alert('WOD Must Have a Name');
+    }
+    else if (self.tabs[0].body.wodDesc.val() === '') {
+      alert('WOD Must Have a Description');
+    }
+    else
+    {
+      self.selectTab(self.tabs[1]);
+    }
   });
 
   this.tabs[1].body.wodForm.el.on('submit', function(event){
-    event.stopPropagation();
-    event.preventDefault();
     self.selectTab(self.tabs[2]);
   });
 }
 
-var Tab = function(el, body) {
-  this.body = body;
+var Tab = function(el, wodSelector) {
+  this.wodSelector = wodSelector;
   this.el = $("#"+el);
   this.hidden = true;
   this.addBody();
@@ -74,6 +82,9 @@ Body.prototype.addAttribs = function() {
     this.wodDd = { el:$('#wod_wod_id') }
     this.newWod = { el:$('#new_wod') }
     this.wodForm = { el:$('.wod_form') }
+
+    this.wodName = this.wodForm.el.find('#wod_name');
+    this.wodDesc = this.wodForm.el.find('#wod_desc');
 
     this.wodStats(this.wodDd.el.val());
 

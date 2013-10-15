@@ -18,7 +18,6 @@ describe("selectWod", function(){
   });
 
   it("should have a selectTab function", function(){
-    tab = new Tab('select_workout');
     sWod.initialize();
     spyOn(sWod, "selectTab");
     sWod.selectTab(tab);
@@ -35,9 +34,9 @@ describe("selectWod", function(){
 describe("selectTab",function(){
   beforeEach(function(){
     sWod = new wodSelector('.recd_workout_tabs');
-    tab_a = new Tab('workout_tab');
-    tab_b = new Tab('daywod_tab');
-    tab_c = new Tab('results_tab');
+    tab_a = new Tab('workout_tab', sWod);
+    tab_b = new Tab('daywod_tab', sWod);
+    tab_c = new Tab('results_tab', sWod);
     sWod.tabs.push(tab_a);
     sWod.tabs.push(tab_b);
     sWod.tabs.push(tab_c);
@@ -82,7 +81,7 @@ describe("selectTab",function(){
 describe("Tab", function(){
   beforeEach(function(){
     sWod = new wodSelector('.recd_workout_tabs');
-    tab_a = new Tab('workout_tab');
+    tab_a = new Tab('workout_tab', sWod);
     sWod.tabs.push(tab_a);
   });
 
@@ -97,18 +96,18 @@ describe("Tab", function(){
 
 describe("Body", function(){
   it("should have the correct selector", function(){
-    tab_a = new Tab('workout_tab');
+    tab_a = new Tab('workout_tab', sWod);
     expect(tab_a.body.el.selector).toBe('.select_workout');
   });
 
   it("should be initially hidden", function(){
-    tab_a = new Tab('workout_tab');
+    tab_a = new Tab('workout_tab', sWod);
     expect(tab_a.body.hidden).toBe(true);
   });
 
   it("should call addAttribs function on init", function(){
     spyOn(Body.prototype, "addAttribs");
-    tab_a = new Tab('workout_tab');
+    tab_a = new Tab('workout_tab', sWod);
     expect(Body.prototype.addAttribs).toHaveBeenCalled();
   });
 });
