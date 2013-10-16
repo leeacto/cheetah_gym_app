@@ -1,4 +1,5 @@
 class ResultsController < ApplicationController
+  include ResultsHelper
 
   def new
     @title = "WOD Result"
@@ -6,6 +7,7 @@ class ResultsController < ApplicationController
     @daywod = Daywod.find(params[:daywod_id])
     @cuser = current_user
     @result = @daywod.results.new
+    session[:daywod_id] = @daywod.id
   end
 
   def destroy
@@ -32,18 +34,18 @@ class ResultsController < ApplicationController
   end
 
   def create
-    @cuser = current_user
-    @daywod = Wod.find(params[:wod_id]).daywods.find(params[:daywod_id])
-    @wod = Wod.find(params[:wod_id])
+    @daywod = Daywod.find(session[:daywod_id])
+    @wod = @daywod.wod
+
     #Change Mins to Secs if WOD is Timed
     if @wod.wod_type == "Time"
-      params[:result][:recd] = params[:result][:mins].to_i*60 + params[:result][:secs].to_i
+      params[:result][:recd] = time_to_recd(params[:result])
     end
     #Save Result
-    @result = Wod.find(params[:wod_id]).daywods.find(params[:daywod_id]).results.build(params[:result])
+    @result = @daywod.results.build(params[:result])
     if @result.save
       flash[:success] = "Result Logged"
-      redirect_to @daywod
+      redirect_to wod_daywod_path(@wod, @daywod)
     else
       render 'new'
     end

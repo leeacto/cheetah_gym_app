@@ -1,45 +1,45 @@
-<%= form_for Result.new do |f| %> 
-    <div class="field">
-      <%= f.label "Athlete: " %>
-      <% if current_user.admin? %>
-        <%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
-      <% else %>
-        <%= f.hidden_field :user_id, :value => current_user.id %>
-        <%= current_user.name %>
-      <% end %>
-    </div>
-    
-    <% if wod_type != "Time" %>
-      <% if wod_type == "Reps" %>
-      <% else %>
-        <div class="field">
-           <%= f.label "Result" %><br />
-          <%= f.number_field :recd, :min => 0, :value => 0 %> 
-        </div>
-      <% end %>
+<%= form_for Result.new do |f| %>
+
+  <div class="field">
+    <%= f.label "Athlete: " %>
+    <% if current_user.admin? %>
+      <%= f.select( :user_id, User.all.collect {|user| [user.name, user.id]}) %> 
+    <% else %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= current_user.name %>
+    <% end %>
+  </div>
+  
+  <% if wod_type != "Time" %>
+    <% if wod_type == "Reps" %>
     <% else %>
       <div class="field">
-         <%= f.label "Minutes" %><br />
-        <%= f.number_field :mins, :min => 0, :value => 0 %> 
+         <%= f.label "Result" %><br />
+        <%= f.number_field :recd, :min => 0, :value => 0 %>
       </div>
-
-      <div class="field">
-         <%= f.label "Seconds" %><br />
-        <%= f.number_field :secs, :min => 0, :value => 0 %> 
-      </div>
-
     <% end %>
+  <% else %>
     <div class="field">
-      <%= f.label "Rx" %><br />
-      <%= f.check_box :rx %> 
+       <%= f.label "Minutes" %><br />
+      <%= f.number_field :mins, :min => 0, :value => 0 %>
+    </div>
+    <div class="field">
+       <%= f.label "Seconds" %><br />
+      <%= f.number_field :secs, :sec => 0, :value => 0 %>
     </div>
 
-    <div class="field">
-      <%= f.label "Note" %><br />
-      <%= f.text_area :note, :size => "30x5" %>
-    </div>
-    
-    <div class="actions">
-      <%= f.submit "Submit Result" %> 
-    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label "Rx" %><br />
+    <%= f.check_box :rx %> 
+  </div>
+
+  <div class="field">
+    <%= f.label "Note" %><br />
+    <%= f.text_area :note, :size => "30x5" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Submit Result" %> 
+  </div>
 <% end %>
