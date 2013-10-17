@@ -37,6 +37,9 @@
     <% if current_user.nil? == false %>
       <% if current_user.admin? %>
         <td>
+            <%= link_to "Edit", edit_wod_path(wod) %>
+          </td>  
+        <td>
           <%= link_to "Delete", wod, :method => :delete, :confirm => "You sure?",
                                       :title => "Delete #{wod.name}" %>
       
