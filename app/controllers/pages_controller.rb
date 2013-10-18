@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
-    @daywods = Daywod.paginate(:page => params[:page]).order("performed DESC")
+    @daywods = Daywod.order("performed DESC").paginate(:page => params[:page])
+    puts @daywods.inspect
   end
 
   def contact
