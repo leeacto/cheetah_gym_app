@@ -21,15 +21,20 @@ class ResultsController < ApplicationController
   end
 
   def update
-    @wod = Wod.find(params[:wod_id])
-    @daywod = Daywod.find(params[:daywod_id])
-    @result = @daywod.results.find(params[:id])
-    if @result.update_attributes(params[:result])
-      flash[:success] = "Result updated"
-      redirect_to Wod.find(params[:wod_id]).daywods.find(params[:daywod_id])
+    @result = Result.find(params[:id])
+    @wod = @result.wod
+    @daywod = @result.daywod
+    if current_user == @result.user
+      if @result.update_attributes(params[:result])
+        flash[:success] = "Result updated"
+        redirect_to wod_daywod_path(@wod, @daywod)
+      else
+        @title = "Edit Result"
+        render 'edit'
+      end
     else
-      @title = "Edit Result"
-      render 'edit'
+      flash[:error] = "Users may only update their own results"
+      redirect_to root_path
     end
   end
 

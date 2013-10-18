@@ -1,4 +1,3 @@
-# By using the symbol ':user', we get Factory Girl to simulate the User model.
 FactoryGirl.define do
 
   factory :user do
@@ -10,11 +9,11 @@ FactoryGirl.define do
   end
 
   factory :wod do
-    name      "Fran"
-    desc      "21-15-9 Thrusters, Pullups"
-    seq        "WG"
-    wod_type  "Time"
-    baserep    1
+    name             "Fran"
+    description      "21-15-9 Thrusters, Pullups"
+    seq              "WG"
+    wod_type         "Time"
+    baserep           1
   end
 
   factory :daywod do
