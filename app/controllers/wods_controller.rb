@@ -6,7 +6,7 @@ class WodsController < ApplicationController
   
   def index
     @title = "List of WODs"
-    @wods = Wod.search(params[:search])#.paginate(:page => params[:page])
+    @wods = Wod.search(params[:search]).paginate(:page => params[:page])
     @daywod = nil
   end
 

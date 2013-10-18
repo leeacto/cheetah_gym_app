@@ -34,7 +34,7 @@ class Wod < ActiveRecord::Base
   
   def self.search(search)
     if search
-      where('name LIKE ? or desc LIKE ? or seq LIKE ?', "%#{search}%","%#{search}%","%#{search}%")
+      where('UPPER(name) LIKE ? or UPPER(desc) LIKE ? or UPPER(seq) LIKE ?', "%#{search.upcase}%","%#{search.upcase}%","%#{search.upcase}%")
     else
       scoped
     end
