@@ -127,5 +127,4 @@ Body.prototype.clrWorkoutForm = function(){
 $(document).ready(function() {
   var wSelector = new wodSelector('.recd_workout_tabs');
   wSelector.initialize();
-
 });
