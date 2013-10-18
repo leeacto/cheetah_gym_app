@@ -1,13 +1,13 @@
 require 'debugger'
 
 class Wod < ActiveRecord::Base
-  attr_accessible :baserep, :desc, :name, :seq, :wod_type
+  attr_accessible :baserep, :description, :name, :seq, :wod_type
 
   has_many :daywods, :dependent => :destroy
   has_many :results, :through => :daywods
   has_many :athletes, through: :results, source: :user
   validates :baserep, :presence => true
-  validates :desc, :presence => true
+  validates :description, :presence => true
   validates :name, :presence => true,
             :length => { :maximum => 10 },
             :uniqueness => { :case_sensitive => false }
@@ -34,7 +34,7 @@ class Wod < ActiveRecord::Base
   
   def self.search(search)
     if search
-      where('name LIKE ? or desc LIKE ? or seq LIKE ?', "%#{search}%","%#{search}%","%#{search}%")
+      where('LOWER(name) LIKE ? OR LOWER(seq) LIKE ? OR LOWER(description) LIKE ?', "%#{search.downcase}%","%#{search.downcase}%","%#{search.downcase}%")
     else
       scoped
     end

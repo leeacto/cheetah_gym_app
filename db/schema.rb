@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015145633) do
+ActiveRecord::Schema.define(:version => 20131018145228) do
 
   create_table "daywods", :force => true do |t|
     t.date     "performed"
@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(:version => 20131015145633) do
 
   create_table "wods", :force => true do |t|
     t.string   "name"
-    t.text     "desc"
+    t.text     "description"
     t.string   "seq"
     t.string   "wod_type"
     t.integer  "baserep"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

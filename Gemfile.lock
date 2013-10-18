@@ -176,6 +176,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen (= 0.4.7)
+  pg
   rails (= 3.2.10)
   rails_12factor
   rspec (= 2.10.0)

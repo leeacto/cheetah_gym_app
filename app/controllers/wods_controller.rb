@@ -46,7 +46,6 @@ class WodsController < ApplicationController
 
   def create
     @wod = Wod.new(params[:wod])
-    puts params.inspect
     if @wod.save
       flash[:success] = "New WOD Created"
       redirect_to @wod

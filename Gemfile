@@ -11,6 +11,7 @@ group :development, :test do
   gem 'sqlite3' 
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
+  gem 'pg'
 end
 
 group :development do
