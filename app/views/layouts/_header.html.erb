@@ -1,7 +1,7 @@
 <header>
-  <%= link_to logo, root_path %>
-  <nav class="head_foot middle">
-    <ul class="round">
+  <%= link_to image_tag('cflogothumb.png'), root_path %>
+  <div class="nav_links">
+    <ul>
       <li><%= link_to "Home |", root_path %></li> 
       <% if signed_in? %>
         <li><%= link_to "Athletes |", athletes_path %></li>
@@ -16,12 +16,12 @@
         <li><%= link_to "Sign In |", signin_path %></li>
       <% end %>
       <li><%= link_to "Schedule", schedule_path %></li>
-      <li>
-        <%= form_tag wods_path, :method => 'get' do %>
-          <%= text_field_tag :search, params[:search] %>
-           <%= submit_tag "Search", :name => nil %>
-        <% end %>
-      </li>
     </ul>
-  </nav>
+  </div>
+  <div class="nav_search">
+    <%= form_tag wods_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search] %>
+       <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </div>
 </header>
