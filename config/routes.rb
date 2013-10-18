@@ -18,7 +18,6 @@ CheetahGymApp::Application.routes.draw do
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  match '/createwod', :to => 'wods#new'
   match '/wodlist', :to => 'wods#index'
   match '/athletes', :to => 'users#index'
   match '/mywods', :to => 'users#wods'

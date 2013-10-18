@@ -63,14 +63,10 @@ describe Wod do
       @wod.should respond_to(:daywods)
     end
 
-    describe "daywod history" do
-      it "should have a daywod history" do
-        @wod.should respond_to(:hist)
-      end 
-
+    describe "history" do
       it "should include the wod's daywods" do
-        @wod.hist.include?(@dw1).should be_true
-        @wod.hist.include?(@dw2).should be_true
+        @wod.daywods.include?(@dw1).should be_true
+        @wod.daywods.include?(@dw2).should be_true
       end
     end
   end

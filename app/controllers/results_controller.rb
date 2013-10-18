@@ -34,20 +34,24 @@ class ResultsController < ApplicationController
   end
 
   def create
-    @daywod = Daywod.find(session[:daywod_id])
-    @wod = @daywod.wod
-
-    #Change Mins to Secs if WOD is Timed
-    if @wod.wod_type == "Time"
-      params[:result][:recd] = time_to_recd(params[:result])
-    end
-    #Save Result
-    @result = @daywod.results.build(params[:result])
-    if @result.save
-      flash[:success] = "Result Logged"
-      redirect_to wod_daywod_path(@wod, @daywod)
+    if current_user.admin? || User.find(params[:result][:user_id]) == current_user
+      @daywod = Daywod.find(session[:daywod_id])
+      @wod = @daywod.wod
+      #Change Mins to Secs if WOD is Timed
+      if @wod.wod_type == "Time"
+        params[:result][:recd] = time_to_recd(params[:result])
+      end
+      #Save Result
+      @result = @daywod.results.build(params[:result])
+      if @result.save
+        flash[:success] = "Result Logged"
+        redirect_to wod_daywod_path(@wod, @daywod)
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      flash[:error] = "Only Admins May Add Results for Other Athletes"
+      redirect_to root_path
     end
   end
 end

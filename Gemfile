@@ -22,6 +22,7 @@ group :test do
   gem 'rspec', '2.10.0' 
   gem 'webrat', '0.7.1'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 # Gems used only for assets and not required

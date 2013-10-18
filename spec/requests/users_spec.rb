@@ -7,12 +7,12 @@ describe "Users" do
         lambda do 
           visit signup_path
           fill_in "Name",          :with => ""
-           fill_in "Email",        :with => ""
-           fill_in "Password",      :with => ""
-           fill_in "Confirmation", :with => ""
-           click_button
-           response.should render_template('users/new')
-           response.should have_selector("div#error_explanation")
+          fill_in "Email",        :with => ""
+          fill_in "Password",      :with => ""
+          fill_in "Confirmation", :with => ""
+          click_button 'Sign up'
+          response.should render_template('users/new')
+          response.should have_selector("div#error_explanation")
         end.should_not change(User, :count)
       end
     end 
@@ -22,12 +22,12 @@ describe "Users" do
          lambda do
           visit signup_path
           fill_in "Name",          :with => "Example User"
-           fill_in "Email",        :with => "user@example.com"
-           fill_in "Password",      :with => "foobar"
-           fill_in "Confirmation", :with => "foobar"
-           click_button
-           response.should render_template('users/show')
-           response.should have_selector("div.flash.success", :content => "Welcome")
+          fill_in "Email",        :with => "user@example.com"
+          fill_in "Password",      :with => "foobar"
+          fill_in "Confirmation", :with => "foobar"
+          click_button 'Sign up'
+          response.should render_template('users/show')
+          response.should have_selector("div.flash.success", :content => "Welcome")
         end.should change(User, :count).by(1)
        end
     end
@@ -36,11 +36,11 @@ describe "Users" do
   describe "sign in/out" do
 
     describe "failure" do
-      it "should not sign a user out" do
+      it "should not sign a user in" do
         visit signin_path
         fill_in :email, :with => ""
         fill_in :password, :with => ""
-        click_button
+        click_button 'Sign in'
         response.should have_selector("div.flash.error", :content => "Invalid")
       end
     end
@@ -49,9 +49,9 @@ describe "Users" do
       it "should sign a user in and out" do
         user = FactoryGirl.create(:user)
         visit signin_path
-        fill_in :email, :with => user.email
-        fill_in :password, :with => user.password
-        click_button
+        fill_in :email, :with => 'mhartl@example.com'
+        fill_in :password, :with => 'foobar'
+        click_button 'Sign in'
         controller.should be_signed_in
         click_link "Sign out"
         controller.should_not be_signed_in

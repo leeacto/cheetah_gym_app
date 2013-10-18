@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe DaywodsController do
-  render_views
+  # render_views
 
   describe "POST 'create'" do
     before(:each) do

@@ -46,11 +46,13 @@ class WodsController < ApplicationController
 
   def create
     @wod = Wod.new(params[:wod])
+    puts params.inspect
     if @wod.save
       flash[:success] = "New WOD Created"
       redirect_to @wod
     else
       @title = "Create New WOD"
+      flash[:error] = "WOD Not Saved"
       render 'new'
     end
   end
