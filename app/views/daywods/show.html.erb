@@ -1,12 +1,13 @@
-<h1><%= link_to @wod.name, @wod %> - <%= @daywod.performed %></h1>
-  <table border="1">
+<h1 id="wod_name"><%= link_to @wod.name, @wod %> - <%= @daywod.performed %></h1>
+
+  <table class="wod_details">
       <tr>
         <th>Description</th>
-        <td><%= @wod.description %>
+        <td><%= @wod.description.gsub(/\n/, '<br>').html_safe %>
       </tr>  
       <tr>
         <th>Sequence</th>
-        <td><%= @wod.seq %>
+        <td><%= @wod.seq.upcase %>
       </tr>  
       <tr>
         <th>Type</th>

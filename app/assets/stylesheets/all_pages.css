@@ -34,7 +34,7 @@ header img {
 
 .nav_links ul {
   display: inline;
-  padding-left: 25%;
+  padding-left: 30%;
   list-style-type: none;
   height: 40px;
   margin: 0;
@@ -164,3 +164,23 @@ footer .nav_links ul {
   text-align: left;
   padding-left: 5px
 }
+
+/* Daywod Show  Page Begin */
+
+#wod_name {
+  font-family: 'Black Ops One', cursive;
+}
+
+#wod_name a {
+  text-decoration: none;
+  color: black;
+}
+
+.wod_details tr {
+  text-align: left;
+}
+
+.wod_details tr td:nth-child(2) {
+  padding-left: 5px;
+}
+/* Daywod Show  Page End */
