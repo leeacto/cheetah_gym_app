@@ -34,5 +34,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'coveralls', require: false
 gem 'jquery-rails'
 gem 'listen', '0.4.7'
