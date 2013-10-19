@@ -1,9 +1,9 @@
 
-<h1><%= @wod.name %></h1>
+<h1 id="wod_name"><%= @wod.name %></h1>
 
 <strong>Description</strong> <br />
 <pre><%= @wod.description %></pre><br />
-<strong>Sequence</strong> <%= @wod.seq %><br />
+<strong>Sequence</strong> <%= @wod.seq.upcase %><br />
 <strong>For </strong> <%= @wod.wod_type %><br />
 <p>
 <%= link_to "Edit WOD", edit_wod_path(@wod) %>
@@ -14,13 +14,6 @@
 <p>
 
 <% unless @wod.daywods.empty? %>
-  <table class="daywods" summary="Wod daywods">
-      <td>
-      <th>Dates Performed</th>
-      <th><center>Gym WOD</center></th></td>
-    <%= render @daywods %>
-  </table>
-
   <table id="ath_results">
     <th>Dates</th>
     <% @daywods.each do |d| %>
