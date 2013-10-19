@@ -13,13 +13,13 @@ wodSelector.prototype.selectTab = function(tab){
     if(this.tabs[i] === tab)
     {
       this.tabs[i].hidden = false;
-      this.tabs[i].el.removeClass('hidden');
+      this.tabs[i].el.addClass('selected_tab');
       this.tabs[i].body.hidden = false;
       this.tabs[i].body.el.removeClass('hidden');
     }
     else {
      this.tabs[i].hidden = true;
-     this.tabs[i].el.addClass('hidden');
+     this.tabs[i].el.removeClass('selected_tab');
      this.tabs[i].body.hidden = true;
      this.tabs[i].body.el.addClass('hidden');
     }
@@ -110,7 +110,7 @@ Body.prototype.wodStats = function(id) {
     dataType: 'json'
   }).done(function(wod_data) {
     $('#wod_name').val(wod_data.name);
-    $('#wod_desc').val(wod_data.desc);
+    $('#wod_description').val(wod_data.description);
     $('#wod_seq').val(wod_data.seq);
     var wod_radio = "#wod_wod_type_" + wod_data.wod_type.toLowerCase();
     $(wod_radio).prop('checked', true);

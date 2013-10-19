@@ -1,7 +1,17 @@
 <% if @wods.count > 0 %>
-  <% @wod.each do |w| %>
-
+  <table>
+    <th><tr>
+      <td>WOD</td>
+      <td>Attempts</td>
+      <td>PR</td>
+    </tr></th>
+  <% @wods.each do |w| %>
+    <tr>
+      <td><%= w.name %></td>
+      <td></td>
+    </tr>
   <% end %>
+  </table>
 <% else %>
   No WODs Completed<br>
   <%= link_to "Go Do a WOD!", wodlist_path %>

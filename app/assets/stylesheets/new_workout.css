@@ -13,14 +13,13 @@
   width: 48%;
   margin: auto;
   border-left: 2px solid #FFCB3E;
-  border-bottom: 2px solid #FFCB3E;
-  /*float: right;*/
+  margin-bottom: 2%;
 }
-
 
 .tab {
   display: block;
   border-right: 2px solid #FFCB3E;
+  border-bottom: 2px solid #FFCB3E;
   position: relative;
   top:  0;
   padding: 10px;
@@ -47,6 +46,14 @@ ul.tab_header li:hover {
   background-color: #FFCC00;
 }
 
+/* Tab Selection Begin */
+.selected_tab {
+  margin-bottom: -2px;
+  border-bottom: 4px solid #FFFFF1;
+}
+
 .hidden {
   display: none;
 }
+
+/* Tab Selection End */

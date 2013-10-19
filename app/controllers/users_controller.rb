@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   end
 
   def wods
-    @user = User.find(current_user.id)
+    @user = current_user
     @wods = @user.wods.uniq
   end
 
