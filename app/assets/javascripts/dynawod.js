@@ -84,7 +84,7 @@ Body.prototype.addAttribs = function() {
     this.wodForm = { el:$('.wod_form') }
 
     this.wodName = this.wodForm.el.find('#wod_name');
-    this.wodDesc = this.wodForm.el.find('#wod_desc');
+    this.wodDesc = this.wodForm.el.find('#wod_description');
 
     this.wodStats(this.wodDd.el.val());
 
@@ -119,7 +119,7 @@ Body.prototype.wodStats = function(id) {
 }
 
 Body.prototype.clrWorkoutForm = function(){
-  $('.wod_form').find('#wod_name, #wod_desc, #wod_seq').val('');
+  $('.wod_form').find('#wod_name, #wod_description, #wod_seq').val('');
   $('#wod_baserep').val(1);
   $('#wod_wod_type_time').prop('checked', true);
 }

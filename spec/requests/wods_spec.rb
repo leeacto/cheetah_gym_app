@@ -7,7 +7,7 @@ describe "Wods" do
         lambda do
           visit new_wod_path
           fill_in "wod_name", :with => ""
-          fill_in "wod_desc", :with => ""
+          fill_in "wod_description", :with => ""
           fill_in "wod_seq", :with => ""
           fill_in "wod_baserep", :with => ""
           click_button
@@ -22,7 +22,7 @@ describe "Wods" do
         lambda do
           visit new_wod_path
           fill_in "wod_name", :with => "Fran"
-          fill_in "wod_desc", :with => "21-15-9 Thrusters, Pull Ups"
+          fill_in "wod_description", :with => "21-15-9 Thrusters, Pull Ups"
           choose "wod_wod_type_time"
           fill_in "wod_seq", :with => "WG"
           fill_in "wod_baserep", :with => "1"

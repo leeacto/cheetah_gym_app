@@ -4,7 +4,7 @@ describe Wod do
 
   before(:each) do
     @attr = {   :name => "Fran",
-          :desc => "21-15-9 Thrusters, Pull Ups",
+          :description => "21-15-9 Thrusters, Pull Ups",
           :seq => "WG",
           :wod_type => "time",
           :baserep => 1
@@ -33,7 +33,7 @@ describe Wod do
   end
 
   it "should require a description" do
-    no_desc_wod = Wod.new(@attr.merge(:desc => ""))
+    no_desc_wod = Wod.new(@attr.merge(:description => ""))
     no_desc_wod.should_not be_valid
   end
 
