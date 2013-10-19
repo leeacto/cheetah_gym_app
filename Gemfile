@@ -6,21 +6,21 @@ gem 'will_paginate', '3.0.2'
 gem 'debugger'
 gem 'rails_12factor'
 gem 'activerecord-postgresql-adapter'
+gem 'pg'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'rspec'
   gem 'sqlite3' 
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
-  gem 'pg'
 end
 
 group :development do
-  gem 'rspec-rails', '2.10.1'
   gem 'faker', '0.3.1'
 end
 
 group :test do
-  gem 'rspec', '2.10.0' 
   gem 'webrat', '0.7.1'
   gem 'factory_girl_rails'
   gem 'launchy'
