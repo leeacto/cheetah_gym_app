@@ -22,13 +22,21 @@ class Result < ActiveRecord::Base
     end
   end
 
+  def mins
+    (self.recd/60).to_s
+  end
+
+  def secs
+    self.recd % 60
+  end
+
   private
 
-    def user_assign_ok
-      if current_user.signed_in? == true then
-        return nil
-      else
-        return nil if :user_id != current_user.id && current_user.admin == false
-      end
+  def user_assign_ok
+    if current_user.signed_in? == true then
+      return nil
+    else
+      return nil if :user_id != current_user.id && current_user.admin == false
     end
+  end
 end
