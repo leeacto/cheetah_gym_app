@@ -5,10 +5,24 @@
 <%= form_for @result, :url => wod_daywod_result_path, :html => { :class => "wod_daywod_result" }  do |f| %> 
     <%= render 'shared/error_messages', :object => f.object %>
     
-    <div class="field">
-      <%= f.label "Result" %><br />
-      <%= f.number_field :recd %> 
-    </div>
+    <% if @result.wod.wod_type != "Time" %>
+      <% if @result.wod.wod_type == "Reps" %>
+      <% else %>
+        <div class="field">
+          <%= f.label "Result" %><br />
+          <%= f.number_field :recd, :min => 0, :value => 0 %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="field">
+         <%= f.label "Minutes" %><br />
+        <%= f.number_field :mins, :min => 0, :value => 0 %>
+      </div>
+      <div class="field">
+         <%= f.label "Seconds" %><br />
+        <%= f.number_field :secs, :sec => 0, :value => 0 %>
+      </div>
+    <% end %>
 
     <div class="field">
       <%= f.label "Rx" %><br />
@@ -16,7 +30,7 @@
     </div>
 
     <div class="field">
-      <%= f.label "Note" %><br />
+      <%= f.label "Note" %><br>
       <%= f.text_area :note, :size => "30x5" %>
     </div>
     
