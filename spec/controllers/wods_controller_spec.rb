@@ -5,7 +5,7 @@ describe WodsController do
 
   describe "GET 'show'" do
     before(:each) do
-      @wod = Wod.create(:name => "Fran", :desc => "21-15-9", :seq => "WG", :wod_type => "time", :baserep => 1)
+      @wod = Wod.create(:name => "Fran", :description => "21-15-9", :seq => "WG", :wod_type => "time", :baserep => 1)
     end
 
     it "should be successful" do
