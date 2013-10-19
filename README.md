@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/leeacto/cheetah_gym_app.png)](https://travis-ci.org/leeacto/cheetah_gym_app)
-[![Coverage Status](https://coveralls.io/repos/leeacto/cheetah_gym_app/badge.png)](https://coveralls.io/r/leeacto/cheetah_gym_app)
-
+[![Coverage Status](https://coveralls.io/repos/leeacto/cheetah_gym_app/badge.png?branch=master)](https://coveralls.io/r/leeacto/cheetah_gym_app)
 ##Welcome to the Cheetah Gym App
 
 ##Summary
