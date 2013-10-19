@@ -23,7 +23,7 @@ class Result < ActiveRecord::Base
   end
 
   def mins
-    (self.recd/60).to_s
+    (self.recd/60).to_i
   end
 
   def secs
