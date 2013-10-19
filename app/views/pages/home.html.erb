@@ -14,7 +14,9 @@
         <li><%= w.performed %></li>
         <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
         <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
-        <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
+        <% if current_user %>
+          <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
+        <% end %>
       </ul>
     <% end %>
   <% end %>
