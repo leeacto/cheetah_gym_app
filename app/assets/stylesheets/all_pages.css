@@ -61,7 +61,7 @@ header img {
   display: inline;
   float: right;
   height: 100%;
-  padding-top: 8px;
+  padding: 8px 10px 0 0;
 }
 
 .nav_search form {
