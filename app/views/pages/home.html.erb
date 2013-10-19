@@ -13,7 +13,7 @@
       <ul class="round journal">
         <li><%= w.performed %></li>
         <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
-        <li><%= w.wod.description %></li>
+        <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
         <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
       </ul>
     <% end %>

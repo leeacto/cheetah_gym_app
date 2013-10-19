@@ -48,5 +48,5 @@
     <% end %>
 </tr>
 <tr>
-  <td colspan="4"><%= wod.description %></td>
+  <td colspan="4" class="wod_desc"><%= wod.description.gsub(/\n/,'<br>').html_safe %></td>
 </tr>
