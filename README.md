@@ -1,3 +1,7 @@
+https://travis-ci.org/leeacto/cheetah_gym_app.png
+
+[![Build Status](https://travis-ci.org/leeacto/cheetah_gym_app.png)](https://travis-ci.org/leeacto/cheetah_gym_app)
+
 ##Welcome to the Cheetah Gym App
 
 ##Summary
