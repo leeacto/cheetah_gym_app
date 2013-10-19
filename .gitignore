@@ -16,3 +16,6 @@
 
 # Ignore coveralls file
 /coverage
+
+# Ignore Project Test file
+/project_test
