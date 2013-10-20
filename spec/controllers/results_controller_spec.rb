@@ -8,6 +8,21 @@ describe ResultsController do
     @user = FactoryGirl.create(:user)
   end
 
+  describe "GET #new" do
+    before(:each) do
+      get :new, :wod_id => @wod.id, :daywod_id => @daywod.id
+    end
+
+    it "finds the correct wod/daywod" do
+      assigns(:wod).should eq @wod
+      assigns(:daywod).should eq @daywod
+    end
+
+    it "has the correct title" do
+      assigns(:title).should eq "WOD Result"
+    end
+  end
+
   describe "POST #create" do
     before(:each) do
       controller.stub(:current_user).and_return @user
