@@ -23,7 +23,6 @@ group :development do
 end
 
 group :test do
-  gem 'webrat', '0.7.1'
   gem 'factory_girl_rails'
   gem 'launchy'
 end
