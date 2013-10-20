@@ -12,8 +12,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec'
   gem 'sqlite3' 
+  gem 'capybara'
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
+  gem 'simplecov', :require => false
 end
 
 group :development do
