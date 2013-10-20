@@ -108,8 +108,16 @@ feature 'Results' do
 
   describe "Editing Results" do
     before(:each) do
+      @other_attribs = {
+        :email => "other@example.com",
+        :name => "Other User",
+        :password => "foobar",
+        :password_confirmation => "foobar"
+      }
+      @other = User.create!(@other_attribs)
+
       @results_attribs = {
-        :user_id => 1,
+        :user_id => 2,
         :recd => 1,
         :daywod_id => 1
       }
@@ -122,20 +130,33 @@ feature 'Results' do
         click_on 'WODs |'
         click_link 'Fran'
         click_link '2013-01-01'
-        save_and_open_page
-        click_link 'Michael Hartl'
       end
+      
+      describe "Own Result" do
+        before(:each) do
+          click_link 'Michael Hartl'
+        end
 
-      it "navigates to the edit page" do
-        page.should have_content 'Edit Result'
-      end
+        it "navigates to the edit page" do
+          page.should have_content 'Edit Result'
+        end
 
-      it "updates with valid attributes" do
-        fill_in 'result_mins', with: 5
-        click_button 'Update Result'
-        page.should have_content 'Result updated'
-        @result.reload
-        @result.recd.should eq 301
+        it "updates with valid attributes" do
+          fill_in 'result_mins', with: 5
+          click_button 'Update'
+          page.should have_content 'Result updated'
+          @result.reload
+          @result.recd.should eq 301
+        end
+
+        it "denies update with invalid attributes" do
+          fill_in 'result_mins', with: 0
+          fill_in 'result_secs', with: 0
+          click_button 'Update'
+          page.should have_content '1 error'
+          @result.reload
+          @result.recd.should eq 1
+        end
       end
     end
   end
