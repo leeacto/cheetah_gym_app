@@ -6,6 +6,7 @@ feature 'Results' do
     @wod = FactoryGirl.create(:wod)
     @daywod = FactoryGirl.create(:daywod)
   end
+
   describe "Creating New Results" do
     context "As a member" do
       describe "As Admin" do
@@ -101,6 +102,40 @@ feature 'Results' do
             page.should have_content 'WOD Result'
           end.should_not change(Result, :count)
         end
+      end
+    end
+  end
+
+  describe "Editing Results" do
+    before(:each) do
+      @results_attribs = {
+        :user_id => 1,
+        :recd => 1,
+        :daywod_id => 1
+      }
+      @result = Result.create(@results_attribs)
+    end
+
+    context "As Admin" do
+      before(:each) do
+        log_in_admin
+        click_on 'WODs |'
+        click_link 'Fran'
+        click_link '2013-01-01'
+        save_and_open_page
+        click_link 'Michael Hartl'
+      end
+
+      it "navigates to the edit page" do
+        page.should have_content 'Edit Result'
+      end
+
+      it "updates with valid attributes" do
+        fill_in 'result_mins', with: 5
+        click_button 'Update Result'
+        page.should have_content 'Result updated'
+        @result.reload
+        @result.recd.should eq 301
       end
     end
   end
