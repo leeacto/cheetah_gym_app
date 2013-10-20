@@ -11,6 +11,7 @@ feature 'Results' do
 
       describe "As Admin" do
         before(:each) do
+          FactoryGirl.create(:user, :name => "Other User", :email => "other@example.com")
           log_in_admin
           click_link 'WODs'
           click_link 'Fran'
@@ -18,12 +19,35 @@ feature 'Results' do
           click_link 'Add Result'
         end
 
-        it "creates a result for itself" do
-          lambda do
-            fill_in 'result_mins', with: 1
-            fill_in 'result_secs', with: 1
-            click_button 'Submit Result'
-          end.should change(Result, :count).by(1)
+        describe "With valid attributes" do
+          it "creates a result for itself" do
+            lambda do
+              select 'Michael Hartl', from: 'result_user_id'
+              fill_in 'result_mins', with: 1
+              fill_in 'result_secs', with: 1
+              click_button 'Submit Result'
+            end.should change(Result, :count).by(1)
+          end
+
+          it "creates a result for other members" do
+            lambda do
+              select 'Other User', from: 'result_user_id'
+              fill_in 'result_mins', with: 1
+              fill_in 'result_secs', with: 1
+              click_button 'Submit Result'
+            end.should change(Result, :count).by(1)
+          end
+        end
+
+        describe "with invalid attributes" do
+          it "denies result creation" do
+            lambda do
+              select 'Michael Hartl', from: 'result_user_id'
+              fill_in 'result_mins', with: 'k'
+              fill_in 'result_secs', with: 'k'
+              click_button 'Submit Result'
+            end.should_not change(Result, :count)
+          end
         end
       end
     end

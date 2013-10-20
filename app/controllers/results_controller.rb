@@ -51,6 +51,7 @@ class ResultsController < ApplicationController
         flash[:success] = "Result Logged"
         redirect_to wod_daywod_path(@wod, @daywod)
       else
+        flash[:error] = "Result was not saved"
         render 'new'
       end
     else

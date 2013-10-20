@@ -1986,3 +1986,259 @@ REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=
 REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
 REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
 REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"k", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"k", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"1", "mins"=>"1", "secs"=>"1", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
+REQUESTING PAGE: GET http://www.example.com/wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/results"}
+REQUESTING PAGE: GET /signin with {} and HTTP headers {}
+REQUESTING PAGE: POST /sessions with {"utf8"=>"✓", "session"=>{"email"=>"mhartl@example.com", "password"=>"foobar"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/2 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /wodlist with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/2"}
+REQUESTING PAGE: GET /wods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wodlist"}
+REQUESTING PAGE: GET /wods/1/daywods/1 with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1"}
+REQUESTING PAGE: GET /wods/1/daywods/1/results/new with {} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1"}
+REQUESTING PAGE: POST /results with {"utf8"=>"✓", "result"=>{"user_id"=>"2", "mins"=>"k", "secs"=>"k", "rx"=>"0", "note"=>""}, "commit"=>"Submit Result"} and HTTP headers {"HTTP_REFERER"=>"/wods/1/daywods/1/results/new"}
