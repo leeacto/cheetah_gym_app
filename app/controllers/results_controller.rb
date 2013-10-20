@@ -5,7 +5,6 @@ class ResultsController < ApplicationController
     @title = "WOD Result"
     @wod = Wod.find(params[:wod_id])
     @daywod = Daywod.find(params[:daywod_id])
-    @cuser = current_user
     @result = @daywod.results.new
     session[:daywod_id] = @daywod.id
   end

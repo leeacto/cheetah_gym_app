@@ -18,7 +18,7 @@ FactoryGirl.define do
 
   factory :daywod do
     performed    "1/1/2013"
-    association    :wod
+    wod_id        1
   end
 
   factory :result do
