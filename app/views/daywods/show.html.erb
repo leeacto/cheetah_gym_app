@@ -17,8 +17,8 @@
 
 <strong><p>Results</p></strong>
 
-<% if signed_in? %>
-<%= link_to "Add Result", new_wod_daywod_result_path(@wod, @daywod) %>
+<% if current_user %>
+  <%= link_to "Add Result", new_wod_daywod_result_path(@wod, @daywod) %>
 <% end %>
 
 <% unless @daywod.results.empty? %>

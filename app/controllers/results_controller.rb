@@ -41,11 +41,9 @@ class ResultsController < ApplicationController
     if current_user.admin? || User.find(params[:result][:user_id]) == current_user
       @daywod = Daywod.find(session[:daywod_id])
       @wod = @daywod.wod
-      #Change Mins to Secs if WOD is Timed
       if @wod.wod_type == "Time"
         params[:result][:recd] = time_to_recd(params[:result])
       end
-      #Save Result
       @result = @daywod.results.build(params[:result])
       if @result.save
         flash[:success] = "Result Logged"

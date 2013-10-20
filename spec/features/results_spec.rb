@@ -2,18 +2,17 @@ require 'spec_helper'
 include UserHelper
 
 feature 'Results' do
-  describe "Navigation" do
+  before(:each) do
+    @wod = FactoryGirl.create(:wod)
+    @daywod = FactoryGirl.create(:daywod)
+  end
+  describe "Creating New Results" do
     context "As a member" do
-      before(:each) do
-        @wod = FactoryGirl.create(:wod)
-        @daywod = FactoryGirl.create(:daywod)
-      end
-
       describe "As Admin" do
         before(:each) do
           FactoryGirl.create(:user, :name => "Other User", :email => "other@example.com")
           log_in_admin
-          click_link 'WODs'
+          click_on 'WODs |'
           click_link 'Fran'
           click_link '2013-01-01'
           click_link 'Add Result'
@@ -52,19 +51,56 @@ feature 'Results' do
         end
       end
     end
-    
+
     context "As Member" do
       before(:each) do
-        @wod = FactoryGirl.create(:wod)
-        @daywod = FactoryGirl.create(:daywod)
         log_in_member
       end
 
-      it "does not see ability to log result" do
-        click_link 'WODs'
+      it "has a field with member's name" do
+        click_link 'WODs |'
         click_link 'Fran'
         click_link '2013-01-01'
-        page.should_not have_content 'Add Result'
+        click_link 'Add Result'
+        page.should have_content 'Athlete: Michael Hartl'
+      end
+
+      describe "with valid attributes" do
+        before(:each) do
+          click_link 'WODs |'
+          click_link 'Fran'
+          click_link '2013-01-01'
+          click_link 'Add Result'
+        end
+
+        it "creates a new result" do
+          lambda do
+            fill_in 'result_mins', with: 1
+            fill_in 'result_secs', with: 1
+            click_button 'Submit Result'
+            page.should have_content 'Result Logged'
+            page.should have_content '2013-01-01'
+          end.should change(Result, :count).by(1)
+        end
+      end
+
+      describe "with invalid attributes" do
+        before(:each) do
+          click_link 'WODs |'
+          click_link 'Fran'
+          click_link '2013-01-01'
+          click_link 'Add Result'
+        end
+
+        it "does not create a new result" do
+          lambda do
+            fill_in 'result_mins', with: 0
+            fill_in 'result_secs', with: 0
+            click_button 'Submit Result'
+            page.should have_content 'Result was not saved'
+            page.should have_content 'WOD Result'
+          end.should_not change(Result, :count)
+        end
       end
     end
   end
