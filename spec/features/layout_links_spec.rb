@@ -2,28 +2,28 @@ require 'spec_helper'
 
 describe "LayoutLinks" do
   it "should have a Home page at '/'" do 
-      get '/'
-      response.should have_selector('title', :content => "Home")
+    visit '/'
+    page.should have_title("Cheetah Crossfit | Home")
   end
 
   it "should have a Contact page at '/contact'" do
-    get '/contact'
-    response.should have_selector('title', :content => "Contact")
+    visit '/contact'
+    page.should have_title("Cheetah Crossfit | Contact")
   end
 
   it "should have an About page at '/about'" do
-    get '/about'
-    response.should have_selector('title', :content => "About")
+    visit '/about'
+    page.should have_title("Cheetah Crossfit | About")
   end
 
   it "should have a Help page at '/help'" do
-    get '/help'
-    response.should have_selector('title', :content => "Help")
+    visit '/help'
+    page.should have_title("Cheetah Crossfit | Help")
   end
 
   it "should have a signup page at '/signup'" do
-    get '/signup'
-    response.should have_selector('title', :content => "Sign up")
+    visit '/signup'
+    page.should have_title("Cheetah Crossfit | Sign up")
   end
 
   describe "when not signed in" do
@@ -31,21 +31,19 @@ describe "LayoutLinks" do
     before(:each) do
       @user = FactoryGirl.create(:user)
       visit signin_path
-      fill_in :email,    :with => @user.email
-      fill_in :password,   :with => @user.password
+      fill_in 'session_email',    :with => @user.email
+      fill_in 'session_password',   :with => @user.password
       click_button 'Sign in'
     end
 
     it "should have a signout link" do
       visit root_path
-      response.should have_selector("a", :href => signout_path,
-                         :content => "Sign Out")
+      page.should have_selector("a", :text => "Sign Out")
     end
 
     it "should have a profile link" do 
       visit root_path
-      response.should have_selector("a", :href => user_path(@user),
-                        :content => "Profile")
+      page.should have_selector("a", :text => "Profile")
     end
   end
 end

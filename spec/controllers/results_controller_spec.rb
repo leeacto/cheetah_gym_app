@@ -44,24 +44,33 @@ describe ResultsController do
       @result = Result.create!(@attrres)
     end
     
-    context "success" do
-      it "allows result owner to update result" do
-        controller.stub(:current_user).and_return @user
-        post :update, :id => @result.id, result: {:recd => 2}
-        @result.reload
-        @result.recd.should eq 2
-      end
-    end
+    describe "As Member" do
+      context "success" do
+        before(:each) do
+          controller.stub(:current_user).and_return @user
+          post :update, :id => @result.id, result: {:secs => 2}
+          @result.reload
+        end
 
-    context "failure" do
-      it "denies update for non-admin editing other athlete result" do
-        @second_user = FactoryGirl.create(:user, :email => "another@example.com")
-        controller.stub(:current_user).and_return @second_user
-        post :update, :id => @result.id, result: {:recd => 2}
-        @result.reload
-        @result.recd.should eq 1
-        flash[:error].should =~ /own/i
-        response.should redirect_to root_path
+        it "allows result owner to update result" do
+          @result.recd.should eq 2
+        end
+
+        it "flashes success" do
+          flash.now[:success].should =~ /updated/i
+        end
+      end
+
+      context "failure" do
+        it "denies update for non-admin editing other athlete result" do
+          @second_user = FactoryGirl.create(:user, :email => "another@example.com")
+          controller.stub(:current_user).and_return @second_user
+          post :update, :id => @result.id, result: {:recd => 2}
+          @result.reload
+          @result.recd.should eq 1
+          flash[:error].should =~ /own/i
+          response.should redirect_to root_path
+        end
       end
     end
   end

@@ -42,7 +42,7 @@ class ResultsController < ApplicationController
     @result = Result.find(params[:id])
     @wod = @result.wod
     @daywod = @result.daywod
-    if current_user == @result.user
+    if current_user.admin || current_user == @result.user
       params[:result][:recd] = time_to_recd(params[:result]) if @wod.wod_type == "Time"
       if @result.update_attributes(params[:result])
         flash[:success] = "Result updated"
