@@ -12,6 +12,8 @@
   
   <% if wod_type != "Time" %>
     <% if wod_type == "Reps" %>
+      <%= f.label "Result" %><br />
+      <%= f.number_field :recd, :min => 0, :value => 0 %>
     <% else %>
       <div class="field">
         <%= f.label "Result" %><br />
