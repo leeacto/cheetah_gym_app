@@ -5,40 +5,41 @@ describe PagesController do
 
   describe "GET 'home'" do
     it "should be successful" do
-      get 'home'
+      get :home
       response.should be_success
     end
 
-    it "should have the right title" do
-      get 'home'
-      response.should have_selector("title",
-                        :content => "Cheetah Crossfit | Home")
+    it "should render the home template" do
+      get :home
+      response.should render_template 'home'
    end
   end
 
   describe "GET 'contact'" do
+    before(:each) do
+      get :contact
+    end
+    
     it "should be successful" do
-      get 'contact'
       response.should be_success
     end
 
-    it "should have the right title" do
-      get 'contact'
-      response.should have_selector("title", 
-                                    :content => "Cheetah Crossfit | Contact")
+    it "should render the contact template" do
+      response.should render_template 'contact'
    end
   end
 
   describe "GET 'about'" do
+    before(:each) do
+      get :about
+    end
+    
     it "should be successful" do
-      get 'about'
       response.should be_success
     end
 
-    it "should have the right title" do
-      get 'about'
-      response.should have_selector("title", 
-                                    :content => "Cheetah Crossfit | About")
+    it "should render the about template" do
+      response.should render_template 'about'
    end
   end
 end

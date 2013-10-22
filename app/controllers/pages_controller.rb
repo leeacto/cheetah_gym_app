@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     @daywods = Daywod.order("performed DESC").paginate(:page => params[:page])
-    puts @daywods.inspect
   end
 
   def contact
@@ -20,5 +19,4 @@ class PagesController < ApplicationController
   def create_workout
     @wods = Wod.all
   end
-  
 end

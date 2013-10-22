@@ -1,22 +1,22 @@
-  <%= image_tag('cflogo.png') %>
-  <div class="sign_in_up round">
-    <% if signed_in? %>
-      <%= link_to "Create new WOD", new_wod_path %>
-      <%= link_to "Log a Workout", newworkout_path %>
-    <% else %>
-      <%= link_to "Sign up now!", signup_path %>
-    <% end %>
-  </div>
-
-  <% @daywods.each do |w| %>
-    <% if w.personal == false %>
-      <ul class="round journal">
-        <li><%= w.performed %></li>
-        <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
-        <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
-        <% if current_user %>
-          <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
-        <% end %>
-      </ul>
-    <% end %>
+<%= image_tag('cflogo.png') %>
+<div class="sign_in_up round">
+  <% if signed_in? %>
+    <%= link_to "Create new WOD", new_wod_path %>
+    <%= link_to "Log a Workout", newworkout_path %>
+  <% else %>
+    <%= link_to "Sign up now!", signup_path %>
   <% end %>
+</div>
+
+<% @daywods.each do |w| %>
+  <% if w.personal == false %>
+    <ul class="round journal">
+      <li><%= w.performed %></li>
+      <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
+      <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
+      <% if current_user %>
+        <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
