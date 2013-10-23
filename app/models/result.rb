@@ -11,14 +11,9 @@ class Result < ActiveRecord::Base
   def formatted
     if self.wod.wod_type == "Time"
       Time.local(1999,1,1,0,
-      (self.recd/self.wod.baserep).to_i,
-      (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i).strftime "%M:%S"
+      self.mins, self.secs).strftime "%M:%S"
     else
-     (self.recd/self.wod.baserep).to_i
-      if (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i > 0
-        +
-        (self.recd - self.wod.baserep*(self.recd/self.wod.baserep).to_i).to_i
-      end   
+     "#{self.rounds}#{self.plus_reps}"
     end
   end
 
@@ -28,6 +23,19 @@ class Result < ActiveRecord::Base
 
   def secs
     self.recd % 60
+  end
+
+  def rounds
+    (self.recd/self.wod.baserep).to_i
+  end
+
+  def plus_reps
+    tester = self.recd % self.wod.baserep
+    if tester > 0
+      "+ #{tester}"
+    else
+      ""
+    end
   end
 
   private

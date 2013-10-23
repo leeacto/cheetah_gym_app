@@ -33,4 +33,23 @@ describe Result do
       @result.user.should == @user 
     end
   end
+
+  describe '#formatted' do
+    before(:each) do
+      @result = Result.create!(@attrres)
+      @result.recd = 128
+      @result.save
+    end
+    
+    it 'formats a timed wod' do
+      expect(@result.formatted).to eq Time.local(1999,1,1,0,
+      2,8).strftime "%M:%S"
+    end
+
+    it 'formats a reps wod' do
+      @wod.wod_type = 'Reps'
+      @wod.save
+      expect(@result.formatted).to eq 128
+    end
+  end
 end
