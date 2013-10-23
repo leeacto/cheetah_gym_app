@@ -8,8 +8,6 @@
 <% if current_user && current_user.admin %>
   <p>
     <%= link_to "Edit WOD", edit_wod_path(@wod) %>
-  <p>
-  <p>
     <%= link_to "Create Daily WOD", new_wod_daywod_path(@wod) %>
   <p>
 <% end %>
