@@ -138,18 +138,26 @@ footer .nav_links ul {
   color: #444;
 }
 
+/* FLASH Begin */
 .flash {
-  border: 1px solid black;
+  margin-left: 1em;
+  padding-left: .5em;
+  border: 2px solid black;
+  border-radius:  5px;
   width: 30%;
 }
 
 .success {
+  background-color: #99FF99;
   color: green;
 }
 
 .error {
+  background-color: #FFC7C7;
   color: red;
 }
+
+/* FLASH End */
 
 .profile {
   width: 100%;
