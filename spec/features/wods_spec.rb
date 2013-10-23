@@ -10,9 +10,8 @@ describe "Wods" do
           fill_in "wod_description", :with => ""
           fill_in "wod_seq", :with => ""
           fill_in "wod_baserep", :with => ""
-          click_button
-             response.should render_template('wods/new')
-             # response.should have_selector("div#error_explanation")
+          click_button 'Create WOD'
+          page.should have_content 'errors'
         end.should_not change(Wod, :count)
       end
     end
@@ -26,7 +25,7 @@ describe "Wods" do
           choose "wod_wod_type_time"
           fill_in "wod_seq", :with => "WG"
           fill_in "wod_baserep", :with => "1"
-          click_button 'Create Wod'
+          click_button 'Create WOD'
            # response.should have_selector("div.flash.success", :content => "New WOD Created")
         end.should change(Wod, :count).by(1)
       end

@@ -26,16 +26,9 @@ describe UsersController do
         response.should be_success
       end
 
-      it "should have the right title" do
-        get :index
-        response.should have_selector("title", :content => "All users")
-      end
-
       it "should have an element for each user" do 
         get :index
-        @users.each do |user|
-          response.should have_selector("li", :content => user.name)
-        end 
+        expect(assigns(:users)).to eq User.all
       end
     end
   end
@@ -55,16 +48,6 @@ describe UsersController do
       get :show, :id => @user
       assigns(:user).should == @user
     end
-
-    it "should have the right title" do
-      get :show, :id => @user
-      response.should have_selector("title", :content => @user.name)
-    end
-
-    it "should include the user's name" do
-      get :show, :id => @user
-      response.should have_selector("h1", :content => @user.name)
-    end
   end
 
   describe "GET 'new'" do
@@ -72,11 +55,6 @@ describe UsersController do
     it "should be successful" do
       get :new
       response.should be_success
-    end
-
-    it "should have the right title" do
-      get :new
-      response.should have_selector("title", :content => "Sign up")
     end
   end
 
@@ -93,11 +71,6 @@ describe UsersController do
         lambda do
           post :create, :user => @attr
         end.should_not change(User, :count)  
-      end
-
-      it "should have the right title" do
-        post :create, :user => @attr
-        response.should have_selector("title", :content => "Sign up")
       end
 
       it "should render the 'new' page" do
@@ -147,11 +120,6 @@ describe UsersController do
       get :edit, :id => @user
       response.should be_success
     end
-
-    it "should have teh right title" do
-      get :edit, :id => @user
-      response.should have_selector("title", :content => "Edit user")
-    end
   end 
 
   describe "PUT 'update'" do
@@ -170,11 +138,6 @@ describe UsersController do
       it "should render the 'edit' page" do
         put :update, :id => @user, :user => @attr
         response.should render_template('edit')
-      end
-
-      it "should have the right title" do
-        put :update, :id => @user, :user => @attr
-        response.should have_selector("title", :content => "Edit user")
       end
     end
 

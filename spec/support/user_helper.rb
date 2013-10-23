@@ -3,6 +3,7 @@ module UserHelper
     @user = FactoryGirl.create(:user)
     @user.admin = true
     @user.save
+    
     visit signin_path
     fill_in 'session_email', with: 'mhartl@example.com'
     fill_in 'session_password', with: 'foobar'

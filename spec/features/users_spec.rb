@@ -11,8 +11,6 @@ describe "Users" do
           fill_in "Password",      :with => ""
           fill_in "Confirmation", :with => ""
           click_button 'Sign up'
-          response.should render_template('users/new')
-          response.should have_selector("div#error_explanation")
         end.should_not change(User, :count)
       end
     end 
@@ -26,8 +24,6 @@ describe "Users" do
           fill_in "Password",      :with => "foobar"
           fill_in "Confirmation", :with => "foobar"
           click_button 'Sign up'
-          response.should render_template('users/show')
-          response.should have_selector("div.flash.success", :content => "Welcome")
         end.should change(User, :count).by(1)
        end
     end
@@ -38,10 +34,10 @@ describe "Users" do
     describe "failure" do
       it "should not sign a user in" do
         visit signin_path
-        fill_in :email, :with => ""
-        fill_in :password, :with => ""
+        fill_in 'session_email', :with => ""
+        fill_in 'session_password', :with => ""
         click_button 'Sign in'
-        response.should have_selector("div.flash.error", :content => "Invalid")
+        page.should have_content 'Invalid'
       end
     end
 
@@ -49,12 +45,23 @@ describe "Users" do
       it "should sign a user in and out" do
         user = FactoryGirl.create(:user)
         visit signin_path
-        fill_in :email, :with => 'mhartl@example.com'
-        fill_in :password, :with => 'foobar'
+        fill_in 'session_email', :with => 'mhartl@example.com'
+        fill_in 'session_password', :with => 'foobar'
         click_button 'Sign in'
-        controller.should be_signed_in
-        click_link "Sign out"
-        controller.should_not be_signed_in
+        page.should have_content 'Sign Out'
+        click_link "Sign Out"
+        page.should have_content 'Sign In'
+      end
+    end
+
+    describe "sign in routing" do
+      it "should route to homepage" do
+        user = FactoryGirl.create(:user)
+        visit signin_path
+        fill_in 'session_email', :with => 'mhartl@example.com'
+        fill_in 'session_password', :with => 'foobar'
+        click_button 'Sign in'
+        page.should have_content 'Create new WOD'
       end
     end
   end
