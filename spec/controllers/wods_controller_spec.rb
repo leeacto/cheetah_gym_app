@@ -20,7 +20,7 @@ describe WodsController do
 
     it "should have the right title" do
       get :show, :id => @wod
-      response.should have_selector("title", :content => @wod.name)
+      response.should render_template 'show'
     end
   end
 
