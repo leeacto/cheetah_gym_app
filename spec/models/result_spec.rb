@@ -48,8 +48,9 @@ describe Result do
 
     it 'formats a reps wod' do
       @wod.wod_type = 'Reps'
+      @wod.baserep = 1
       @wod.save
-      expect(@result.formatted).to eq 128
+      expect(@result.formatted).to eq '128'
     end
   end
 end

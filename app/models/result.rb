@@ -30,7 +30,7 @@ class Result < ActiveRecord::Base
   end
 
   def plus_reps
-    tester = self.recd % self.wod.baserep
+    tester = (self.recd % self.wod.baserep).to_i
     if tester > 0
       "+ #{tester}"
     else
