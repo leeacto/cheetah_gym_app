@@ -15,6 +15,11 @@
       </tr>  
   </table>
 
+  <% if current_user && current_user.admin %>
+    <%= link_to "Delete", @daywod, :method => :delete, :confirm => "You sure?",
+                  :title => "Delete Daywod" %>
+  <% end %>
+
 <strong><p>Results</p></strong>
 
 <% if current_user %>
