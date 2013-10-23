@@ -5,13 +5,14 @@
 <pre><%= @wod.description %></pre><br />
 <strong>Sequence</strong> <%= @wod.seq.upcase %><br />
 <strong>For </strong> <%= @wod.wod_type %><br />
-<p>
-<%= link_to "Edit WOD", edit_wod_path(@wod) %>
-<p>
-
-<p>
-<%= link_to "Create Daily WOD", new_wod_daywod_path(@wod) %>
-<p>
+<% if current_user && current_user.admin %>
+  <p>
+    <%= link_to "Edit WOD", edit_wod_path(@wod) %>
+  <p>
+  <p>
+    <%= link_to "Create Daily WOD", new_wod_daywod_path(@wod) %>
+  <p>
+<% end %>
 
 <% unless @wod.daywods.empty? %>
   <table id="ath_results">
