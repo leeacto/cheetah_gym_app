@@ -156,6 +156,7 @@ feature 'Results' do
           @result.recd.should eq 301
         end
 
+
         it "denies update with invalid attributes" do
           fill_in 'result_mins', with: 0
           fill_in 'result_secs', with: 0
@@ -163,6 +164,19 @@ feature 'Results' do
           page.should have_content '1 error'
           @result.reload
           @result.recd.should eq 1
+        end
+
+        describe "Deleting" do
+          it "sees that it can delete result" do
+            page.should have_content 'Delete Result'
+          end
+
+          # it "removes the record" do
+          #   lambda do
+          #     click_link 'Delete Result'
+          #     click_button 'OK'
+          #   end.should change(Result, :count).by(-1)
+          # end
         end
       end
 
@@ -190,6 +204,12 @@ feature 'Results' do
           page.should have_content '1 error'
           @other_result.reload
           @other_result.recd.should eq 1
+        end
+
+        describe "Deleting" do
+          it "sees that it can delete result" do
+            page.should have_content 'Delete Result'
+          end
         end
       end
     end

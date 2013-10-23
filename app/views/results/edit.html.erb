@@ -1,6 +1,11 @@
 <h1>Edit Result</h1>
 
-<h2>Athlete</h2> <%= User.find(@result.user_id).name %>
+<h2>Athlete: <%= @result.user.name %></h2>
+<% if current_user && (current_user.admin || current_user = @result.user) %>
+    <%= link_to "Delete Result", @daywod, :method => :delete, :confirm => "You sure?",
+                  :title => "Delete Result" %>
+    <br>
+<% end %>
 
 <%= form_for @result, :url => wod_daywod_result_path, :html => { :class => "wod_daywod_result" }  do |f| %> 
     <%= render 'shared/error_messages', :object => f.object %>
