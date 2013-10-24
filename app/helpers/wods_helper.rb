@@ -8,15 +8,15 @@ module WodsHelper
   def result_avg(wod, rx=nil)
     case rx
     when true
-      total_recd = wod.results.rxd.pluck(:recd).inject(':+')
+      total_recd = wod.results.rxd.pluck(:recd).inject('+')
       return '' if total_recd == nil
       avg_recd = total_recd.to_f/wod.results.rxd.count
     when false
-      total_recd = wod.results.sxd.pluck(:recd).inject(':+')
+      total_recd = wod.results.sxd.pluck(:recd).inject('+')
       return '' if total_recd == nil
       avg_recd = total_recd.to_f/wod.results.sxd.count
     else
-      total_recd = wod.results.pluck(:recd).inject(':+')
+      total_recd = wod.results.pluck(:recd).inject('+')
       return '' if total_recd == nil
       avg_recd = total_recd.to_f/wod.results.count
     end
