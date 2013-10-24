@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-   before(:each) do
+  before(:each) do
     @attr = { 
       :name => "Example User", 
       :email => "user@example.com",
@@ -10,52 +10,55 @@ describe User do
     }
   end
 
-   it "should create a new instance given valid attributes" do
-    User.create!(@attr)
+  it "should create a new instance given valid attributes" do
+    expect{User.create!(@attr)}.to change(User, :count).by(1)
   end
 
-   it "should require a name" do
-    no_name_user = User.new(@attr.merge(:name => ""))
-     no_name_user.should_not be_valid
-  end
+  describe "Name Validations" do
+    it "should require a name" do
+      no_name_user = User.new(@attr.merge(:name => ""))
+      no_name_user.should_not be_valid
+    end
 
-  it "should reject too long names" do
-    long_name = "a" * 51
-    long_name_user = User.new(@attr.merge(:name => long_name))
-    long_name_user.should_not be_valid
-  end
-
-  it "should accept valid email addresses" do
-    addresses = %w[user@foo.com THE_USER@foo.bar.org first.last@foo.jp] 
-    addresses.each do |address|
-      valid_email_user = User.new(@attr.merge(:email => address))
-      valid_email_user.should be_valid
-    end 
+    it "should reject too long names" do
+      long_name = "a" * 51
+      long_name_user = User.new(@attr.merge(:name => long_name))
+      long_name_user.should_not be_valid
+    end
   end
   
-  it "should reject invalid email addresses" do
-    addresses = %w[user@foo,com user_at_foo.org example.user@foo.] 
-    addresses.each do |address|
-      invalid_email_user = User.new(@attr.merge(:email => address))
-      invalid_email_user.should_not be_valid
-    end 
-  end
+  describe "Email Validations" do
+    it "should accept valid email addresses" do
+      addresses = %w[user@foo.com THE_USER@foo.bar.org first.last@foo.jp] 
+      addresses.each do |address|
+        valid_email_user = User.new(@attr.merge(:email => address))
+        valid_email_user.should be_valid
+      end 
+    end
+  
+    it "should reject invalid email addresses" do
+      addresses = %w[user@foo,com user_at_foo.org example.user@foo.] 
+      addresses.each do |address|
+        invalid_email_user = User.new(@attr.merge(:email => address))
+        invalid_email_user.should_not be_valid
+      end 
+    end
 
-  it "should reject duplicat email addresses" do
-    User.create!(@attr)
-    user_with_duplicate_email = User.new(@attr)
-    user_with_duplicate_email.should_not be_valid
-  end
+    it "should reject duplicate email addresses" do
+      User.create!(@attr)
+      user_with_duplicate_email = User.new(@attr)
+      user_with_duplicate_email.should_not be_valid
+    end
 
-  it "should reject email addresses identical up to case" do
-    upcased_email = @attr[:email].upcase
-    User.create!(@attr.merge(:email => upcased_email))
-    user_with_duplicate_email = User.new(@attr)
-    user_with_duplicate_email.should_not be_valid
+    it "should reject email addresses identical up to case" do
+      upcased_email = @attr[:email].upcase
+      User.create!(@attr.merge(:email => upcased_email))
+      user_with_duplicate_email = User.new(@attr)
+      user_with_duplicate_email.should_not be_valid
+    end
   end
 
   describe "password validations" do
-
     it "should require a password" do
       User.new(@attr.merge(:password => "", :password_confirmation => "")).
       should_not be_valid
@@ -82,7 +85,6 @@ describe User do
   end
 
   describe "password encryption" do
-
     before(:each) do
       @user = User.create!(@attr)
     end
@@ -95,8 +97,7 @@ describe User do
       @user.encrypted_password.should_not be_blank
     end
 
-    describe "authenticate method" do
-
+    describe "#authenticate" do
       it "should return nil on email/password mismatch" do
         wrong_password_user = User.authenticate(@attr[:email], "wrongpass")
         wrong_password_user.should be_nil
@@ -115,7 +116,6 @@ describe User do
   end
 
   describe "admin attribute" do
-
     before(:each) do
       @user = User.create!(@attr)
     end
@@ -132,5 +132,16 @@ describe User do
       @user.toggle!(:admin)
       @user.should be_admin
     end
-  end  
+  end
+
+  describe "#by_name scope" do
+    before(:each) do
+      @user = User.create(@attr.merge(:name => 'Zack Miller'))
+      @user2 = FactoryGirl.create(:user)
+    end
+
+    it "orders by the first name" do
+      expect(User.by_name.first).to eq @user2
+    end
+  end
 end
