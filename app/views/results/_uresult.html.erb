@@ -3,11 +3,7 @@
   <td><%= result.wod.name %></td>
   <td><%= result.formatted %></td>
   <td>
-    <% if result.rx  == true %>
-    Yes
-    <% else %>
-    No
-    <% end %>
+    <%= "\u2714" if result.rx  == true %>
   </td>
   <td><pre><%= result.note %></pre></td>
 </tr>

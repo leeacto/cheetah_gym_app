@@ -3,7 +3,7 @@ require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :email, :name, :password, :password_confirmation
-  has_many :results
+  has_many :results, :dependent => :destroy
   has_many :daywods, through: :results
   has_many :wods, through: :daywods
 
@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
                     :format => { :with => email_regex },
                     :uniqueness => { :case_sensitive => false }
   
-  # Automatically create the virtual attribute 'password_confirmation'. 
   validates :password, :presence => true,
             :confirmation => true,
             :length => { :within => 6..40 }, :if => :should_validate_password?
@@ -37,10 +36,7 @@ class User < ActiveRecord::Base
     (user && user.salt == cookie_salt) ? user : nil
   end
 
-  def feed
-    results
-  end
-
+  scope :by_name, -> { order('name ASC') }
   private
     def should_validate_password?
       if password

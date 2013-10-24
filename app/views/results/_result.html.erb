@@ -1,15 +1,17 @@
 
 <tr>
-  <td><%= link_to result.user.name, edit_wod_daywod_result_path(result.wod.id, result.daywod_id, result.id)  %></td>
+  <td>
+  <% if current_user && (current_user?(result.user) || current_user.admin) %>
+    <%= link_to result.user.name, edit_wod_daywod_result_path(result.wod.id, result.daywod_id, result.id)  %>
+  <% else %>
+    <%= result.user.name %>
+  <% end %>
+  </td>
   <td>
     <%= result.formatted %>
   </td>
   <td>
-    <% if result.rx  == true %>
-      Yes
-    <% else %>
-      No
-    <% end %>
+    <%= "\u2714" if result.rx  == true %>
   </td>
   <td><%= result.note %></td>
 </tr>

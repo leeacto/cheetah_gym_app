@@ -8,6 +8,9 @@ class Result < ActiveRecord::Base
   validates :recd, :presence => true, :numericality => { :greater_than => 0 }
   validates :user_id, :presence => true
 
+  scope :rxd, -> {where(:rx => true)}
+  scope :sxd, -> {where(:rx => false)}
+  
   def formatted
     if self.wod.wod_type == "Time"
       Time.local(1999,1,1,0,
