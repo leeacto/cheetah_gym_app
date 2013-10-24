@@ -20,7 +20,7 @@ module WodsHelper
       return '' if total_recd == nil
       avg_recd = total_recd.to_f/wod.results.count
     end
-    "TEST"
+    avg_recd
     # if wod.wod_type == "Time"
     #   Time.local(1999,1,1,0, (avg_recd/wod.baserep).to_i, (avg_recd%wod.baserep).to_i).strftime "%M:%S"
     # else
