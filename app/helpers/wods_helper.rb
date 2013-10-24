@@ -26,9 +26,9 @@ module WodsHelper
     else
       formatted = "#{(avg_recd/wod.baserep).to_i}"
       
-      if avg_recd % wod.baserep > 0
+      if (avg_recd % wod.baserep).to_i > 0
        
-       formatted += "+ #{avg_recd % wod.baserep}"
+       formatted += "+ #{(avg_recd % wod.baserep).to_i}"
       end
       formatted
     end
