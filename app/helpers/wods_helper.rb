@@ -24,7 +24,7 @@ module WodsHelper
     if wod.wod_type == "Time"
       Time.local(1999,1,1,0, (avg_recd/wod.baserep).to_i, (avg_recd%wod.baserep).to_i).strftime "%M:%S"
     else
-    #   formatted = "#{(avg_recd/wod.baserep).to_i}"
+      formatted = "#{(avg_recd/wod.baserep).to_i}"
     #   if avg_recd % wod.baserep > 0
     #     +
     #    formatted += "+ #{avg_recd % wod.baserep}"
