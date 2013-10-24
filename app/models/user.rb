@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
   end
 
   scope :by_name, -> { order('name ASC') }
+  
   private
     def should_validate_password?
       if password
