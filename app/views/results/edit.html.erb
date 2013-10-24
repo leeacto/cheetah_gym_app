@@ -2,7 +2,7 @@
 
 <h2>Athlete: <%= @result.user.name %></h2>
 <% if current_user && (current_user.admin || current_user = @result.user) %>
-    <%= link_to "Delete Result", @daywod, :method => :delete, :confirm => "You sure?",
+    <%= link_to "Delete Result", @result, :method => :delete, :confirm => "You sure?",
                   :title => "Delete Result" %>
     <br>
 <% end %>

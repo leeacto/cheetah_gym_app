@@ -1,3 +1,4 @@
+require 'debugger'
 class ResultsController < ApplicationController
   include ResultsHelper
 
@@ -10,7 +11,7 @@ class ResultsController < ApplicationController
   end
 
   def create
-    if current_user.admin? || User.find(params[:result][:user_id]) == current_user
+    if current_user.admin? || current_user?(User.find(params[:result][:user_id]))
       @daywod = Daywod.find(session[:daywod_id])
       @wod = @daywod.wod
       params[:result][:recd] = time_to_recd(params[:result]) if @wod.wod_type == "Time"
@@ -29,6 +30,15 @@ class ResultsController < ApplicationController
   end
 
   def destroy
+    @result = Result.find(params[:id])
+    @daywod = @result.daywod
+    @wod = @result.wod
+    if signed_in? && (current_user?(@result.user) || current_user.admin)
+      @result.destroy
+    else
+      flash[:error] = "You can only delete your own result"
+    end
+      redirect_to wod_daywod_path(@wod, @daywod)
   end
 
   def edit
@@ -42,7 +52,7 @@ class ResultsController < ApplicationController
     @result = Result.find(params[:id])
     @wod = @result.wod
     @daywod = @result.daywod
-    if current_user.admin || current_user == @result.user
+    if current_user.admin || current_user?(@result.user)
       params[:result][:recd] = time_to_recd(params[:result]) if @wod.wod_type == "Time"
       if @result.update_attributes(params[:result])
         flash[:success] = "Result updated"
