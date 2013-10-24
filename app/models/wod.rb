@@ -4,7 +4,7 @@ class Wod < ActiveRecord::Base
   attr_accessible :baserep, :description, :name, :seq, :wod_type
 
   has_many :daywods, :dependent => :destroy
-  has_many :results, :through => :daywods
+  has_many :results, :through => :daywods, :dependent => :destroy
   has_many :athletes, through: :results, source: :user
   validates :baserep, :presence => true
   validates :description, :presence => true
@@ -41,7 +41,6 @@ class Wod < ActiveRecord::Base
   end
 
   private
-
     def reps_to_sixty
       if self.wod_type == "Time"
         self.baserep = "60"
