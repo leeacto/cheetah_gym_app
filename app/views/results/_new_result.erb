@@ -10,10 +10,23 @@
     <% end %>
   </div>
   
-  <% if wod_type != "Time" %>
-    <% if wod_type == "Reps" %>
-      <%= f.label "Result" %><br />
-      <%= f.number_field :recd, :min => 0, :value => 0 %>
+  <% if wod.wod_type != "Time" %>
+    <% if wod.wod_type == "Reps" %>
+      <% if wod.baserep == 1 %>
+        <div class="field">
+          <%= f.label "Result" %><br />
+          <%= f.number_field :recd, :min => 0, :value => 0 %>
+        </div>
+      <% else %>
+        <div class="field">
+          <%= f.label "Rounds" %><br />
+          <%= f.number_field :rds, :min => 0, :value => 0 %>
+        </div>
+        <div class="field">
+          <%= f.label "Reps" %><br />
+          <%= f.number_field :reps, :min => 0, :value => 0 %>
+        </div>
+      <% end %>
     <% else %>
       <div class="field">
         <%= f.label "Result" %><br />
@@ -22,11 +35,11 @@
     <% end %>
   <% else %>
     <div class="field">
-       <%= f.label "Minutes" %><br />
+      <%= f.label "Minutes" %><br />
       <%= f.number_field :mins, :min => 0, :value => 0 %>
     </div>
     <div class="field">
-       <%= f.label "Seconds" %><br />
+      <%= f.label "Seconds" %><br />
       <%= f.number_field :secs, :min => 0, :value => 0 %>
     </div>
   <% end %>

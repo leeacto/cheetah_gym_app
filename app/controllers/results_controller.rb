@@ -14,7 +14,17 @@ class ResultsController < ApplicationController
     if current_user.admin? || current_user?(User.find(params[:result][:user_id]))
       @daywod = Daywod.find(session[:daywod_id])
       @wod = @daywod.wod
-      params[:result][:recd] = time_to_recd(params[:result]) if @wod.wod_type == "Time"
+      
+      if @wod.wod_type == "Time"
+        params[:result][:recd] = time_to_recd(params[:result]) 
+        params[:result].delete(:mins)
+        params[:result].delete(:secs)
+      elsif @wod.baserep > 1
+        params[:result][:recd] = rds_to_recd(params[:result], @wod.baserep)
+        params[:result].delete(:rds)
+        params[:result].delete(:reps)
+      end
+
       @result = @daywod.results.build(params[:result])
       if @result.save
         flash[:success] = "Result Logged"
