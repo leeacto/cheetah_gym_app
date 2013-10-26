@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     @user.name = @user.name.titleize
+    @user.email = @user.email.downcase
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to Cheetah Crossfit!"

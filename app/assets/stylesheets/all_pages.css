@@ -125,18 +125,22 @@ footer .nav_links ul {
   text-align: center;
 }
 
-.sign_in_up {
-  border: 2px solid gray;
-  text-align: center;
-  width: 10%;
+.root_button_frame form {
+  width: 50%;
   margin: auto;
-  padding: 10px;
 }
 
-.sign_in_up a {
-  text-decoration: none;
-  color: #444;
+.root_button {
+  display: block;
+  border-radius: .5em;
+  background-color: green;
+  border: 2px solid green;
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  margin-bottom: .5em;
 }
+
 
 /* FLASH Begin */
 .flash {

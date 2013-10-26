@@ -1,10 +1,8 @@
-<% if w.personal == false %>
-  <ul class="round journal">
-    <li><%= w.performed %></li>
-    <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
-    <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
-    <% if current_user %>
-      <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
-    <% end %>
-  </ul>
-<% end %>
+<ul class="round journal">
+  <li><%= w.performed %></li>
+  <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
+  <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
+  <% if current_user %>
+    <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
+  <% end %>
+</ul>

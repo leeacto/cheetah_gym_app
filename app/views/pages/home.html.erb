@@ -1,11 +1,12 @@
 <%= image_tag('cflogo.png') %>
-<div class="sign_in_up round">
-  <% if signed_in? %>
-    <%= link_to "Create new WOD", new_wod_path %>
-    <%= link_to "Log a Workout", newworkout_path %>
-  <% else %>
-    <%= link_to "Sign up now!", signup_path %>
-  <% end %>
+
+<div class="root_button_frame">
+<% if signed_in? %>
+  <%= button_to "Create new WOD", new_wod_path, {:class => "root_button"} %>
+  <%= button_to "Log a Workout", newworkout_path, {:class => "root_button"} %>
+<% else %>
+  <%= button_to "Sign up now!", signup_path, {:class => "root_button"} %>
+<% end %>
 </div>
 
 <% @daywods.each do |w| %>
