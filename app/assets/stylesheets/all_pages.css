@@ -133,14 +133,16 @@ footer .nav_links ul {
 .root_button {
   display: block;
   border-radius: .5em;
-  background-color: green;
-  border: 2px solid green;
+  background-color: #FFCB3E;
+  border: 2px solid #FFCB3E;
   text-align: center;
   width: 30%;
   margin: auto;
   margin-bottom: .5em;
+  color: black;
+  text-decoration: none;
+  font-family: 'Black Ops One', cursive;
 }
-
 
 /* FLASH Begin */
 .flash {
