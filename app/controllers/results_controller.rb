@@ -4,7 +4,12 @@ class ResultsController < ApplicationController
 
   def index
     if request.xhr?
-      @results = Daywod.find(params[:daywod_id]).results
+      @wod = Wod.find(params[:wod_id])
+      if @wod.wod_type == "Time"
+        @results = Daywod.find(params[:daywod_id]).results.order("rx DESC, recd ASC")
+      else
+        @results = Daywod.find(params[:daywod_id]).results.order("rx DESC, recd DESC")
+      end
       render 'index', { :layout => false}
     else
       @results = Daywod.find(params[:daywod_id]).results
