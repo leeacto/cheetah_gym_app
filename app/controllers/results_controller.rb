@@ -2,6 +2,15 @@ require 'debugger'
 class ResultsController < ApplicationController
   include ResultsHelper
 
+  def index
+    if request.xhr?
+      @results = Daywod.find(params[:daywod_id]).results
+      render 'index', { :layout => false}
+    else
+      @results = Daywod.find(params[:daywod_id]).results
+    end
+  end
+
   def new
     @title = "WOD Result"
     @wod = Wod.find(params[:wod_id])

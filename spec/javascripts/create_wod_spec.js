@@ -4,11 +4,17 @@
 
 describe("selectWod", function(){
   beforeEach(function(){
-    sWod = new wodSelector('.recd_workout_tabs');
-  });
-
-  it("should have the correct el", function(){
-    expect(sWod.el).toBe('.recd_workout_tabs');
+    sWod = new wodSelector(
+      "<div class='recd_workout_tabs'>" +
+        "<ul class='tab_header'>" +
+          "<li class='selected_tab' id='workout_tab'>Select Workout</li>" +
+          "<li id='daywod_tab'>Enter Date Performed</li>" +
+          "<li id='results_tab'>Enter Results</li>" +
+        "</ul>" +
+        "<div class='select_workout'><div class='wod_form'></div></div>" +
+        "<div class='select_daywod'></div>" +
+        "<div class='select_result'></div>" +
+      "</div>");
   });
 
   it("should have an initialize function", function(){
@@ -20,8 +26,8 @@ describe("selectWod", function(){
   it("should have a selectTab function", function(){
     sWod.initialize();
     spyOn(sWod, "selectTab");
-    sWod.selectTab(tab);
-    expect(sWod.selectTab).toHaveBeenCalledWith(tab);
+    sWod.selectTab(sWod.tabs[0]);
+    expect(sWod.selectTab).toHaveBeenCalledWith(sWod.tabs[0]);
   });
   
   it("should have an addTabs function", function(){

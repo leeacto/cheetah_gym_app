@@ -98,7 +98,7 @@ footer .nav_links ul {
   color: #222;
 }
 
-.journal {
+.journal_entry {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -109,7 +109,7 @@ footer .nav_links ul {
   width: 30%
 }
 
-.journal li {
+.journal_entry li {
   padding-left: 2em;
 }
 
