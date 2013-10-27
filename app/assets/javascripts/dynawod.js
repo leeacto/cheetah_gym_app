@@ -1,5 +1,5 @@
 var wodSelector = function(el) {
-  this.el = el;
+  this.el = $(el);
   this.tabs = [];
 };
 
@@ -7,28 +7,10 @@ wodSelector.prototype.initialize = function(){
   this.addTabs();
 }
 
-wodSelector.prototype.selectTab = function(tab){
-  for(var i in this.tabs)
-  {
-    if(this.tabs[i] === tab)
-    {
-      this.tabs[i].hidden = false;
-      this.tabs[i].el.addClass('selected_tab');
-      this.tabs[i].body.hidden = false;
-      this.tabs[i].body.el.removeClass('hidden');
-    }
-    else {
-     this.tabs[i].hidden = true;
-     this.tabs[i].el.removeClass('selected_tab');
-     this.tabs[i].body.hidden = true;
-     this.tabs[i].body.el.addClass('hidden');
-    }
-  }
-}
-
 wodSelector.prototype.addTabs = function(){
   var self = this;
-  $(this.el).find('.tab_header li').each(function(){
+
+  (this.el).find('.tab_header li').each(function(){
     var new_tab = new Tab(this.id, self);
     new_tab.el.on('click',function(){
       self.selectTab(new_tab);
@@ -57,6 +39,25 @@ wodSelector.prototype.addTabs = function(){
   });
 }
 
+wodSelector.prototype.selectTab = function(tab){
+  for(var i in this.tabs)
+  {
+    if(this.tabs[i] === tab)
+    {
+      this.tabs[i].hidden = false;
+      this.tabs[i].el.addClass('selected_tab');
+      this.tabs[i].body.hidden = false;
+      this.tabs[i].body.el.removeClass('hidden');
+    }
+    else {
+     this.tabs[i].hidden = true;
+     this.tabs[i].el.removeClass('selected_tab');
+     this.tabs[i].body.hidden = true;
+     this.tabs[i].body.el.addClass('hidden');
+    }
+  }
+}
+
 var Tab = function(el, wodSelector) {
   this.wodSelector = wodSelector;
   this.el = $("#"+el);
@@ -70,7 +71,7 @@ Tab.prototype.addBody = function() {
 
 var Body = function(el, tab) {
   this.tab = tab;
-  this.el = $(".select_" + el.substring(1,el.length-4))
+  this.el = $(".select_" + el.substring(1,el.length-4));
   this.hidden = true;
   this.addAttribs();
 }
@@ -126,5 +127,7 @@ Body.prototype.clrWorkoutForm = function(){
 
 $(document).ready(function() {
   var wSelector = new wodSelector('.recd_workout_tabs');
-  wSelector.initialize();
+  if ($('html').find('.recd_workout_tabs').value) {
+    wSelector.initialize();
+  }
 });

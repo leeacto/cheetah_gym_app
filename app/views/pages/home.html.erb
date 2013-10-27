@@ -1,14 +1,16 @@
 <%= image_tag('cflogo.png') %>
 
 <div class="root_button_frame">
-<% if signed_in? %>
-  <%= link_to "Create new WOD", new_wod_path, {:class => "root_button"} %>
-  <%= link_to "Log a Workout", newworkout_path, {:class => "root_button"} %>
-<% else %>
-  <%= link_to "Sign up now!", signup_path, {:class => "root_button"} %>
-<% end %>
+  <% if signed_in? %>
+    <%= link_to "Create new WOD", new_wod_path, {:class => "root_button"} %>
+    <%= link_to "Log a Workout", newworkout_path, {:class => "root_button"} %>
+  <% else %>
+    <%= link_to "Sign up now!", signup_path, {:class => "root_button"} %>
+  <% end %>
 </div>
 
-<% @daywods.each do |w| %>
-  <%= render partial: 'daywods/root_daywod', :locals => {:w => w } %>
-<% end %>
+<div class = "journal">
+  <% @daywods.each do |w| %>
+    <%= render partial: 'daywods/root_daywod', :locals => {:w => w } %>
+  <% end %>
+</div>

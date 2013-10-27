@@ -1,8 +1,12 @@
-<ul class="round journal">
+<ul class="round journal_entry">
   <li><%= w.performed %></li>
-  <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w) %></li>
+  <li>WOD: <%= link_to w.wod.name, wod_daywod_path(w.wod, w), {:id => "wod_#{w.wod.id}"} %></li>
   <li><%= w.wod.description.gsub(/\n/,'<br>').html_safe %></li>
   <% if current_user %>
-    <li><%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %></li>
+    <li>
+      <%= link_to "Enter Result", new_wod_daywod_result_path(w.wod, w) %> 
+      <%= link_to "View Results", wod_daywod_results_path(w.wod, w), { :id => "daywod_#{w.id}" } %>
+    </li>
+    <div class='hidden'></div>
   <% end %>
 </ul>

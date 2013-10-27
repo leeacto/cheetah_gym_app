@@ -1,0 +1,8 @@
+<li>
+  <table>
+    <% @results.each do |r| %>
+      <td><%= r.user.name %></td>
+      <td><%= r.formatted %></td>
+    <% end %>
+  </table>
+</li>
