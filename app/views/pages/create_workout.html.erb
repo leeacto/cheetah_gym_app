@@ -33,6 +33,6 @@
   </div>
   
   <div class="select_results hidden tab">
-    <%= render partial: '/results/new_result', locals: { wod_type: "Time" }%>
+    <%= render partial: '/results/new_result', locals: { wod: Wod.last }%>
   </div>
 </div>
