@@ -5,7 +5,7 @@
 ##Summary
 The purpose of this app is to allow Crossfit gym members and their coach to track the outcome of their workouts over time. Crossfit emphasizes measurable performance over time.
 
-Notebooks get lost, and spreadsheets get long. With this app, you can measure you will always have access to your hard work.
+Notebooks get lost, and spreadsheets get long. With this app, you will always have access to your hard work.
 
 ##Installation
 1) Run <tt>git clone https://github.com/leeacto/cheetah_gym_app.git cheetah_gym_app</tt> from your command line
