@@ -10,19 +10,37 @@
 <%= form_for @result, :url => wod_daywod_result_path, :html => { :class => "wod_daywod_result" }  do |f| %> 
     <%= render 'shared/error_messages', :object => f.object %>
 
-    <% if @result.wod.wod_type != "Time" %>
-      <div class="field">
-        <%= f.label "Result" %><br />
-        <%= f.number_field :recd, :min => 0, :value => @result.recd %>
-      </div>
+    <% if wod.wod_type != "Time" %>
+      <% if wod.wod_type == "Reps" %>
+        <% if wod.baserep == 1 %>
+          <div class="field">
+            <%= f.label "Result" %><br />
+            <%= f.number_field :recd, :min => 0, :value => 0 %>
+          </div>
+        <% else %>
+          <div class="field">
+            <%= f.label "Rounds" %><br />
+            <%= f.number_field :rds, :min => 0, :value => 0 %>
+          </div>
+          <div class="field">
+            <%= f.label "Reps" %><br />
+            <%= f.number_field :reps, :min => 0, :value => 0 %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="field">
+          <%= f.label "Result" %><br />
+          <%= f.number_field :recd, :min => 0, :value => 0 %>
+        </div>
+      <% end %>
     <% else %>
       <div class="field">
-         <%= f.label "Minutes" %><br />
-        <%= f.number_field :mins, :min => 0, :value => @result.mins %>
+        <%= f.label "Minutes" %><br />
+        <%= f.number_field :mins, :min => 0, :value => 0 %>
       </div>
       <div class="field">
-         <%= f.label "Seconds" %><br />
-        <%= f.number_field :secs, :sec => 0, :value => @result.secs %>
+        <%= f.label "Seconds" %><br />
+        <%= f.number_field :secs, :min => 0, :value => 0 %>
       </div>
     <% end %>
 
