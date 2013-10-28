@@ -150,6 +150,7 @@ feature 'Results' do
 
         it "updates with valid attributes" do
           fill_in 'result_mins', with: 5
+          fill_in 'result_secs', with: 1
           click_button 'Update'
           page.should have_content 'Result updated'
           @result.reload
@@ -170,13 +171,6 @@ feature 'Results' do
           it "sees that it can delete result" do
             page.should have_content 'Delete Result'
           end
-
-          # it "removes the record" do
-          #   lambda do
-          #     click_link 'Delete Result'
-          #     click_button 'OK'
-          #   end.should change(Result, :count).by(-1)
-          # end
         end
       end
 
@@ -191,6 +185,7 @@ feature 'Results' do
 
         it "updates with valid attributes" do
           fill_in 'result_mins', with: 5
+          fill_in 'result_secs', with: 1
           click_button 'Update'
           page.should have_content 'Result updated'
           @other_result.reload
