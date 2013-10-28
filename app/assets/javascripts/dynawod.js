@@ -110,12 +110,12 @@ Body.prototype.wodStats = function(id) {
     method: 'get',
     dataType: 'json'
   }).done(function(wod_data) {
-    $('#wod_name').val(wod_data.name);
-    $('#wod_description').val(wod_data.description);
-    $('#wod_seq').val(wod_data.seq);
-    var wod_radio = "#wod_wod_type_" + wod_data.wod_type.toLowerCase();
+    $('#wod_name').val(wod_data.wod.name);
+    $('#wod_description').val(wod_data.wod.description);
+    $('#wod_seq').val(wod_data.wod.seq);
+    var wod_radio = "#wod_wod_type_" + wod_data.wod.wod_type.toLowerCase();
     $(wod_radio).prop('checked', true);
-    $('#wod_baserep').val(wod_data.baserep);
+    $('#wod_baserep').val(wod_data.wod.baserep);
   });
 }
 
@@ -127,7 +127,7 @@ Body.prototype.clrWorkoutForm = function(){
 
 $(document).ready(function() {
   var wSelector = new wodSelector('.recd_workout_tabs');
-  if ($('html').find('.recd_workout_tabs').value) {
+  if ($('html')[0].baseURI.substr($('html')[0].baseURI.length-10) === 'newworkout') {
     wSelector.initialize();
   }
 });
