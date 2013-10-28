@@ -10,9 +10,9 @@
 <%= form_for @result, :url => wod_daywod_result_path, :html => { :class => "wod_daywod_result" }  do |f| %> 
     <%= render 'shared/error_messages', :object => f.object %>
 
-    <% if wod.wod_type != "Time" %>
-      <% if wod.wod_type == "Reps" %>
-        <% if wod.baserep == 1 %>
+    <% if @wod.wod_type != "Time" %>
+      <% if @wod.wod_type == "Reps" %>
+        <% if @wod.baserep == 1 %>
           <div class="field">
             <%= f.label "Result" %><br />
             <%= f.number_field :recd, :min => 0, :value => 0 %>
