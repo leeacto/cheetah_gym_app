@@ -67,7 +67,7 @@ class ResultsController < ApplicationController
 
   def edit
     @title = "Edit Result"
-    @result = @daywod.results.find(params[:id])
+    @result = Result.find(params[:id])
     @wod = @result.wod
     @daywod = @result.daywod
   end
