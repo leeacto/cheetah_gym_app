@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin-left: 1em;
+}
+
 img {
   display: block;
   margin: auto;
