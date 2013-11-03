@@ -8,5 +8,9 @@
       <%= link_to "View Results", wod_daywod_results_path(w.wod, w), { :id => "daywod_#{w.id}" } %>
     </li>
     <div class='hidden'></div>
+  <% else %>
+    <li>
+      <%= link_to "View Results", wod_daywod_results_path(w.wod, w), { :id => "daywod_#{w.id}" } %>
+    </li>
   <% end %>
 </ul>
