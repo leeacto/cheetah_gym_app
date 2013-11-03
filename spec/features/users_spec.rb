@@ -42,16 +42,32 @@ describe "Users" do
     end
 
     describe "success" do
-      it "should sign a user in and out" do
-        user = FactoryGirl.create(:user)
-        visit signin_path
-        fill_in 'session_email', :with => 'mhartl@example.com'
-        fill_in 'session_password', :with => 'foobar'
-        click_button 'Sign in'
-        page.should have_content 'Sign Out'
-        click_link "Sign Out"
-        page.should have_content 'Sign In'
+      context 'case sensitive' do
+        it "should sign a user in and out" do
+          user = FactoryGirl.create(:user)
+          visit signin_path
+          fill_in 'session_email', :with => 'mhartl@example.com'
+          fill_in 'session_password', :with => 'foobar'
+          click_button 'Sign in'
+          page.should have_content 'Sign Out'
+          click_link "Sign Out"
+          page.should have_content 'Sign In'
+        end
       end
+
+      context 'case insensitive' do
+        it "should sign a user in and out" do
+          user = FactoryGirl.create(:user)
+          visit signin_path
+          fill_in 'session_email', :with => 'MHartl@example.com'
+          fill_in 'session_password', :with => 'foobar'
+          click_button 'Sign in'
+          page.should have_content 'Sign Out'
+          click_link "Sign Out"
+          page.should have_content 'Sign In'
+        end
+      end
+
     end
 
     describe "sign in routing" do
