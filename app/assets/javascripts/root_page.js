@@ -17,7 +17,7 @@ dayWodList.prototype.addEntries = function() {
 
 var Entry = function(el) {
   this.el = $(el);
-  this.dwId = $("#" + this.el.find('a:nth-child(2)')[0].id);
+  this.dwId = $("#" + this.el.find("a:contains('View Results')")[0].id);
   this.wId = $("#" + this.el.find('a:nth-child(1)')[0].id);
   this.resultDiv = $(el).find('div');
 
