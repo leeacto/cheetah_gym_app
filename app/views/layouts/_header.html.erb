@@ -1,7 +1,7 @@
 <header>
-  <%= link_to image_tag('cflogothumb.png'), root_path %>
-  <div class="nav_links">
-    <ul>
+  
+    <ul class="nav_links">
+      <li><%= link_to image_tag('cflogothumb.png'), root_path %></li>
       <li><%= link_to "Home |", root_path %></li> 
       <% if signed_in? %>
         <li><%= link_to "Athletes |", athletes_path %></li>
@@ -25,5 +25,5 @@
         </div>
       </li>
     </ul>
-  </div>
+  
 </header>

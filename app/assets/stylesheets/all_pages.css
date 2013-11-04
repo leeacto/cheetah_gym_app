@@ -21,11 +21,11 @@ header {
   width: 100%;
   background-color: #FFCB3E;
   margin-bottom: 10px;
-  height: 40px;
+  height: 2.5em;
 }
 
 header img {
-  width: 35px;
+  max-width: 35px;
   margin: 3px 0 0 3px;
   display: inline;
   float: left;
@@ -33,28 +33,26 @@ header img {
 
 .nav_links {
   display: inline;
-  padding-bottom: 10px;
-}
-
-.nav_links ul {
-  display: inline;
-  padding-left: 10em;
+  padding-left: 1em;
   list-style-type: none;
-  height: 40px;
+  height: 100%;
+  width: 100%;
   margin: 0;
   float: left;
 }
 
-.nav_links ul li {
+.nav_links li {
+  vertical-align: middle;
+  height: 100%;
   line-height: 250%;
   display: inline-block;
 }
 
-.nav_links ul li:nth-child(8) {
-  padding-right: 10px;
+.nav_links li:nth-child(1) {
+  padding-right: 1.5em;
 }
 
-.nav_links a {
+.nav_links li a {
   color: #231F20;
   line-height: 100%;
   text-decoration: none;
@@ -63,7 +61,6 @@ header img {
 
 .nav_search {
   display: inline-block;
-  /*float: right;*/
   height: 100%;
 }
 
