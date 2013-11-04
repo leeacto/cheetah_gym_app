@@ -16,12 +16,14 @@
         <li><%= link_to "Sign In |", signin_path %></li>
       <% end %>
       <li><%= link_to "Schedule", schedule_path %></li>
+      <li>
+        <div class="nav_search">
+          <%= form_tag wods_path, :method => 'get' do %>
+            <%= text_field_tag :search, params[:search] %>
+             <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
+      </li>
     </ul>
-  </div>
-  <div class="nav_search">
-    <%= form_tag wods_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search] %>
-       <%= submit_tag "Search", :name => nil %>
-    <% end %>
   </div>
 </header>

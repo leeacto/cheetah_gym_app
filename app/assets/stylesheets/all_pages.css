@@ -38,7 +38,7 @@ header img {
 
 .nav_links ul {
   display: inline;
-  padding-left: 30%;
+  padding-left: 10em;
   list-style-type: none;
   height: 40px;
   margin: 0;
@@ -62,10 +62,9 @@ header img {
 }
 
 .nav_search {
-  display: inline;
-  float: right;
+  display: inline-block;
+  /*float: right;*/
   height: 100%;
-  padding: 8px 10px 0 0;
 }
 
 .nav_search form {
