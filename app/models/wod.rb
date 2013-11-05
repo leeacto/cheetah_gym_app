@@ -9,7 +9,7 @@ class Wod < ActiveRecord::Base
   validates :baserep, :presence => true
   validates :description, :presence => true
   validates :name, :presence => true,
-            :length => { :maximum => 10 },
+            :length => { :maximum => 20 },
             :uniqueness => { :case_sensitive => false }
   validates :seq, :presence => true
   validates :wod_type, :presence => true
