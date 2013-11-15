@@ -13,7 +13,7 @@ FactoryGirl.define do
     description      "21-15-9 Thrusters, Pullups"
     seq              "WG"
     wod_type         "Time"
-    baserep           1
+    baserep           60
   end
 
   factory :daywod do

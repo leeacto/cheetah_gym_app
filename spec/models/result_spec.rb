@@ -41,9 +41,16 @@ describe Result do
       @result.save
     end
     
-    it 'formats a timed wod' do
-      expect(@result.formatted).to eq Time.local(1999,1,1,0,
-      2,8).strftime "%M:%S"
+    describe 'formats a timed wod' do
+      it 'under an hour' do
+        expect(@result.formatted).to eq '2:08'
+      end
+
+      it 'over an hour' do
+        @result.recd = 3601
+        @result.save
+        expect(@result.formatted).to eq '1:00:01'
+      end
     end
 
     it 'formats a reps wod' do
