@@ -1,5 +1,3 @@
-require 'debugger'
-
 class Wod < ActiveRecord::Base
   attr_accessible :baserep, :description, :name, :seq, :wod_type
 

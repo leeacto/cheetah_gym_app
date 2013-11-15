@@ -3,7 +3,6 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.10'
 gem 'will_paginate', '3.0.2'
-gem 'debugger'
 gem 'rails_12factor'
 gem 'activerecord-postgresql-adapter'
 gem 'pg'

@@ -1,5 +1,3 @@
-require 'debugger'
-
 module WodsHelper
   def desc_layout(wod)
     sanitize(wod.description.gsub(/\n/,'<br>'), :tags => %w(br) )

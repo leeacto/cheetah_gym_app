@@ -21,7 +21,7 @@ describe Wod do
   end
 
   it "should have a restricted name length" do
-    long_name = "a" * 11
+    long_name = "a" * 21
     long_name_wod = Wod.new(@attr.merge(:name => long_name))
     long_name_wod.should_not be_valid
   end

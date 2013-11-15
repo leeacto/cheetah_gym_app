@@ -1,4 +1,3 @@
-require 'debugger'
 class ResultsController < ApplicationController
   include ResultsHelper
 
