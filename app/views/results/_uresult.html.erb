@@ -1,6 +1,6 @@
 <tr>
   <td><%= result.daywod.performed %></td>
-  <td><%= result.wod.name %></td>
+  <td><%= link_to result.wod.name, wod_daywod_path(result.wod, result.daywod) %></td>
   <td><%= result.formatted %></td>
   <td>
     <%= "\u2714" if result.rx  == true %>
