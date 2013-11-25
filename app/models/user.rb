@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   has_many :results, :dependent => :destroy
   has_many :daywods, through: :results
   has_many :wods, through: :daywods
+  has_one  :bio
+  accepts_nested_attributes_for :bio
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

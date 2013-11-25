@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131018145228) do
+ActiveRecord::Schema.define(:version => 20131124214026) do
+
+  create_table "bios", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "height"
+    t.integer  "weight"
+    t.text     "experience"
+    t.text     "fav"
+    t.text     "unfav"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "daywods", :force => true do |t|
     t.date     "performed"

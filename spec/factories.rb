@@ -8,6 +8,15 @@ FactoryGirl.define do
     admin                    false
   end
 
+  factory :bio do
+    height 69
+    weight 178
+    experience "4 years"
+    fav "none of them"
+    unfav "burpees"
+    association :user
+  end
+
   factory :wod do
     name             "Fran"
     description      "21-15-9 Thrusters, Pullups"

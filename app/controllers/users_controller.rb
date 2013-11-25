@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @bio = @user.bio
     @title = @user.name
     @results = Result.where("user_id = ?", params[:id]).order("rx DESC, recd ASC")
   end

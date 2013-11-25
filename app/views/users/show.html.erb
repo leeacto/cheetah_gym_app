@@ -4,6 +4,8 @@
       <h1>
         <%= @user.name %> 
       </h1>
+      <%= link_to 'Edit Profile', edit_user_path(@user) %>
+      <%= link_to 'Edit Bio', edit_user_bio_path(@user, @bio) %>
     </td>
     <td class="sidebar round">
       <strong>Workouts Completed </strong><%= @results.count %><br>
@@ -13,11 +15,23 @@
   </tr>
 </table>
 
-<ul class="my_wods_index">
-  <li>
-    <%= link_to "My WODs", mywods_path %>
-  </li>
-</ul>
+<table class='bio'>
+  <tr>
+   Height: <%= @bio.height %> Weight: <%= @bio.weight %><br>
+  </tr>
+  <tr>
+    Experience<br>
+    <%= @bio.experience %>
+  </tr>
+  <tr>
+    Favorite Workout<br>
+    <%= @bio.fav %>
+  </tr>
+  <tr>
+    Least Favorite Workout<br>
+    <%= @bio.unfav %>
+  </tr>
+</table>
 
 <table>
   <tr>

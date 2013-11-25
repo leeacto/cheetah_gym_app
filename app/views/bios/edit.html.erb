@@ -1,0 +1,11 @@
+<%= form_for Bio.new do |f| %>
+  <%= f.label :feet %>
+  <%= f.number_field :feet %>
+  <%= f.label :inches %>
+  <%= f.number_field :inches, :placeholder => 0 %>
+  <%= f.label :weight %>
+  <%= f.number_field :weight %><br>
+  <%= f.label :experience %>
+  <%= f.text_field :experience %><br>
+  <%= f.submit %>
+<% end %>
