@@ -5,7 +5,7 @@
         <%= @user.name %> 
       </h1>
       <%= link_to 'Edit Profile', edit_user_path(@user) %>
-      <%= link_to 'Edit Bio', edit_user_bio_path(@user, @bio) %>
+      <%= link_to 'Edit Bio', edit_bio_path(@bio) %>
     </td>
     <td class="sidebar round">
       <strong>Workouts Completed </strong><%= @results.count %><br>
