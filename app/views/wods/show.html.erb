@@ -23,11 +23,11 @@
 
     <% @athletes.each do |a| %>
       <tr>
-        <td><%= a.name %></td>
+        <td><%= link_to a.name, a %></td>
         <% @daywods.each do |d| %>
           <td class = "recd">
             <% if d.athletes.include?(a) %>
-              <%= d.results.where(:user_id => a.id).first.formatted %>
+              <%= link_to d.results.where(:user_id => a.id).first.formatted, d.results.where(:user_id => a.id).first  %>
             <% else %>
 
             <% end %>
