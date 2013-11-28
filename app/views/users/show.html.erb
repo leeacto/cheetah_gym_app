@@ -38,7 +38,7 @@
 	<% @wods.each do |w| %>
 		<tr>
 			<td><%= link_to w.name, w %></td>
-			<% w.results.each do |r| %>
+			<% w.results.where(user_id: @user.id).each do |r| %>
 				<td><%= link_to r.formatted, r %><td>
 			<% end %>
 		</tr>
