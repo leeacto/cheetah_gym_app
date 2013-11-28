@@ -28,8 +28,6 @@
           <td class = "recd">
             <% if d.athletes.include?(a) %>
               <%= link_to d.results.where(:user_id => a.id).first.formatted, d.results.where(:user_id => a.id).first  %>
-            <% else %>
-
             <% end %>
           </td>
         <% end %>
