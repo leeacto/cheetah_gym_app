@@ -165,7 +165,7 @@ describe UsersController do
 
       it "should have a flash message" do
         put :update, :id => @user, :user => @attr
-        flash[:success].should =~ /updated/
+        flash[:success].should =~ /updated/i
       end
     end
   end
@@ -244,7 +244,7 @@ describe UsersController do
       it "should redirect to the users page" do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
-        flash[:success].should =~ /destroyed/i
+        flash[:success].should =~ /deleted/i
       end
     end
   end
