@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     @bio = @user.bio
     @title = @user.name
     @results = Result.where("user_id = ?", params[:id]).order("rx DESC, recd ASC")
+		@wods = @user.wods.uniq
   end
 
   def create

@@ -15,6 +15,13 @@ class ResultsController < ApplicationController
     end
   end
 
+	def show
+    @title = "Result"
+    @result = Result.find(params[:id])
+    @wod = @result.wod
+    @daywod = @result.daywod
+	end
+
   def new
     @title = "WOD Result"
     @wod = Wod.find(params[:wod_id])

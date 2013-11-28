@@ -1,0 +1,9 @@
+<h1>WOD Result</h1>
+
+<table>
+	<tr><td>Athlete: </td><td><%= @result.user.name %></td></tr>
+	<tr><td>Date: </td><td><%= @daywod.performed %></td></tr>
+	<tr><td>Result: </td><td><%= @result.formatted %></td></tr>
+  <tr><td>Rx: </td><td><%= "\u2714" if @result.rx  == true %></td></tr>
+  <tr><td>Notes: </td><td><%= @result.note %></td></tr>
+</table>

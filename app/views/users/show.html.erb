@@ -35,13 +35,13 @@
 </table>
 
 <table>
-  <tr>
-    <th>Date</th>
-    <th>WOD</th>
-    <th>Result</th>
-    <th>Rx</th>
-    <th>Notes</th>
-  </tr>
-  <%= render :partial => "results/uresult", :collection => @results, :as => :result %>
+	<% @wods.each do |w| %>
+		<tr>
+			<td><%= link_to w.name, w %></td>
+			<% w.results.each do |r| %>
+				<td><%= link_to r.formatted, r %><td>
+			<% end %>
+		</tr>
+	<% end %>
 </table>
 <% end %>
