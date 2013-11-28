@@ -6,12 +6,12 @@ class BiosController < ApplicationController
 
   def update
     @bio = Bio.find(params[:id])
-    @bio = @bio.user
+    @user = @bio.user
     params[:bio][:height] = params[:bio][:feet].to_i*12 + params[:bio][:inches].to_i
     params[:bio].delete(:feet)
     params[:bio].delete(:inches)
     @bio.update_attributes(params[:bio])
-    redirect_to users_path(@user)
+    redirect_to @user
   end
 
   private

@@ -2,7 +2,7 @@ require 'digest'
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :bio_attributes
   has_many :results, :dependent => :destroy
   has_many :daywods, through: :results
   has_many :wods, through: :daywods

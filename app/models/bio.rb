@@ -9,4 +9,8 @@ class Bio < ActiveRecord::Base
   def inches
     height.to_i % 12
   end
+
+	def height_in_ft
+		"#{feet}'#{inches}"
+	end
 end

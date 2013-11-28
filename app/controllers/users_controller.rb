@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     @user.email = @user.email.downcase
     if @user.save
       @user.create_bio
-debugger
       sign_in @user
       flash[:success] = "Welcome to Cheetah Crossfit!"
       redirect_to @user
@@ -45,7 +44,7 @@ debugger
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile Updated"
       redirect_to @user
     else
       @title = "Edit user"
@@ -55,7 +54,7 @@ debugger
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
+    flash[:success] = "User Deleted."
     redirect_to users_path
   end
 
