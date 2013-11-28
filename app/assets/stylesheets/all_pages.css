@@ -16,6 +16,14 @@ img {
   border-radius: 5px;
 }
 
+label{
+  width: 9em;
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	display: block
+}
+
 /* Header and Footer Begin */
 header {
   width: 100%;
