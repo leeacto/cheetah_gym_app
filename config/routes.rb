@@ -3,7 +3,10 @@ CheetahGymApp::Application.routes.draw do
   
   resources :results
   resources :daywods
-  resources :users
+  resources :users do
+    resources :bios
+  end
+  resources :bios
   resources :sessions, :only => [:new, :create, :destroy]
   resources :wods do
     resources :daywods do

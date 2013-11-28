@@ -1,0 +1,11 @@
+<%= form_for @bio do |f| %>
+  <%= f.label :feet %>
+  <%= f.number_field :feet %><br>
+  <%= f.label :inches %>
+  <%= f.number_field :inches %><br>
+  <%= f.label :weight %>
+  <%= f.number_field :weight %><br>
+  <%= f.label :experience %>
+  <%= f.text_area :experience, size: '30x5' %><br>
+  <%= f.submit %>
+<% end %>

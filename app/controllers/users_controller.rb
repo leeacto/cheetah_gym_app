@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @bio = @user.bio
     @title = @user.name
     @results = Result.where("user_id = ?", params[:id]).order("rx DESC, recd ASC")
   end
@@ -25,6 +26,7 @@ class UsersController < ApplicationController
     @user.name = @user.name.titleize
     @user.email = @user.email.downcase
     if @user.save
+      @user.create_bio
       sign_in @user
       flash[:success] = "Welcome to Cheetah Crossfit!"
       redirect_to @user
@@ -42,7 +44,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile Updated"
       redirect_to @user
     else
       @title = "Edit user"
@@ -52,7 +54,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
+    flash[:success] = "User Deleted."
     redirect_to users_path
   end
 
