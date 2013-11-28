@@ -5,7 +5,7 @@
         <%= @user.name %> 
       </h1>
       <%= link_to 'Edit Profile', edit_user_path(@user) %>
-      <%= link_to 'Edit Bio', edit_bio_path(@bio) %>
+      <%= link_to 'Edit Bio', edit_bio_path(@bio) if @bio %>
     </td>
     <td class="sidebar round">
       <strong>Workouts Completed </strong><%= @results.count %><br>
@@ -15,6 +15,7 @@
   </tr>
 </table>
 
+<% if @bio %>
 <table class='bio'>
   <tr>
    Height: <%= @bio.height %> Weight: <%= @bio.weight %><br>
@@ -43,3 +44,4 @@
   </tr>
   <%= render :partial => "results/uresult", :collection => @results, :as => :result %>
 </table>
+<% end %>
