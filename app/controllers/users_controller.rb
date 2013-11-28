@@ -26,6 +26,8 @@ class UsersController < ApplicationController
     @user.name = @user.name.titleize
     @user.email = @user.email.downcase
     if @user.save
+      @user.create_bio
+debugger
       sign_in @user
       flash[:success] = "Welcome to Cheetah Crossfit!"
       redirect_to @user

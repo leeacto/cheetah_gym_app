@@ -61,7 +61,6 @@ describe UsersController do
   describe "POST 'create'" do
 
     describe "failure" do
-
       before(:each) do
         @attr = { :name => "", :email => "", :password => "",
                   :password_confirmation => "" }
@@ -80,7 +79,6 @@ describe UsersController do
     end
 
     describe "success" do
-
       before(:each) do
         @attr = { :name => "Michael Hartl", :email => "mhartl@railstutorial.org", :password => "foobar",
                   :password_confirmation => "foobar" }
@@ -102,9 +100,15 @@ describe UsersController do
         response.should redirect_to(user_path(assigns(:user)))
       end
 
-      it "should have a welcome message" do
+      it 'has a welcome message' do
         post :create, :user => @attr
         flash[:success].should =~ /Welcome to Cheetah Crossfit!/i 
+      end
+
+      it 'creates an associated bio' do
+        post :create, :user => @attr
+	@user = User.last
+        expect(@user.bio).to be_kind_of Bio
       end
     end
   end
