@@ -16,6 +16,7 @@
   </table>
 
   <% if current_user && current_user.admin %>
+		<%= link_to 'Edit', edit_wod_daywod_path(@wod, @daywod) %>
     <%= link_to "Delete", @daywod, :method => :delete, :confirm => "You sure?",
                   :title => "Delete Daywod" %>
   <% end %>

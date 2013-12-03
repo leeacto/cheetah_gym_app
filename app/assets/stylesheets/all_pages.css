@@ -16,7 +16,7 @@ img {
   border-radius: 5px;
 }
 
-label{
+.edit_bio label{
   width: 9em;
 	float: left;
 	text-align: right;
