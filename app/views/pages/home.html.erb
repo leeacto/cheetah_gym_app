@@ -3,7 +3,7 @@
 <div class="root_button_frame">
   <% if signed_in? %>
     <%= link_to "Create new WOD", new_wod_path, {:class => "root_button"} %>
-    <%= link_to "Log a Workout", newworkout_path, {:class => "root_button"} %>
+   <!-- <%= link_to "Log a Workout", newworkout_path, {:class => "root_button"} %> -->
   <% else %>
     <%= link_to "Sign up now!", signup_path, {:class => "root_button"} %>
   <% end %>
