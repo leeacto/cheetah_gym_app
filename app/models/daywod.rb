@@ -7,4 +7,7 @@ class Daywod < ActiveRecord::Base
   validates :performed, :presence => true
   validates :wod_id, :presence => true
   validates_uniqueness_of :wod_id, scope: :performed
+
+	scope :impersonal, -> { where(personal: false) }
+	scope :current, -> { where("performed <= ?", Time.new) }
 end

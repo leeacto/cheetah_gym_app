@@ -31,7 +31,7 @@ class DaywodsController < ApplicationController
   def show
     @daywod = Daywod.find(params[:id])
     @wod = @daywod.wod
-    @title = Wod.find(@wod).name
+    @title = @wod.name
     if @wod.wod_type == "Time"
       @results = @daywod.results.paginate(:page => params[:page]).order("rx DESC, recd ASC")
     else

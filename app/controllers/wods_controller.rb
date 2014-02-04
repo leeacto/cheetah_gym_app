@@ -35,7 +35,7 @@ class WodsController < ApplicationController
   def show
     @wod = Wod.find(params[:id])
     @title = @wod.name
-    @daywods = @wod.daywods.paginate(:page => params[:page])
+    @daywods = @wod.daywods.current.paginate(:page => params[:page])
     @athletes = @wod.athletes.uniq
     if request.xhr?
       render json: @wod

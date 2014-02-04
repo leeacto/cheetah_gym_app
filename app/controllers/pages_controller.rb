@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
-    @daywods = Daywod.where(:personal => false).order("performed DESC").paginate(:page => params[:page])
+    @daywods = Daywod.impersonal.order("performed DESC").current.paginate(:page => params[:page])
   end
 
   def contact
